@@ -1,0 +1,120 @@
+/* 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25px;
+    height: 20px;
+  }
+  
+ 
+  .nav-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .menu-icon .bar1,
+  .menu-icon .bar2,
+  .menu-icon .bar3 {
+    width: 100%;
+    height: 3px;
+    background-color: #333;
+    transition: 0.4s;
+  }
+  
+  .menu-icon.open .bar1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+  
+  .menu-icon.open .bar2 {
+    opacity: 0;
+  }
+  
+  .menu-icon.open .bar3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+  }
+  
+  .auth-buttons .login-signup {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .auth-buttons .login-signup:hover {
+    background-color: #0056b3;
+  }
+  
+ 
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: flex;
+     position: fixed;
+    }
+  
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 80px;
+      left: 0;
+      background-color: rgb(214, 191, 191);
+      padding: 0;
+      margin: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links.open {
+      display: flex;
+    }
+  
+    .nav-links li {
+      text-align: center;
+      padding: 0.4rem 0;
+     
+      width: 100%;
+    }
+  
+    .auth-buttons {
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+   */
+   /* Existing styles */
+
+/* Existing styles for Navbar */
+

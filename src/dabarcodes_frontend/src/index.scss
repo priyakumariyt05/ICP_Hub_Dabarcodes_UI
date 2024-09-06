@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+// body {
+//   font-family: sans-serif;
+//   font-size: 1.5rem;
+// }
+
+// img {
+//   max-width: 50vw;
+//   max-height: 25vw;
+//   display: block;
+//   margin: auto;
+// }
+
+// form {
+//   display: flex;
+//   justify-content: center;
+//   gap: 0.5em;
+//   flex-flow: row wrap;
+//   max-width: 40vw;
+//   margin: auto;
+//   align-items: baseline;
+// }
+
+// button[type="submit"] {
+//   padding: 5px 20px;
+//   margin: 10px auto;
+//   float: right;
+// }
+
+// #greeting {
+//   margin: 10px auto;
+//   padding: 10px 60px;
+//   border: 1px solid #222;
+// }
+
+// #greeting:empty {
+//   display: none;
+// }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  @apply font-butler;
+}
+
+
+.list-disc-custom {
+  list-style-type: disc; 
+}
+
+.no-bullet {
+  list-style-type: none;
+  position: relative;
+}
+
+.no-bullet::before {
+  content: '';
+  position: absolute;
+  left: -1.25rem; 
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1em;
+  height: 1em;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* Hide scrollbar for IE and Edge */
+  scrollbar-width: none;  /* Hide scrollbar for Firefox */
+}
+// ul {
+//   list-style-type: disc; /* This should be default, but ensure it's not set to none */
+// }
+// .keen-slider {
+//   overflow: hidden;
+// }
+
+// .keen-slider__slide {
+//   display: flex;
+//   justify-content: center;
+// }
+.keen-slider {
+  width: 100%; /* Ensure the slider takes full width */
+}
+
+
+.slick-slide {
+  display: flex;
+  justify-content: center;
+}
+
+/* You can also adjust the width of the slider container if needed */
+.slick-slider {
+  width: 100%; /* Adjust to fit your layout */
+}
+.keen-slider__slide {
+  min-width: 100%; /* Ensure each slide takes the full width on small screens */
+}
+.keen-slider {
+  display: flex;
+  flex-wrap: nowrap; /* Prevents the items from wrapping or shrinking */
+}
+/* Add this to your CSS file */
+.table-container {
+  overflow-x: auto;
+  scroll-behavior: smooth; /* Smooth scroll behavior */
+  -webkit-overflow-scrolling: touch; /* Enable momentum scrolling for iOS */
+}
+
+.table-container::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for cleaner look */
+}

@@ -1,0 +1,144 @@
+ .subscription-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .subscription-header {
+    text-align: left;
+    margin-bottom: 40px;
+  }
+  
+  .subscription-header h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .subscription-header p {
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+ 
+  .plans-and-offers {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .plans {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .plan {
+    background-color: #e0f7fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px 20px;
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .plan h3 {
+    color: #00796b;
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .plan p {
+    margin: 10px 0;
+    color: #333;
+  }
+  
+  .plan .price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .offers {
+    max-width: 300px;
+  }
+  
+  .offers h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #00796b;
+    margin-bottom: 15px;
+  }
+  
+  .offers ul {
+    list-style-type: none;
+    padding: 0;
+    color: #333;
+  }
+  
+  .offers ul li {
+    padding-left: 30px;
+    margin-bottom: 10px;
+  }
+  
+
+  @media (max-width: 992px) {
+    .subscription-header {
+      text-align: center;
+    }
+  
+    .plans-and-offers {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .plans {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .plan {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .offers {
+      margin-top: 20px;
+      text-align: center;
+    }
+  }
+  
+
+  @media (max-width: 768px) {
+    .plan {
+      padding: 20px;
+    }
+  
+    .plan h3 {
+      font-size: 18px;
+    }
+  
+    .plan .price {
+      font-size: 16px;
+    }
+  }
+  
+
+  @media (max-width: 480px) {
+    .subscription-container {
+      padding: 20px 10px;
+    }
+  
+    .plan {
+      padding: 15px;
+    }
+  
+    .plan h3 {
+      font-size: 16px;
+    }
+  
+    .plan .price {
+      font-size: 14px;
+    }
+  }
+  
