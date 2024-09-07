@@ -55,6 +55,7 @@ import FeedbackForm from './Profile/Setting/FeedbackForm';
 import ContactSupport from './Profile/Setting/ContactSupport';
 import OverlayQR from './NewHomePageCustomer.jsx/OverlaySKU/OverlayQR';
 import OverlayMultiple from './NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple';
+import ProfilePage from './Profile/ProfilePage';
 
 
 function App() {
@@ -78,6 +79,7 @@ function App() {
         <Route path="/coupon-popup" element={<CouponPopup />} />
         <Route path="/sku-modal" element={<SkuModal />} />
 {/* Profile roting start */}
+
 <Route path="/create-profile" element={<CreateProfile/>} />
         <Route path="/profile" element={<ProfileInformation />} />
         <Route path="/subscription-profile" element={<SubscriptionProfile />} />
