@@ -1,12 +1,11 @@
-
-import React, { useState, useRef } from 'react';
-import Sidebar from './Sidebar';
-import { FaFilter, FaSearch } from 'react-icons/fa';
+import React, { useState, useRef } from "react";
+import Sidebar from "./Sidebar";
+import { FaFilter, FaSearch } from "react-icons/fa";
 
 const itemsPerPage = 5; // Number of items to display per page
 
 const PromotionManagement = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
 
   // Reference for the table container
@@ -14,15 +13,59 @@ const PromotionManagement = () => {
 
   const promotions = [
     // Example promotions data
-    { status: 'New', name: 'Promotional Event', startDate: '2024, August 17', endDate: '2024, October 17', validityStatus: 'Active', decisionStatus: 'Approved' },
-    { status: 'New', name: '$40 off', startDate: '2024, August 12', endDate: '2024, October 17', validityStatus: 'Active', decisionStatus: 'Approved' },
-    { status: 'New', name: '$40 off', startDate: '2024, August 13', endDate: '2024, October 17', validityStatus: 'Active', decisionStatus: 'Approved' },
-    { status: 'New', name: '12% off', startDate: '2024, August 17', endDate: '2024, October 17', validityStatus: 'Active', decisionStatus: 'Approved' },
-    { status: 'Ended', name: '30%', startDate: '2024, August 17', endDate: '2024, October 17', validityStatus: 'Ended', decisionStatus: 'Rejected' },
-    { status: 'Pending', name: '32%', startDate: '2024, September 17', endDate: '2024, October 17', validityStatus: 'Active', decisionStatus: 'Pending' },
+    {
+      status: "New",
+      name: "Promotional Event",
+      startDate: "2024, August 17",
+      endDate: "2024, October 17",
+      validityStatus: "Active",
+      decisionStatus: "Approved",
+    },
+    {
+      status: "New",
+      name: "$40 off",
+      startDate: "2024, August 12",
+      endDate: "2024, October 17",
+      validityStatus: "Active",
+      decisionStatus: "Approved",
+    },
+    {
+      status: "New",
+      name: "$40 off",
+      startDate: "2024, August 13",
+      endDate: "2024, October 17",
+      validityStatus: "Active",
+      decisionStatus: "Approved",
+    },
+    {
+      status: "New",
+      name: "12% off",
+      startDate: "2024, August 17",
+      endDate: "2024, October 17",
+      validityStatus: "Active",
+      decisionStatus: "Approved",
+    },
+    {
+      status: "Ended",
+      name: "30%",
+      startDate: "2024, August 17",
+      endDate: "2024, October 17",
+      validityStatus: "Ended",
+      decisionStatus: "Rejected",
+    },
+    {
+      status: "Pending",
+      name: "32%",
+      startDate: "2024, September 17",
+      endDate: "2024, October 17",
+      validityStatus: "Active",
+      decisionStatus: "Pending",
+    },
   ];
 
-  const filteredPromotions = promotions.filter(promo => promo.name.toLowerCase().includes(searchTerm.toLowerCase()));
+  const filteredPromotions = promotions.filter((promo) =>
+    promo.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
   const totalPages = Math.ceil(filteredPromotions.length / itemsPerPage);
 
   const handleSearch = (e) => {
@@ -42,7 +85,10 @@ const PromotionManagement = () => {
     }
   };
 
-  const paginatedPromotions = filteredPromotions.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
+  const paginatedPromotions = filteredPromotions.slice(
+    (currentPage - 1) * itemsPerPage,
+    currentPage * itemsPerPage
+  );
 
   // Swipe Functionality
   let startX = 0;
@@ -107,7 +153,13 @@ const PromotionManagement = () => {
                 <tr key={index} className="border-t border-b">
                   <td className="p-4">
                     <span
-                      className={`inline-block text-gray-800 rounded-lg px-3 py-1 ${promo.status === 'New' ? 'bg-[#EAFDEE]' : promo.status === 'Ended' ? 'bg-[#FFEBE6]' : 'bg-[#FFFAE4]'}`}
+                      className={`inline-block text-gray-800 rounded-lg px-3 py-1 ${
+                        promo.status === "New"
+                          ? "bg-[#EAFDEE]"
+                          : promo.status === "Ended"
+                          ? "bg-[#FFEBE6]"
+                          : "bg-[#FFFAE4]"
+                      }`}
                     >
                       {promo.status}
                     </span>
@@ -117,16 +169,24 @@ const PromotionManagement = () => {
                   <td className="p-4">{promo.endDate}</td>
                   <td className="p-4">
                     <span
-                      className={`inline-block text-gray-800 rounded-lg px-3 py-1 ${promo.validityStatus === 'Active' ? 'bg-[#EAFDEE]' : 'bg-[#FFEBE6]'}`}
+                      className={`inline-block text-gray-800 rounded-lg px-3 py-1 ${
+                        promo.validityStatus === "Active"
+                          ? "bg-[#EAFDEE]"
+                          : "bg-[#FFEBE6]"
+                      }`}
                     >
                       {promo.validityStatus}
                     </span>
                   </td>
                   <td className="p-4">
-                    {promo.decisionStatus === 'Pending' ? (
+                    {promo.decisionStatus === "Pending" ? (
                       <div className="flex space-x-4">
-                        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">Approve</button>
-                        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg">Reject</button>
+                        <button className="px-4 py-2 bg-blue-500 text-white rounded-lg">
+                          Approve
+                        </button>
+                        <button className="px-4 py-2 bg-gray-200 text-gray-700 rounded-lg">
+                          Reject
+                        </button>
                       </div>
                     ) : (
                       promo.decisionStatus
@@ -146,7 +206,9 @@ const PromotionManagement = () => {
           >
             Previous
           </button>
-          <span className="text-gray-600">Page {currentPage} of {totalPages}</span>
+          <span className="text-gray-600">
+            Page {currentPage} of {totalPages}
+          </span>
           <button
             onClick={handleNext}
             className="text-gray-600 border border-gray-300 px-4 py-2 rounded-[10px]"

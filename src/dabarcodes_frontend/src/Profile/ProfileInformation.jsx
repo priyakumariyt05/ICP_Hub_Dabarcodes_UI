@@ -725,7 +725,7 @@ const ProfileInformation = () => {
   return (
     <>
       <Navbar2 />
-      <div className="flex flex-col md:flex-row min-h-screen p-6">
+      <div className="flex flex-col md:flex-row min-h-screen p-6 font-roboto">
         <LeftSidebar />
         <div className="w-full md:w-2/3 md:mt-0 md:ml-6 mb-10 rounded-md">
           <div className="py-4">

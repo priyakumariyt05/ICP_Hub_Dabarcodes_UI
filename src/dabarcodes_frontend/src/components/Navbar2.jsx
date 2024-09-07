@@ -17,16 +17,25 @@ function Navbar2() {
             onClick={() => setMenuOpen(!menuOpen)}
           />
           <div className="text-xl font-bold text-[#171717]">
-          <img src="/image/image 40.png" alt="" />
+            <img src="/image/image 40.png" alt="" />
           </div>
           <nav className="hidden md:flex space-x-4">
-            <a href="/explore-category" className=" hover:text-blue-500 text-[#171717] font-roboto">
+            <a
+              href="/explore-category"
+              className=" hover:text-blue-500 text-[#171717] font-roboto"
+            >
               Categories
             </a>
-            <a href="#" className="text-[#171717] hover:text-blue-500 font-roboto">
+            <a
+              href="#"
+              className="text-[#171717] hover:text-blue-500 font-roboto"
+            >
               Promotions
             </a>
-            <a href="#" className="text-[#171717] hover:text-blue-500 font-roboto">
+            <a
+              href="#"
+              className="text-[#171717] hover:text-blue-500 font-roboto"
+            >
               Linked SKUs
             </a>
           </nav>
@@ -58,13 +67,22 @@ function Navbar2() {
       {/* Mobile Menu */}
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 px-4 py-3 flex flex-col space-y-2 z-20">
-          <a href="#" className="text-[#171717] hover:text-blue-500 font-roboto">
+          <a
+            href="#"
+            className="text-[#171717] hover:text-blue-500 font-roboto"
+          >
             Categories
           </a>
-          <a href="#" className="text-[#171717] hover:text-blue-500 font-roboto">
+          <a
+            href="#"
+            className="text-[#171717] hover:text-blue-500 font-roboto"
+          >
             Promotions
           </a>
-          <a href="#" className="text-[#171717] hover:text-blue-500 font-roboto">
+          <a
+            href="#"
+            className="text-[#171717] hover:text-blue-500 font-roboto"
+          >
             Linked SKUs
           </a>
           <div className="relative mt-2">
@@ -82,13 +100,15 @@ function Navbar2() {
         How to use daBarcodes
       </div>
 
-
       <div className="px-4 py-2 text-sm text-gray-600 font-roboto">
-  <Link to="/" className="hover:underline">Home</Link> / 
-  
-  <Link to="/homepage2" className=" hover:underline">SKU</Link>
-</div>
-
+        <Link to="/" className="hover:underline">
+          Home
+        </Link>{" "}
+        /
+        <Link to="/homepage2" className=" hover:underline">
+          SKU
+        </Link>
+      </div>
     </div>
   );
 }

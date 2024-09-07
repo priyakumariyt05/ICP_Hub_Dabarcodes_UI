@@ -132,6 +132,7 @@ const ConnectWalletModal = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
+    navigate(-1);
   };
 
   const handleNextClick = () => {

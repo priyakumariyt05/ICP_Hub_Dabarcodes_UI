@@ -120,3 +120,30 @@ body {
 .table-container::-webkit-scrollbar {
   display: none; /* Hide scrollbar for cleaner look */
 }
+.keen-slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.keen-slider__slide {
+  position: relative;
+  min-height: 150px; /* Adjust as needed */
+  width: 100%; /* Ensure slides take full width */
+}
+
+/* Ensure that no additional styling is constraining the layout */
+// .keen-slider__slide img {
+//   width: 100%;
+//   height: auto;
+// }
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+

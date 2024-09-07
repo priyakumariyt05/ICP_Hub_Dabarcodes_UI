@@ -21,8 +21,8 @@
 //       </div>
 //     );
 //   };
-  
-import React from 'react';
+
+import React from "react";
 
 const RetailerCard = ({
   storeName,
@@ -33,16 +33,14 @@ const RetailerCard = ({
   className = "", // Additional class names for customization
   children, // Allows adding additional content inside the card if needed
   showOffer = true, // Control visibility of the offer section
-  showValidTill = true // Control visibility of the validTill section
+  showValidTill = true, // Control visibility of the validTill section
 }) => {
   return (
-    <div className={`border rounded-lg p-4 shadow-md text-left mx-4 my-2 max-w-xs md:max-w-sm lg:max-w-md ${className}`}>
+    <div
+      className={`border rounded-lg p-4 shadow-md text-left mx-4 my-2 max-w-xs md:max-w-sm lg:max-w-md ${className}`}
+    >
       <div className="flex items-center mb-4">
-        <img
-          src={imageSrc}
-          alt={imageAlt}
-          className="w-12 h-12 mr-4"
-        />
+        <img src={imageSrc} alt={imageAlt} className="w-12 h-12 mr-4" />
         <div>
           <h2 className="font-bold">{storeName}</h2>
           <p className="text-gray-500">Available online and physical store</p>
@@ -64,5 +62,3 @@ const RetailerCard = ({
 };
 
 export default RetailerCard;
-
-

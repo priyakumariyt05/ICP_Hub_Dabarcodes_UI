@@ -9,6 +9,7 @@ import Scroll from '../ReusableComponents/Scroll';
 import CouponSection from './CouponSection';
 import UpcomingCoupons from './UpcomingCoupons';
 import ExploreSlider from '../ExploreByCategory/ExploreSlider';
+import CurrentProductPromotion from './CurrentProductPromotion';
 
 
 const HomePage = () => {
@@ -61,19 +62,7 @@ const HomePage = () => {
 
 
 {/* Explore */}
-      {/* <div className="p-8 m-8">
-      <div className="flex justify-between items-center mt-10 mb-10">
-          <h1 className="font-butler text-2xl font-extrabold leading-30px text-center text-[#171717]">Explore Promotion By Categories</h1>
-          <button className="text-blue-500 border-b-2 border-blue-500 pb-1 hover:bg-blue-100">
-            View All
-          </button>
-        </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 mb-20">
-          {categories.map((category, index) => (
-            <CategoryCard key={index} category={category} />
-          ))}
-        </div>
-      </div> */}
+
       <ExploreSlider categories={categories} />
 
 
@@ -85,12 +74,13 @@ const HomePage = () => {
     
         
 <UpcomingCoupons/>
-      <div className="flex flex-col p-4">
+<CurrentProductPromotion/>
+      {/* <div className="flex flex-col p-4">
   <div className="flex justify-between items-center pl-4 md:pl-10 mb-4">
     <h1 className="text-xl md:text-2xl font-semibold p-4 font-serif">Current Products on Promotion</h1>
   </div>
 
-  {/* Section 5 */}
+ 
   <div className="flex flex-col md:flex-row min-h-screen gap-8">
 
     <aside className="w-full md:w-1/4 bg-white p-4 shadow-lg rounded-md md:h-1/2">
@@ -150,7 +140,7 @@ const HomePage = () => {
       </div>
     </div>
   </div>
-</div>
+</div> */}
 <Footer/>
     </>
   );

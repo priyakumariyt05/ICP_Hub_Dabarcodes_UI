@@ -1,7 +1,6 @@
-
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Navbar3 = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +16,7 @@ const Navbar3 = () => {
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
               aria-controls="mobile-menu"
-              aria-expanded={isOpen ? 'true' : 'false'}
+              aria-expanded={isOpen ? "true" : "false"}
             >
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
@@ -64,19 +63,39 @@ const Navbar3 = () => {
             </div>
 
             <div className="hidden sm:flex sm:ml-6 space-x-4 items-center">
-              <a href="#" className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto">Shop</a>
-              <a href="#" className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto" >Pickup and Delivery</a>
-              <a href="#" className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto">Coupons</a>
-              <a href="#" className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto">Featured</a>
-         
+              <a
+                href="#"
+                className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto"
+              >
+                Shop
+              </a>
+              <a
+                href="#"
+                className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto"
+              >
+                Pickup and Delivery
+              </a>
+              <a
+                href="#"
+                className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto"
+              >
+                Coupons
+              </a>
+              <a
+                href="#"
+                className="text[#171717] hover:bg-gray-100 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium font-roboto"
+              >
+                Featured
+              </a>
+
               <div className="hidden md:flex items-center relative w-full max-w-xs mx-auto">
-          <input
-            type="text"
-            className="w-full pr-10 pl-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
-            placeholder="Search"
-          />
-          <FiSearch className="absolute right-3 text-gray-500" />
-        </div>
+                <input
+                  type="text"
+                  className="w-full pr-10 pl-4 py-2 border rounded-md focus:outline-none focus:border-blue-500"
+                  placeholder="Search"
+                />
+                <FiSearch className="absolute right-3 text-gray-500" />
+              </div>
             </div>
           </div>
 
@@ -89,12 +108,37 @@ const Navbar3 = () => {
       </div>
 
       {/* Mobile menu */}
-      <div className={`sm:hidden ${isOpen ? 'absolute top-16 left-0 right-0 z-10' : 'hidden'}`} id="mobile-menu">
+      <div
+        className={`sm:hidden ${
+          isOpen ? "absolute top-16 left-0 right-0 z-10" : "hidden"
+        }`}
+        id="mobile-menu"
+      >
         <div className="bg-white border-b border-gray-200 px-2 pt-2 pb-3 space-y-1">
-          <a href="#" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Shop</a>
-          <a href="#" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Pickup and Delivery</a>
-          <a href="#" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Coupons</a>
-          <a href="#" className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium">Featured</a>
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Shop
+          </a>
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Pickup and Delivery
+          </a>
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Coupons
+          </a>
+          <a
+            href="#"
+            className="text-gray-700 hover:bg-gray-100 hover:text-blue-600 block px-3 py-2 rounded-md text-base font-medium"
+          >
+            Featured
+          </a>
 
           {/* Search Input for Mobile */}
           <div className="relative mt-2">
@@ -124,11 +168,18 @@ const Navbar3 = () => {
       </div>
 
       <div className="px-4 py-2 text-sm text-gray-600">
-  <Link to="/" className=" hover:underline">Home</Link> / 
-  <Link to="/section1" className=" hover:underline">section1</Link> / 
-  <Link to="/homepage" className=" hover:underline">section2</Link>
-</div>
-
+        <Link to="/" className=" hover:underline">
+          Home
+        </Link>{" "}
+        /
+        <Link to="/section1" className=" hover:underline">
+          section1
+        </Link>{" "}
+        /
+        <Link to="/homepage" className=" hover:underline">
+          section2
+        </Link>
+      </div>
     </nav>
   );
 };

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const UtilityTokenCard = () => {
   return (
     <div className="flex justify-center items-center min-h-screen ">
       <div className="bg-white shadow-lg rounded-lg p-8 text-center max-w-md w-full h-[500px] flex flex-col justify-center">
         <div className="mb-6">
-          <img 
-            src="/image/Token.png" 
-            alt="Token Icon" 
+          <img
+            src="/image/Token.png"
+            alt="Token Icon"
             className="mx-auto w-24 h-24 rounded-full"
           />
         </div>
@@ -28,4 +28,3 @@ const UtilityTokenCard = () => {
 };
 
 export default UtilityTokenCard;
-

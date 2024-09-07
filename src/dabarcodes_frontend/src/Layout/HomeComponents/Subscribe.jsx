@@ -4,8 +4,11 @@ import { IoBagHandle } from "react-icons/io5";
 import { Link } from "react-router-dom";
 const Subscribe = () => {
   return (
-    <div id="for-subscription" className="flex flex-row sm:ml-[62px]   bg-[#E7F8FE] border-[#055C9A] border-[0.86px] sm:rounded-[231.53px_0_0_231.53px] opacity-52 sm:mb-40  mt-20 mb-20">
-     <div className="lg:flex hidden xl:h-[481px]  lg:h-[400px] justify-center xl:mt-[-37px] ">
+    <div
+      id="for-subscription"
+      className="flex flex-row sm:ml-[62px]   bg-[#E7F8FE] border-[#055C9A] border-[0.86px] sm:rounded-[231.53px_0_0_231.53px] opacity-52 sm:mb-40  mt-20 mb-20"
+    >
+      <div className="lg:flex hidden xl:h-[481px]  lg:h-[400px] justify-center xl:mt-[-37px] ">
         <img
           src="/image/image 10.png"
           alt="Subscription"
@@ -14,7 +17,6 @@ const Subscribe = () => {
       </div>
 
       <main className="lg:pl-0 md:pl-52 sm:pl-36 pl-8 pb-4 ">
-       
         <div className=" mb-8">
           <span className="text-2xl font-bold italic mb-4 block mt-10">
             Join the Subscription
@@ -24,7 +26,7 @@ const Subscribe = () => {
             enhance <br /> your shopping experience:
           </p>
         </div>
-  <div className="mb-8">
+        <div className="mb-8">
           <div className="xl:flex flex-wrap   gap-20 space-y-4">
             <div className="flex items-center space-x-4 ">
               <RiDiscountPercentFill size={40} color="#B72322" />

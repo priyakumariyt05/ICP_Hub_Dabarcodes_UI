@@ -17,11 +17,11 @@
 //         { name: 'Snacks', image: '/image/drink.png' },
 //         { name: 'Snacks', image: '/image/drink.png' },
 //       ];
-    
+
 //   return (
 //     <>
 // <div className="p-8">
-    
+
 //     <div className="flex items-center justify-center mt-4 mb-10">
 //     <h1 className="font-[roboto] text-[32px] sm:text-[36px] md:text-[39px] font-extrabold leading-[40px] sm:leading-[44px] md:leading-[46.8px] text-center text-[#171717]">
 // Explore by Category
@@ -84,25 +84,25 @@
 
 // export default Explore;
 
-import React from 'react';
-import CategoryCard from '../ReusableComponents/CategoryCard';
+import React from "react";
+import CategoryCard from "../ReusableComponents/CategoryCard";
 
 const Explore = () => {
   const categories = [
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
-    { name: 'Snacks', image: '/image/drink.png' },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
+    { name: "Snacks", image: "/image/drink.png" },
   ];
 
   return (

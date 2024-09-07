@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 
 const SessionTimeoutModal = () => {
   const [timeLeft, setTimeLeft] = useState(62); // 1 min 2 sec
@@ -21,13 +21,13 @@ const SessionTimeoutModal = () => {
 
   const handleContinue = () => {
     // Logic for continue action
-    alert('Continue working');
+    alert("Continue working");
     setIsOpen(false); // Close the modal after continuing
   };
 
   const handleLogOff = () => {
     // Logic for log off action
-    alert('Logging off');
+    alert("Logging off");
     setIsOpen(false); // Close the modal after logging off
   };
 
@@ -60,7 +60,10 @@ const SessionTimeoutModal = () => {
             {formatTime(timeLeft)}
           </p>
           <p className="text-center text-gray-600 mt-4">
-            Please click <span className="font-semibold">"Continue"</span> to keep working; or click <span className="font-semibold">"Log off"</span> to end your session now.
+            Please click <span className="font-semibold">"Continue"</span> to
+            keep working; or click{" "}
+            <span className="font-semibold">"Log off"</span> to end your session
+            now.
           </p>
         </div>
         <div className="flex justify-between mt-6">

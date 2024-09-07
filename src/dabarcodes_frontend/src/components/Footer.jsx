@@ -1,15 +1,13 @@
-
-import React from 'react';
-import { Link } from 'react-router-dom'; 
-import { FaTwitter, FaFacebook, FaLinkedin } from 'react-icons/fa';
-import { IoLogoInstagram } from 'react-icons/io';
-import { MdOutlineKeyboardArrowRight } from 'react-icons/md';
+import React from "react";
+import { Link } from "react-router-dom";
+import { FaTwitter, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { IoLogoInstagram } from "react-icons/io";
+import { MdOutlineKeyboardArrowRight } from "react-icons/md";
 
 function Footer() {
   return (
     <footer className="bg-[#DBF4FD] w-full py-10 px-10 font-roboto">
       <div className="w-full m-4 lg:grid grid-cols-12 gap-20">
-
         <div className="col-span-6">
           <div className="col-span-1 md:col-span-2">
             <h3 className="text-2xl font-bold text-gray-800 mb-4">
@@ -52,19 +50,28 @@ function Footer() {
             </h3>
             <ul className="list-none space-y-2">
               <li>
-                <Link to="/about" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/about"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   About us
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/how-it-works"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   How it works
                 </Link>
               </li>
               <li>
-                <Link to="/contact" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/contact"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Contact us
                 </Link>
@@ -78,19 +85,28 @@ function Footer() {
             </h3>
             <ul className="list-none space-y-2">
               <li>
-                <Link to="/help-center" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/help-center"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link to="/faqs" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/faqs"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   FAQs
                 </Link>
               </li>
               <li>
-                <Link to="/customer-support" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/customer-support"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Customer Support
                 </Link>
@@ -102,19 +118,28 @@ function Footer() {
             <h3 className="lg:text-2xl font-bold text-gray-800 mb-4">Legal</h3>
             <ul className="list-none space-y-2">
               <li>
-                <Link to="/privacy-policy" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/privacy-policy"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link to="/terms-of-service" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/terms-of-service"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Terms of Service
                 </Link>
               </li>
               <li>
-                <Link to="/cookie-policy" className="flex items-center text-gray-600 hover:text-gray-800">
+                <Link
+                  to="/cookie-policy"
+                  className="flex items-center text-gray-600 hover:text-gray-800"
+                >
                   <MdOutlineKeyboardArrowRight className="mr-2" />
                   Cookie Policy
                 </Link>
@@ -143,4 +168,3 @@ function Footer() {
 }
 
 export default Footer;
-

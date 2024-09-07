@@ -127,7 +127,7 @@
 //       id: 1,
 //       title: '$25 OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#6087D4]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector2.png',
@@ -136,7 +136,7 @@
 //       id: 2,
 //       title: '20% OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#763AB6]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector2.png',
@@ -145,7 +145,7 @@
 //       id: 3,
 //       title: 'Bundle OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#EC5F93]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector3.png',
@@ -154,7 +154,7 @@
 //       id: 4,
 //       title: 'Bundle OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#EC5F93]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector3.png',
@@ -196,7 +196,7 @@
 //       <div
 //         ref={scrollContainerRef}
 //         className="flex gap-4 overflow-x-auto whitespace-nowrap scroll-smooth hide-scrollbar"
-//         style={{ width: '100%', maxWidth: '1200px' }} 
+//         style={{ width: '100%', maxWidth: '1200px' }}
 //         {coupons.map((coupon) => (
 //           <div style={{ flex: '0 0 33.33%' }} key={coupon.id}>
 //             <UpcomingCouponCard {...coupon} />
@@ -214,14 +214,13 @@
 // import UpcomingCouponCard from './UpcomingCouponCard.jsx';
 // import CouponCard from '../SkuList/CouponCard.jsx';
 
-
 // const UpcomingCoupons = () => {
 //   const scrollContainerRef = useRef(null);
 
 //   const scroll = (direction) => {
 //     const container = scrollContainerRef.current;
 //     if (container) {
-//       const scrollAmount = container.clientWidth; 
+//       const scrollAmount = container.clientWidth;
 //       container.scrollBy({
 //         left: direction === 'left' ? -scrollAmount : scrollAmount,
 //         behavior: 'smooth',
@@ -234,7 +233,7 @@
 //       id: 1,
 //       title: '$25 OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#6087D4]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector2.png',
@@ -243,7 +242,7 @@
 //       id: 2,
 //       title: '20% OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#763AB6]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector2.png',
@@ -252,7 +251,7 @@
 //       id: 3,
 //       title: 'Bundle OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#EC5F93]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector3.png',
@@ -261,7 +260,7 @@
 //       id: 4,
 //       title: 'Bundle OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#EC5F93]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector3.png',
@@ -270,7 +269,7 @@
 //       id: 5,
 //       title: 'Bundle OFF',
 //       description: 'On Frozen Products and Fruits',
-//       launch: 'Deal Launching on July', 
+//       launch: 'Deal Launching on July',
 //       bgColor: 'bg-[#EC5F93]',
 //       buttonColor: 'bg-blue-500',
 //       imageUrl: '/image/vector3.png',
@@ -279,7 +278,6 @@
 
 //   return (
 //     <>
-
 
 //     <div className="p-8 m-8">
 //       <div className="flex justify-between items-center mt-10 mb-10">
@@ -321,10 +319,10 @@
 // };
 
 // export default UpcomingCoupons;
-import React, { useRef } from 'react';
-import { IoArrowForward, IoArrowBack } from 'react-icons/io5';
-import CouponCard from '../SkuList/CouponCard.jsx';
-import UpcomingCouponCard from './UpcomingCouponCard.jsx.jsx';
+import React, { useRef } from "react";
+import { IoArrowForward, IoArrowBack } from "react-icons/io5";
+import CouponCard from "../SkuList/CouponCard.jsx";
+import UpcomingCouponCard from "./UpcomingCouponCard.jsx.jsx";
 
 const UpcomingCoupons = () => {
   const scrollContainerRef = useRef(null);
@@ -332,10 +330,10 @@ const UpcomingCoupons = () => {
   const scroll = (direction) => {
     const container = scrollContainerRef.current;
     if (container) {
-      const scrollAmount = container.clientWidth; 
+      const scrollAmount = container.clientWidth;
       container.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
       });
     }
   };
@@ -343,48 +341,48 @@ const UpcomingCoupons = () => {
   const coupons = [
     {
       id: 1,
-      title: '$25 OFF',
-      description: 'On Frozen Products and Fruits',
-      launch: 'Deal Launching on July',
-      bgColor: 'bg-[#6087D4]',
-      buttonColor: 'bg-blue-500',
-      imageUrl: '/image/vector2.png',
+      title: "$25 OFF",
+      description: "On Frozen Products and Fruits",
+      launch: "Deal Launching on July",
+      bgColor: "bg-[#6087D4]",
+      buttonColor: "bg-blue-500",
+      imageUrl: "/image/vector2.png",
     },
     {
       id: 2,
-      title: '20% OFF',
-      description: 'On Frozen Products and Fruits',
-      launch: 'Deal Launching on July',
-      bgColor: 'bg-[#763AB6]',
-      buttonColor: 'bg-blue-500',
-      imageUrl: '/image/vector2.png',
+      title: "20% OFF",
+      description: "On Frozen Products and Fruits",
+      launch: "Deal Launching on July",
+      bgColor: "bg-[#763AB6]",
+      buttonColor: "bg-blue-500",
+      imageUrl: "/image/vector2.png",
     },
     {
       id: 3,
-      title: 'Bundle OFF',
-      description: 'On Frozen Products and Fruits',
-      launch: 'Deal Launching on July',
-      bgColor: 'bg-[#EC5F93]',
-      buttonColor: 'bg-blue-500',
-      imageUrl: '/image/vector3.png',
+      title: "Bundle OFF",
+      description: "On Frozen Products and Fruits",
+      launch: "Deal Launching on July",
+      bgColor: "bg-[#EC5F93]",
+      buttonColor: "bg-blue-500",
+      imageUrl: "/image/vector3.png",
     },
     {
       id: 4,
-      title: 'Bundle OFF',
-      description: 'On Frozen Products and Fruits',
-      launch: 'Deal Launching on July',
-      bgColor: 'bg-[#EC5F93]',
-      buttonColor: 'bg-blue-500',
-      imageUrl: '/image/vector3.png',
+      title: "Bundle OFF",
+      description: "On Frozen Products and Fruits",
+      launch: "Deal Launching on July",
+      bgColor: "bg-[#EC5F93]",
+      buttonColor: "bg-blue-500",
+      imageUrl: "/image/vector3.png",
     },
     {
       id: 5,
-      title: 'Bundle OFF',
-      description: 'On Frozen Products and Fruits',
-      launch: 'Deal Launching on July',
-      bgColor: 'bg-[#EC5F93]',
-      buttonColor: 'bg-blue-500',
-      imageUrl: '/image/vector3.png',
+      title: "Bundle OFF",
+      description: "On Frozen Products and Fruits",
+      launch: "Deal Launching on July",
+      bgColor: "bg-[#EC5F93]",
+      buttonColor: "bg-blue-500",
+      imageUrl: "/image/vector3.png",
     },
   ];
 
@@ -400,13 +398,13 @@ const UpcomingCoupons = () => {
       </div>
       <div className="relative max-w-7xl mx-auto p-5 rounded-lg">
         <button
-          onClick={() => scroll('left')}
+          onClick={() => scroll("left")}
           className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-[#0673C1] text-white rounded-full p-2 z-10 shadow-md"
         >
           <IoArrowBack className="w-8 h-8" />
         </button>
         <button
-          onClick={() => scroll('right')}
+          onClick={() => scroll("right")}
           className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-[#0673C1] text-white rounded-full p-2 z-10 shadow-md"
         >
           <IoArrowForward className="w-8 h-8" />

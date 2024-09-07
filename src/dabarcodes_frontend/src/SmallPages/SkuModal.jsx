@@ -1,18 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 const SkuModal = () => {
-  const [isOpen, setIsOpen] = useState(true); 
+  const [isOpen, setIsOpen] = useState(true);
 
   const handleClose = () => {
     setIsOpen(false);
   };
 
   const handleFixedSkuClick = () => {
-    console.log('Link as Fixed SKU');
+    console.log("Link as Fixed SKU");
     handleClose();
   };
 
   const handleFloatingSkuClick = () => {
-    console.log('Link as Floating SKU');
+    console.log("Link as Floating SKU");
     handleClose();
   };
 
@@ -32,7 +32,9 @@ const SkuModal = () => {
               You&apos;re about to link this SKU to your account. Once linked,
               this action is irreversible.
             </p>
-            <p className="text-gray-700 mb-4">Are you sure you want to proceed?</p>
+            <p className="text-gray-700 mb-4">
+              Are you sure you want to proceed?
+            </p>
             <div className="flex flex-col justify-center space-y-4 mb-4">
               <button
                 onClick={handleFixedSkuClick}

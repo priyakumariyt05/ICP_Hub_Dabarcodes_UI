@@ -1,120 +1,123 @@
-import React, { useState, useEffect } from 'react';
-import { FaFilter, FaSearch } from 'react-icons/fa';
-import Sidebar from './Sidebar';
-
+import React, { useState, useEffect } from "react";
+import { FaFilter, FaSearch } from "react-icons/fa";
+import Sidebar from "./Sidebar";
 
 const fetchSkuData = async () => {
   // Simulate API call
   return new Promise((resolve) => {
-    setTimeout(() => resolve([
-      // Replace with your dynamic data
-      {
-        sku: "Organic Quinoa Grains 500g",
-        category: "Grains & Cereals",
-        brand: "Nature's Harvest",
-        supplier: "Green Fields Organic Supplies",
-        stockStatus: "In Stock",
-        stockStatusColor: "#EAFDEE",
-        stockStatusTextColor: "text-gray-800",
-      },
-        {
-    sku: "Gluten-Free Oatmeal 100g",
-    category: "Breakfast Foods",
-    brand: "Pure Oats",
-    supplier: "Healthy Grains Co.",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Spicy BBQ Almonds 350g",
-    category: "Snacks & Nuts",
-    brand: "Almond Delight",
-    supplier: "NutriSource Imports",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Vegan Chickpea Pasta",
-    category: "Pasta & Noodles",
-    brand: "Vita Pasta",
-    supplier: "Plant-Based Foods Ltd.",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Dark Chocolate Chia Bars",
-    category: "Healthy Snacks",
-    brand: "Choco Bite",
-    supplier: "Cocoa Essence Distributors",
-    stockStatus: "Out of Stock",
-    stockStatusColor: "#FFEBE6",
-    stockStatusTextColor: "text-[#B42700]",
-  },
-  {
-    sku: "Honey Roasted Cashews",
-    category: "Snacks & Nuts",
-    brand: "Golden Nuts",
-    supplier: "Nutty Solutions Inc.",
-    stockStatus: "20 min left",
-    stockStatusColor: "#FFFAE4",
-    stockStatusTextColor: "text-[#716423]",
-  },
-  {
-    sku: "Multigrain Tortilla Chips",
-    category: "Chips & Crackers",
-    brand: "Crunchy Harvest",
-    supplier: "Grain Masters",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Cold-Pressed Green Juice",
-    category: "Beverages",
-    brand: "Green Vitality",
-    supplier: "Fresh Pressed Juices Co.",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Artisan Sourdough Bread Loaf",
-    category: "Bakery",
-    brand: "Golden Crust",
-    supplier: "Baker's Delight",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Green Juice",
-    category: "Beverages",
-    brand: "Green Vitality",
-    supplier: "Fresh Pres.",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-  {
-    sku: "Cold-Pressed",
-    category: "Beverages",
-    brand: "Green Vitality",
-    supplier: "Fresh Pressed Juices Co.",
-    stockStatus: "In Stock",
-    stockStatusColor: "#EAFDEE",
-    stockStatusTextColor: "text-gray-800",
-  },
-    ]), 1000);
+    setTimeout(
+      () =>
+        resolve([
+          // Replace with your dynamic data
+          {
+            sku: "Organic Quinoa Grains 500g",
+            category: "Grains & Cereals",
+            brand: "Nature's Harvest",
+            supplier: "Green Fields Organic Supplies",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Gluten-Free Oatmeal 100g",
+            category: "Breakfast Foods",
+            brand: "Pure Oats",
+            supplier: "Healthy Grains Co.",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Spicy BBQ Almonds 350g",
+            category: "Snacks & Nuts",
+            brand: "Almond Delight",
+            supplier: "NutriSource Imports",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Vegan Chickpea Pasta",
+            category: "Pasta & Noodles",
+            brand: "Vita Pasta",
+            supplier: "Plant-Based Foods Ltd.",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Dark Chocolate Chia Bars",
+            category: "Healthy Snacks",
+            brand: "Choco Bite",
+            supplier: "Cocoa Essence Distributors",
+            stockStatus: "Out of Stock",
+            stockStatusColor: "#FFEBE6",
+            stockStatusTextColor: "text-[#B42700]",
+          },
+          {
+            sku: "Honey Roasted Cashews",
+            category: "Snacks & Nuts",
+            brand: "Golden Nuts",
+            supplier: "Nutty Solutions Inc.",
+            stockStatus: "20 min left",
+            stockStatusColor: "#FFFAE4",
+            stockStatusTextColor: "text-[#716423]",
+          },
+          {
+            sku: "Multigrain Tortilla Chips",
+            category: "Chips & Crackers",
+            brand: "Crunchy Harvest",
+            supplier: "Grain Masters",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Cold-Pressed Green Juice",
+            category: "Beverages",
+            brand: "Green Vitality",
+            supplier: "Fresh Pressed Juices Co.",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Artisan Sourdough Bread Loaf",
+            category: "Bakery",
+            brand: "Golden Crust",
+            supplier: "Baker's Delight",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Green Juice",
+            category: "Beverages",
+            brand: "Green Vitality",
+            supplier: "Fresh Pres.",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+          {
+            sku: "Cold-Pressed",
+            category: "Beverages",
+            brand: "Green Vitality",
+            supplier: "Fresh Pressed Juices Co.",
+            stockStatus: "In Stock",
+            stockStatusColor: "#EAFDEE",
+            stockStatusTextColor: "text-gray-800",
+          },
+        ]),
+      1000
+    );
   });
 };
 
 const SkuManagement = () => {
   const [data, setData] = useState([]);
   const [filteredData, setFilteredData] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState("");
   const [page, setPage] = useState(1);
   const [itemsPerPage] = useState(5);
 
@@ -129,11 +132,12 @@ const SkuManagement = () => {
   }, []);
 
   useEffect(() => {
-    const filtered = data.filter(item => 
-      item.sku.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      item.supplier.toLowerCase().includes(searchTerm.toLowerCase())
+    const filtered = data.filter(
+      (item) =>
+        item.sku.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.brand.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        item.supplier.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredData(filtered);
   }, [searchTerm, data]);
@@ -146,7 +150,10 @@ const SkuManagement = () => {
     setPage(newPage);
   };
 
-  const paginatedData = filteredData.slice((page - 1) * itemsPerPage, page * itemsPerPage);
+  const paginatedData = filteredData.slice(
+    (page - 1) * itemsPerPage,
+    page * itemsPerPage
+  );
 
   return (
     <>
@@ -156,7 +163,7 @@ const SkuManagement = () => {
           <header className="flex justify-between items-center mb-8">
             <h1 className="text-3xl font-semibold text-gray-800">Dashboard</h1>
           </header>
-          
+
           <div className="flex items-center justify-end space-x-4 mb-10">
             <div className="relative">
               <input
@@ -213,10 +220,14 @@ const SkuManagement = () => {
               >
                 Previous
               </button>
-              <span className="text-gray-600">Page {page} of {Math.ceil(filteredData.length / itemsPerPage)}</span>
+              <span className="text-gray-600">
+                Page {page} of {Math.ceil(filteredData.length / itemsPerPage)}
+              </span>
               <button
                 className="text-gray-600 border border-gray-300 px-4 py-2 rounded-[10px]"
-                disabled={page === Math.ceil(filteredData.length / itemsPerPage)}
+                disabled={
+                  page === Math.ceil(filteredData.length / itemsPerPage)
+                }
                 onClick={() => handlePageChange(page + 1)}
               >
                 Next
