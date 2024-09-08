@@ -116,10 +116,26 @@ const CardSection = ({ product }) => {
 
         <div className="flex justify-between items-center mb-4">
           <div className="text-sm text-gray-600 font-roboto">
+            <div className="text-sm text-gray-600">
+              <span className="font-semibold inline-block">
+                Active Promotion:
+              </span>
+              <span className="inline-block   text-red-500">
+                {product.promotionValidity}
+              </span>
+            </div>
             <h3 className="font-bold text-lg">{product.name}</h3>
-            <p className="text-[16px] font-normal leading-[19.2px] text-left text-[#0A6C91]">
+            {/* <p className="text-[16px] font-normal leading-[19.2px] text-left text-[#0A6C91]">
               {product.price}
-            </p>
+            </p> */}
+            <div className="flex items-center space-x-2">
+              <span className="text-lg font-semibold text-[#0A6C91]">
+                ${product.price}
+              </span>
+              <span className="text-sm text-gray-500 line-through">
+                ${product.originalPrice}
+              </span>
+            </div>
             <p className="text-custom-gray text-12px font-regular leading-14.4px pt-2">
               {product.disc}
             </p>

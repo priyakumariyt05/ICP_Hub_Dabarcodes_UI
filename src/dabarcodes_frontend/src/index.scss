@@ -97,6 +97,7 @@ body {
 .slick-slide {
   display: flex;
   justify-content: center;
+  overflow: hidden;
 }
 
 /* You can also adjust the width of the slider container if needed */
@@ -145,5 +146,6 @@ body {
 .hide-scrollbar {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+
 }
 

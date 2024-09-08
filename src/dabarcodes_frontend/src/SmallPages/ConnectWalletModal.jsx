@@ -48,9 +48,9 @@
 //               <div className="flex-grow border-t border-gray-300"></div>
 //             </div>
 //             <div>
-//               <input 
-//                 type="email" 
-//                 placeholder="Continue using email" 
+//               <input
+//                 type="email"
+//                 placeholder="Continue using email"
 //                 className="w-full p-3 border rounded-md mb-4"
 //               />
 //               <button className="w-full p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
@@ -105,9 +105,9 @@
 //               <div className="flex-grow border-t border-gray-300"></div>
 //             </div>
 //             <div>
-//               <input 
-//                 type="email" 
-//                 placeholder="Continue using email" 
+//               <input
+//                 type="email"
+//                 placeholder="Continue using email"
 //                 className="w-full p-3 border rounded-md mb-4"
 //               />
 //               <button className="w-full p-3 bg-blue-600 text-white rounded-md hover:bg-blue-700">
@@ -123,8 +123,8 @@
 
 // export default ConnectWalletModal;
 
-import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; 
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const ConnectWalletModal = () => {
   const [isModalOpen, setIsModalOpen] = useState(true);
@@ -136,18 +136,23 @@ const ConnectWalletModal = () => {
   };
 
   const handleNextClick = () => {
-    navigate('/role-selection'); 
+    navigate("/role-selection");
   };
 
   return (
     <>
       {isModalOpen && (
-        <div className="fixed inset-0 flex items-center justify-center bg-gray-900 bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center bg-gray-200 bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full relative">
-            <button onClick={closeModal} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl p-1">
+            <button
+              onClick={closeModal}
+              className="absolute top-2 right-2 text-gray-400 hover:text-gray-600 text-2xl p-1"
+            >
               ×
             </button>
-            <h2 className="text-xl font-semibold text-center mb-4">Connect Wallet</h2>
+            <h2 className="text-xl font-semibold text-center mb-4">
+              Connect Wallet
+            </h2>
             <div className="border border-gray-800 rounded-md overflow-hidden">
               <button className="w-full flex items-center justify-center p-3 text-lg font-bold text-black hover:bg-blue-100 border-b border-gray-800">
                 <img src="/image/1.png" alt="ICP Login" className="mr-4" />
@@ -168,9 +173,9 @@ const ConnectWalletModal = () => {
               <div className="flex-grow border-t border-gray-300"></div>
             </div>
             <div>
-              <input 
-                type="email" 
-                placeholder="Continue using email" 
+              <input
+                type="email"
+                placeholder="Continue using email"
                 className="w-full p-3 border rounded-md mb-4"
               />
               <button
@@ -188,4 +193,3 @@ const ConnectWalletModal = () => {
 };
 
 export default ConnectWalletModal;
-

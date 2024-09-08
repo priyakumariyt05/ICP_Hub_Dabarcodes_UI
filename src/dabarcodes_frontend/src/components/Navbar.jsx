@@ -1,9 +1,20 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
+import ConnectWalletModal from "../SmallPages/ConnectWalletModal";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
 
   return (
     <div className="bg-white shadow-lg relative z-10">
@@ -69,18 +80,25 @@ function Navbar() {
             </a>
           </nav>
         </div>
-        <div className="auth-buttons">
+        {/* <div className="auth-buttons">
           <Link to="/connect-wallet" className="no-underline">
             <button className="login-signup ml-4 text-white font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-roboto">
               Login/Signup
             </button>
           </Link>
+        </div> */}
+
+        <div className="auth-buttons">
+          <button
+            onClick={handleOpenModal}
+            className="login-signup ml-4 text-white font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-roboto"
+          >
+            Login/Signup
+          </button>
         </div>
-        {/* <div className="auth-buttons">
-  <button className="login-signup ml-4 text-white font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded">
-    Login/Signup
-  </button> 
-</div> */}
+
+        {/* Render ConnectWalletModal if isModalOpen is true */}
+        {isModalOpen && <ConnectWalletModal onClose={handleCloseModal} />}
       </div>
 
       {/* Mobile Menu */}
@@ -136,11 +154,11 @@ function Navbar() {
       <div className="px-4 py-2 text-sm text-gray-600 font-roboto">
         <Link to="/" className=" hover:underline">
           Home
-        </Link>{" "}
+        </Link>
         /
         <Link to="/section1" className=" hover:underline">
           section1
-        </Link>{" "}
+        </Link>
         /
         <Link to="/homepage" className=" hover:underline">
           section2
