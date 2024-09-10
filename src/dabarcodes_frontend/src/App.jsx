@@ -51,6 +51,7 @@ import ContactSupport from "./Profile/Setting/ContactSupport";
 import OverlayQR from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayQR";
 import OverlayMultiple from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple";
 import PlansPricing from "./NewHomePageCustomer.jsx/PlansPricing";
+import AccountPage from "./Dashboard/Accountpage";
 
 function App() {
   return (
@@ -116,6 +117,7 @@ function App() {
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
         <Route path="/*" element={<DashboardRoutes />} />
+        <Route path ="account-page" element={<AccountPage/>}/>
         {/* <Route path="/dashboard" element={<DashboardRoutes />} /> */}
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/contact-support" element={<ContactSupport />} />

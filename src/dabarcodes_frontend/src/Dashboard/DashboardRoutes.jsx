@@ -38,6 +38,7 @@ import SkuManagement from './SkuManagement';
 import Notifications from './Notifications';
 import Sidebar from './Sidebar';
 
+
 const DashboardRoutes = () => {
   return (
     <div className="flex">
@@ -49,6 +50,7 @@ const DashboardRoutes = () => {
           <Route path="/sku-management" element={<SkuManagement />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="*" element={<Navigate to="/dashboard" />} />
+  
           {/* Add other routes if needed */}
         </Routes>
       </main>

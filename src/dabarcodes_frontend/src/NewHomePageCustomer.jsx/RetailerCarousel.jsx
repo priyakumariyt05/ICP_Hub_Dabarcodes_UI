@@ -133,7 +133,10 @@ const RetailerCarousel = ({
             key={index}
             storeName={retailer.storeName}
             offer={retailer.offer}
-            validTill={retailer.validTill}
+            // validTill={retailer.validTill}
+            storeAddress={retailer.storeAddress}
+            direction={retailer.direction}
+            storeTiming={retailer.storeTiming}
             imageSrc={retailer.imageSrc}
           />
         ))}

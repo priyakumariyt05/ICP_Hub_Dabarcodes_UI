@@ -140,6 +140,7 @@ const MySku = () => {
                 hoverBackgroundColor: ['#2563eb', '#9ca3af', '#003D6A'],
                 borderColor: ['#ffffff', '#ffffff', '#ffffff'],
                 borderWidth: 2,
+                borderRadius:30,
             },
         ],
     };

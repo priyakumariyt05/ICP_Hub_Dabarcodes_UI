@@ -113,7 +113,7 @@ import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
 import CardSection from "./CardSection";
 
-const ProductSection2 = ({ title, products, viewAllHandler }) => {
+const ProductSection2 = ({ title, products, viewAllHandler, showBorder = true }) => {
   const [showAll, setShowAll] = useState(false);
 
 
@@ -139,7 +139,8 @@ const ProductSection2 = ({ title, products, viewAllHandler }) => {
 
   return (
     // <div className="my-8 border p-6 rounded-lg shadow-lg">
-    <div className="my-4 md:my-6 lg:my-8 border p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg">
+    // <div className="my-4 md:my-6 lg:my-8 border p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg">
+    <div className={`my-4 md:my-6 lg:my-8 p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg ${showBorder ? 'border' : ''}`}>
       {/* <div className="flex justify-between items-center mb-4"> */}
       <div className="flex  md:flex-row justify-between  mb-4 md:mb-6">
         <h2 className="font-bold text-xl">{title}</h2>

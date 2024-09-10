@@ -37,47 +37,59 @@ import RetailerCard from "./RetailerCard";
 const RetailerGrid = () => {
   const retailers = [
     {
-      storeName: "Retailer A",
-      offer: "10% off on all products",
-      validTill: "31st December 2024",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
+      storeTiming: "9am to 6pm",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
     {
-      storeName: "Retailer B",
-      offer: "20% off on electronics",
-      validTill: "15th January 2025",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
+      storeTiming: "9am to 6pm",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
     {
-      storeName: "Retailer C",
-      offer: "Buy 1 Get 1 Free",
-      validTill: "10th November 2024",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
+      storeTiming: "9am to 6pm",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
     {
-      storeName: "Retailer D",
-      offer: "Free Shipping on orders over $50",
-      validTill: "25th December 2024",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
+      storeTiming: "9am to 6pm",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
     {
-      storeName: "Retailer E",
-      offer: "15% off on fashion items",
-      validTill: "5th February 2025",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
+      storeTiming: "9am to 6pm",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
     {
-      storeName: "Retailer F",
-      offer: "Up to 50% off on clearance items",
+      storeName: "Urban Grocers",
+      storeAddress: "132 Elm Street, Downtown",
+      offer: "+5 active promotion",
       validTill: "20th December 2024",
       imageSrc: "/image/promo.png",
+      direction: "500 meter from you",
     },
   ];
 
   return (
     <div className="p-10">
       {/* Header Section */}
-      <div className="flex justify-between items-center mb-8">
+      <div className="flex justify-between items-center mb-8 font-roboto">
         <h1 className="text-2xl font-semibold font-butler">Retailer near me</h1>
         <button className="text-black px-4 py-2 rounded-full font-roboto">
           View All
@@ -91,7 +103,10 @@ const RetailerGrid = () => {
             key={index}
             storeName={retailer.storeName}
             offer={retailer.offer}
-            validTill={retailer.validTill}
+            direction={retailer.direction}
+            // validTill={retailer.validTill}
+            storeTiming={retailer.storeTiming}
+            storeAddress={retailer.storeAddress}
             imageSrc={retailer.imageSrc}
           />
         ))}

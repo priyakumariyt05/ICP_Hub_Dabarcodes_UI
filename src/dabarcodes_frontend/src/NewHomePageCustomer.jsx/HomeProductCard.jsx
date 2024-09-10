@@ -92,127 +92,154 @@ import RetailerCarousel from "./RetailerCarousel";
 import ProductSection2 from "./ProductSection2";
 import Footer from "../components/Footer";
 import CardDetails from "./CardDetails";
-const wishlistData = [
-  {
-    id: 1,
-    image: "/image/drink.png",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
+import Navbar2 from "../components/Navbar2";
+import { useData } from "../ContextApi.jsx/DataContext";
 
-  {
-    id: 2,
-    image: "/image/drink.png",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
-  {
-    id: 3,
-    image: "/image/drink.png",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
-  {
-    id: 4,
-    image: "/image/drink.png",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
-];
+// const wishlistData = [
+//   {
+//     id: 1,
+//     image: "/image/drink.png",
+//     promotionValidity: "valid untill 2024, Sept 19",
+//     name: "Nestle Ice Coffee",
+//     brand: "Lingo Pvt Ltd",
+//     size: "527 ml",
+//     discount: "$15 off",
+//     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+//     price: "$27",
+//     originalPrice: "52",
+//   },
+
+//   {
+//     id: 2,
+//     image: "/image/drink.png",
+//     promotionValidity: "valid untill 2024, Sept 19",
+//     name: "Nestle Ice Coffee",
+//     brand: "Lingo Pvt Ltd",
+//     size: "527 ml",
+//     discount: "15 off",
+//     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+//     price: "27",
+//     originalPrice: "52",
+//   },
+//   {
+//     id: 3,
+//     image: "/image/drink.png",
+//     promotionValidity: "valid untill 2024, Sept 19",
+//     name: "Nestle Ice Coffee",
+//     brand: "Lingo Pvt Ltd",
+//     size: "527 ml",
+//     discount: "15 off",
+//     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+//     price: "27",
+//     originalPrice: "52", 
+//   },
+//   {
+//     id: 4,
+//     image: "/image/drink.png",
+//     promotionValidity: "valid untill 2024, Sept 19",
+//     name: "Nestle Ice Coffee",
+//     brand: "Lingo Pvt Ltd",
+//     size: "527 ml",
+//     discount: "15 off",
+//     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+//     price: "27",
+//     originalPrice: "52",
+//   },
+// ];
 const HomeProductCard = () => {
-  const [wishlist, setWishlist] = useState(wishlistData);
+  // const [wishlist, setWishlist] = useState(wishlistData);
+  const { wishlist, retailerList } = useData()
 
-  const Sku = [
-    {
-      id: 1,
-      image: "/image/drink.png",
-      name: "Nestle Ice Coffee",
-      brand: "Lingo Pvt Ltd",
-      size: "527 ml",
-      discount: "$15 off",
-      disc: "Super smooth and creamy vanilla half and half crowned with s...",
-      price: "$27",
-    },
+  // const Sku = [
+  //   {
+  //     id: 1,
+  //     image: "/image/drink.png",
+  //     name: "Nestle Ice Coffee",
+  //     brand: "Lingo Pvt Ltd",
+  //     size: "527 ml",
+  //     discount: "$15 off",
+  //     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+  //     price: "$27",
+  //   },
 
-    {
-      id: 1,
-      image: "/image/drink.png",
-      name: "Nestle Ice Coffee",
-      brand: "Lingo Pvt Ltd",
-      size: "527 ml",
-      discount: "$15 off",
-      disc: "Super smooth and creamy vanilla half and half crowned with s...",
-      price: "$27",
-    },
+  //   {
+  //     id: 1,
+  //     image: "/image/drink.png",
+  //     name: "Nestle Ice Coffee",
+  //     brand: "Lingo Pvt Ltd",
+  //     size: "527 ml",
+  //     discount: "$15 off",
+  //     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+  //     price: "$27",
+  //   },
 
-    {
-      id: 1,
-      image: "/image/drink.png",
-      name: "Nestle Ice Coffee",
-      brand: "Lingo Pvt Ltd",
-      size: "527 ml",
-      discount: "$15 off",
-      disc: "Super smooth and creamy vanilla half and half crowned with s...",
-      price: "$27",
-    },
+  //   {
+  //     id: 1,
+  //     image: "/image/drink.png",
+  //     name: "Nestle Ice Coffee",
+  //     brand: "Lingo Pvt Ltd",
+  //     size: "527 ml",
+  //     discount: "$15 off",
+  //     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+  //     price: "$27",
+  //   },
 
-    {
-      id: 1,
-      image: "/image/drink.png",
-      name: "Nestle Ice Coffee",
-      brand: "Lingo Pvt Ltd",
-      size: "527 ml",
-      discount: "$15 off",
-      disc: "Super smooth and creamy vanilla half and half crowned with s...",
-      price: "$27",
-    },
-  ];
-  const retailers = [
-    {
-      storeName: "Retailer A",
-      offer: "10% off on all products",
-      validTill: "31st December 2024",
-      imageSrc: "/image/promo.png",
-    },
-    {
-      storeName: "Retailer B",
-      offer: "20% off on electronics",
-      validTill: "15th January 2025",
-      imageSrc: "/image/promo.png",
-    },
-    {
-      storeName: "Retailer C",
-      offer: "Buy 1 Get 1 Free",
-      validTill: "10th November 2024",
-      imageSrc: "/image/promo.png",
-    },
-    // Add more retailers as needed
-  ];
+  //   {
+  //     id: 1,
+  //     image: "/image/drink.png",
+  //     name: "Nestle Ice Coffee",
+  //     brand: "Lingo Pvt Ltd",
+  //     size: "527 ml",
+  //     discount: "$15 off",
+  //     disc: "Super smooth and creamy vanilla half and half crowned with s...",
+  //     price: "$27",
+  //   },
+  // ];
+  // const retailers = [
+  //   {
+  //     storeName: "Urban Grocers",
+  //     storeAddress:"132 Elm Street, Downtown",
+  //     offer: "+5 active promotion",
+  //     storeTiming:"9am to 6pm",
+  //     imageSrc: "/image/promo.png",
+  //     direction:"500 meter from you",
+  //   },
+  //   {
+  //     storeName: "Urban Grocers",
+  //     storeAddress:"132 Elm Street, Downtown",
+  //     offer: "+5 active promotion",
+  //     storeTiming:"9am to 6pm",
+  //     imageSrc: "/image/promo.png",
+  //     direction:"500 meter from you",
+  //   },
+  //   {
+  //     storeName: "Urban Grocers",
+  //     storeAddress:"132 Elm Street, Downtown",
+  //     offer: "+5 active promotion",
+  //     storeTiming:"9am to 6pm",
+  //     imageSrc: "/image/promo.png",
+  //     direction:"500 meter from you",
+  //   }, 
+  //   {
+  //     storeName: "Urban Grocers",
+  //     storeAddress:"132 Elm Street, Downtown",
+  //     offer: "+5 active promotion",
+  //     storeTiming:"9am to 6pm",
+  //     imageSrc: "/image/promo.png",
+  //     direction:"500 meter from you",
+  //   },
+  //   // Add more retailers as needed
+  // ];
   const handleViewAllClick = () => {
     // Logic for when the "View All" button is clicked
   };
   return (
     <>
+    <Navbar2/>
       <CardDetails />
       <RetailerCarousel
         title="Participating Retailers"
-        retailers={retailers}
+        retailers={retailerList}
         buttonLabel="View All"
         onViewAllClick={handleViewAllClick}
       />
@@ -223,7 +250,7 @@ const HomeProductCard = () => {
         You might also like
       </h1>
       <div className="p-4 space-y-8">
-        <ProductSection2 products={wishlist} />
+        <ProductSection2 products={wishlist}  showBorder={false}  />
       </div>
       <Footer />
     </>
