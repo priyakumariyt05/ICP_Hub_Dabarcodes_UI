@@ -34,7 +34,7 @@ import DashboardRoutes from "./Dashboard/DashboardRoutes";
 import PrivacyPreference from "./ProfileDetails/PrivacyPreference";
 import HomePage2 from "./NewHomePageCustomer.jsx/Homepage2";
 import TopSku from "./NewHomePageCustomer.jsx/TopSku";
-import Explore from "./NewHomePageCustomer.jsx/Explore";
+
 
 import HomeProductCard from "./NewHomePageCustomer.jsx/HomeProductCard";
 import CreateProfile from "./CreateAccount/CreateProfile";
@@ -52,6 +52,8 @@ import OverlayQR from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayQR";
 import OverlayMultiple from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple";
 import PlansPricing from "./NewHomePageCustomer.jsx/PlansPricing";
 import AccountPage from "./Dashboard/Accountpage";
+import ExploreCategories from "./NewHomePageCustomer.jsx/Explore/ExploreCategories";
+import ExploreBrands from "./NewHomePageCustomer.jsx/Explore/ExploreBrands";
 
 function App() {
   return (
@@ -96,7 +98,9 @@ function App() {
         {/* HOMEPAGE2 */}
         <Route path="/homepage2" element={<HomePage2 />} />
         <Route path="/top-sku" element={<TopSku />} />
-        <Route path="/explore" element={<Explore />} />
+       
+        <Route path="/catergories" element={<ExploreCategories />} />
+        <Route path="/explore-brands" element={<ExploreBrands />} />
         <Route path="/home-product-card" element={<HomeProductCard />} />
         <Route path="/qr-card" element={<QrCard />} />
         <Route path="/session-expired" element={<SessionExpiredModal />} />
@@ -117,7 +121,7 @@ function App() {
         <Route path="/product-list" element={<ProductList />} />
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
         <Route path="/*" element={<DashboardRoutes />} />
-        <Route path ="account-page" element={<AccountPage/>}/>
+        <Route path="account-page" element={<AccountPage />} />
         {/* <Route path="/dashboard" element={<DashboardRoutes />} /> */}
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/contact-support" element={<ContactSupport />} />

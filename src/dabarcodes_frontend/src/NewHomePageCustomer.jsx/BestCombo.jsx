@@ -103,112 +103,8 @@
 
 // export default BestCombo;
 import React from "react";
-import { Link } from "react-router-dom";
+
 import CardSection from "./CardSection";
-
-const Combo = [
-  {
-    id: 1,
-    image: "https://via.placeholder.com/150",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
-  {
-    id: 2,
-    image: "https://via.placeholder.com/150",
-    name: "Nestle Ice Coffee",
-    brand: "Lingo Pvt Ltd",
-    size: "527 ml",
-    discount: "$15 off",
-    disc: "Super smooth and creamy vanilla half and half crowned with s...",
-    price: "$27",
-  },
-  // Add more products as needed
-];
-
-// const BestCombo = ({ data }) => {
-//   // Split Combo into two parts
-//   const halfLength = Math.ceil(data.length / 2);
-//   const firstHalf = data.slice(0, halfLength);
-//   const secondHalf = data.slice(halfLength);
-
-//   return (
-//     <div className="border mb-12 rounded-md mx-4">
-//       <div className="flex mx-4 text-balance justify-between my-4 md:mx-8 font-semibold">
-//         <p className="lg:text-[20px]">Best Combo offers</p>
-//         <Link
-//           to=""
-//           className="cursor-pointer hover:underline decoration-[#0D90C1] underline-offset-8"
-//         >
-//           View All
-//         </Link>
-//       </div>
-//       <div className="flex flex-wrap gap-4 mt-2 px-2 hide-scrollbar mb-8 md:mx-4">
-//         <div className="flex flex-col gap-4 w-full md:w-1/2">
-//           {firstHalf.map(product => (
-//             <CardSection key={product.id} product={product} />
-//           ))}
-//         </div>
-//         <div className="flex flex-col gap-4 w-full md:w-1/2">
-//           {secondHalf.map(product => (
-//             <CardSection key={product.id} product={product} />
-//           ))}
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-// export default BestCombo
-
-// const BestCombo = ({ data }) => {
-//   return (
-//     <div className="border mb-12 rounded-md mx-4">
-//       <div className="flex mx-4 text-balance justify-between my-4 md:mx-8 font-semibold">
-//         <p className="lg:text-[20px]">Best Combo offers</p>
-//         <a
-//           href=""
-//           className="cursor-pointer hover:underline decoration-[#0D90C1] underline-offset-8"
-//         >
-//           View All
-//         </a>
-//       </div>
-//       <div className="flex gap-4 mt-2 px-2 hide-scrollbar mb-8">
-//         {data.map(product => (
-//           <CardSection key={product.id} product={product} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BestCombo;
-
-// const BestCombo = ({ data }) => {
-//   return (
-//     <div className="border mb-12 rounded-md mx-4">
-//       <div className="flex mx-4 text-balance justify-between my-4 md:mx-8 font-semibold">
-//         <p className="lg:text-[20px]">Best Combo offers</p>
-//         <a
-//           href=""
-//           className="cursor-pointer hover:underline decoration-[#0D90C1] underline-offset-8"
-//         >
-//           View All
-//         </a>
-//       </div>
-//       <div className="flex gap-4 overflow-x-auto px-2 hide-scrollbar mb-8">
-//         {data.map(product => (
-//           <CardSection key={product.id} product={product} />
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default BestCombo;
 
 import { useKeenSlider } from "keen-slider/react";
 import "keen-slider/keen-slider.min.css";
@@ -226,16 +122,19 @@ const BestCombo = ({ data }) => {
       "(min-width: 1024px)": {
         slides: { perView: 2, spacing: 20 },
       },
+      "(min-width: 1280px)": {
+        slides: { perView: 2, spacing: 20 },
+      },
     },
   });
 
   return (
     <div className="my-4 md:my-6 lg:my-8 border p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg m-8">
-      <div className="flex mx-4 text-balance justify-between my-4 md:mx-8 font-semibold">
-        <p className="lg:text-[20px]">Best Combo offers</p>
+      <div className="flex  justify-between items-center my-4">
+        <p className="font-semibold lg:text-[20px] text-[16px]">Best Combo Offers</p>
         <a
-          href=""
-          className="cursor-pointer hover:underline decoration-[#0D90C1] underline-offset-8"
+          href="#"
+          className="text-[#0D90C1] text-sm md:text-base cursor-pointer hover:underline underline-offset-4"
         >
           View All
         </a>

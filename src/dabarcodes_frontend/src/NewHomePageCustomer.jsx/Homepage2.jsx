@@ -466,16 +466,19 @@ import Recomendation from "./Recomendation";
 import RetailerCarousel from "./RetailerCarousel";
 import Footer from "../components/Footer";
 import Navbar2 from "../components/Navbar2";
-import { useData } from "../ContextApi.jsx/DataContext";
-
+import { useData } from "../ContextApi/DataContext";
+import BestCombo from "./BestCombo";
 
 const HomePage2 = () => {
-  const { wishlist, linkedSku, topSku, upComingOffer, retailerList } = useData()
+  const { wishlist, linkedSku, topSku, upComingOffer, retailerList, combo } =
+    useData();
 
   const handleViewAllClick = () => {
     // Logic for when the "View All" button is clicked
   };
 
+  const firstHalf = combo.slice(0, 2);
+  const secondHalf = combo.slice(2, 4);
   return (
     <>
       <Navbar2 />
@@ -499,6 +502,16 @@ const HomePage2 = () => {
         <div className="p-4 space-y-8">
           <ProductSection2 title="Top SKU" products={topSku} />
           <ProductSection2 title="Upcoming Offer" products={upComingOffer} />
+        </div>
+      </div>
+
+      {/* combo */}
+      <div className="flex flex-col md:flex-row ">
+        <div className="w-full md:w-1/2">
+          <BestCombo data={firstHalf} />
+        </div>
+        <div className="w-full md:w-1/2">
+          <BestCombo data={secondHalf} />
         </div>
       </div>
 

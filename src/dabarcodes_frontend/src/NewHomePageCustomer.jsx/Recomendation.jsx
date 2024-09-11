@@ -249,7 +249,7 @@ const ProductCard = ({
             <span className="font-semibold inline-block">
               Active Promotion:
             </span>
-            <span className="inline-block ml-1  text-red-500">
+            <span className="inline-block ml-1 font-bold  text-[#B42700]">
               {promotionValidity}
             </span>
           </div>

@@ -7,7 +7,7 @@ import RetailerGrid from "./RetailerGrid";
 import Recomendation from "./Recomendation";
 import Navbar2 from "../components/Navbar2";
 import Footer from "../components/Footer";
-import { useData } from "../ContextApi.jsx/DataContext";
+import { useData } from "../ContextApi/DataContext";
 
 // const Sku = [
 //   {
@@ -224,7 +224,7 @@ import { useData } from "../ContextApi.jsx/DataContext";
 //   // Logic for when the "View All" button is clicked
 // };
 const TopSku = () => {
-  const { topSku } = useData()
+  const { topSku } = useData();
   return (
     <>
       <Navbar2 />
