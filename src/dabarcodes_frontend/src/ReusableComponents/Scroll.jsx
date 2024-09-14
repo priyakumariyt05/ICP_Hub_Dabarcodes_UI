@@ -1,4 +1,4 @@
-// HorizontalScroll.js
+
 import React, { useRef } from 'react';
 import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'; // Optional: use any icons or custom buttons
 

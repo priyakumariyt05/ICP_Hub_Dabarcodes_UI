@@ -9,6 +9,7 @@ import {
   comboData,
   brands,
   categories,
+  products,
 } from "../Data/data";
 const DataContext = createContext();
 
@@ -21,6 +22,7 @@ export const DataProvider = ({ children }) => {
   const [combo] = useState(comboData);
   const [brandData] =useState(brands);
   const[exploreCategory] =useState(categories)
+  const [product] =useState(products)
 
   return (
     <DataContext.Provider
@@ -33,6 +35,7 @@ export const DataProvider = ({ children }) => {
         combo,
         brandData,
         exploreCategory,
+        product,
 
       }}
     >

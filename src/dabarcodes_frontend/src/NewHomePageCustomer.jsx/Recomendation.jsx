@@ -164,6 +164,7 @@
 import { GoBookmark } from "react-icons/go";
 import React from "react";
 import Slider from "react-slick";
+import { useData } from "../ContextApi/DataContext";
 
 const ProductCard = ({
   imageUrl,
@@ -182,11 +183,11 @@ const ProductCard = ({
 }) => {
   return (
     <div
-      className="border border-orange-200 rounded-lg shadow-lg p-4 flex items-start space-x-4 w-full max-w-lg font-roboto"
+      className="border border-orange-200 rounded-lg shadow-lg p-4 flex items-start space-x-4 w-full max-w-lg font-roboto "
       style={{ border: `0.5px solid ${borderColor}` }}
     >
       {/* Left Section - Product Image and Discount Label */}
-      <div className="w-1/5 flex flex-col items-center">
+      <div className="w-1/5 flex flex-col items-center ">
         <img
           src={imageUrl}
           alt={productName}
@@ -236,26 +237,15 @@ const ProductCard = ({
 
         {/* Third Row: Column with Two Rows */}
         <div className=" flex flex-col space-y-4 ">
-          {/* Promotion Info */}
-          {/* <div className="text-sm text-gray-600">
-            <p className="text-sm text-gray-500">
-              Active Promotion{promotionInfo}
-            </p>
-            <span className="font-semibold text-red-500">Valid Until:</span>
-            {promotionValidity}
-          </div> */}
-
-          <div className="text-sm text-gray-600">
-            <span className="font-semibold inline-block">
-              Active Promotion:
-            </span>
-            <span className="inline-block ml-1 font-bold  text-[#B42700]">
+          <div className="text-sm text-gray-400">
+            <span className="font-medium inline-block">Active Promotion:</span>
+            <span className="inline-block  font-bold  text-[#B42700]">
               {promotionValidity}
             </span>
           </div>
 
-          <div className="text-sm text-gray-500">
-            <span className="font-semibold">
+          <div className="text-sm text-gray-400">
+            <span className="font-medium">
               Promoted By: <br />
             </span>
             <span className="text-[13.34px] text-black font-semibold leading-[16.8px] tracking-[-0.1px]">
@@ -265,8 +255,14 @@ const ProductCard = ({
             <br />
             {othersCount && <span> +{othersCount} others</span>}
             <div className="flex justify-between items-center mt-4">
-              <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg">
-                {linkSku}
+              {/* <button className="bg-[#0D90C1] text-white px-3 py-1 rounded-lg mr-4">
+              Link Sku
+            </button> */}
+              {/* <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto">
+          Link SKU
+        </button> */}
+              <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto min-w-[100px] flex-shrink-0">
+                Link SKU
               </button>
 
               <button className="text-gray-400 mt-2 sm:mt-0 flex items-center">
@@ -322,7 +318,6 @@ const ProductSlider = ({ products = [] }) => {
               promotionValidity={product.promotionValidity}
               promotedBy={product.promotedBy}
               othersCount={product.othersCount}
-              linkSku={product.linkSku}
             />
           </div>
         ))}
@@ -331,92 +326,93 @@ const ProductSlider = ({ products = [] }) => {
   );
 };
 
-const products = [
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$3 off",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$3 off",
-    promotionInfo: "Active Promotion",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$3 off",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$3 off",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$3 off",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-  {
-    imageUrl: "/image/drink.png",
-    productName: "Nestle Ice Coffee",
-    price: "12",
-    originalPrice: "15",
-    size: "500g Pouch",
-    description: "Refreshing drink, perfect for any occasion...",
-    discount: "$13 off",
-    promotionValidity: "Valid Until 2024, Oct 5",
-    promotedBy: "Lingo Pvt Ltd",
-    othersCount: 2,
-    linkSku: "Link SKU",
-  },
-];
+// const products = [
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$3 off",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$3 off",
+//     promotionInfo: "Active Promotion",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$3 off",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$3 off",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$3 off",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+//   {
+//     imageUrl: "/image/drink.png",
+//     productName: "Nestle Ice Coffee",
+//     price: "12",
+//     originalPrice: "15",
+//     size: "500g Pouch",
+//     description: "Refreshing drink, perfect for any occasion...",
+//     discount: "$13 off",
+//     promotionValidity: "Valid Until 2024, Oct 5",
+//     promotedBy: "Lingo Pvt Ltd",
+//     othersCount: 2,
+
+//   },
+// ];
 
 const Recomendation = () => {
+  const { product } = useData();
   return (
     <div className=" mx-auto py-10">
-      <ProductSlider products={products} />
+      <ProductSlider products={product} />
     </div>
   );
 };

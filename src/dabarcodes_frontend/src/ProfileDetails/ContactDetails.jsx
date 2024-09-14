@@ -294,7 +294,6 @@
 
 // export default ContactDetails;
 
-
 // import React, { useState } from "react";
 // import { FaCheck, FaBars, FaTimes } from "react-icons/fa";
 // import { Link } from "react-router-dom";
@@ -661,7 +660,6 @@
 //           </form>
 //         </div>
 
-        
 //       </div>
 //     </div>
 //   );
@@ -965,27 +963,25 @@ const ContactDetails = () => {
               </div>
             </div>
             <div className="flex justify-between mt-8">
-          <Link to="/personal-details">
-            <button
-              type="button"
-              className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
-            >
-              Back
-            </button>
-          </Link>
-          <Link to="/additional-information">
-            <button
-              type="submit"
-              className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
-            >
-              Next
-            </button>
-          </Link>
-        </div>
+              <Link to="/personal-details">
+                <button
+                  type="button"
+                  className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+                >
+                  Back
+                </button>
+              </Link>
+              <Link to="/additional-information">
+                <button
+                  type="submit"
+                  className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                >
+                  Next
+                </button>
+              </Link>
+            </div>
           </form>
         </div>
-
-        
       </div>
     </div>
   );

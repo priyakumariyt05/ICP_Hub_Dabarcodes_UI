@@ -627,10 +627,10 @@ const PrivacyPreference = () => {
             </button>
           </Link>
           <Link
-            to="/homepage2"
+            to="/create-password"
             className="px-4 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-700 inline-block"
           >
-            Submit
+          Next
           </Link>
         </div>
       </div>

@@ -37,6 +37,8 @@ import PromotionManagement from './PromotionManagement';
 import SkuManagement from './SkuManagement';
 import Notifications from './Notifications';
 import Sidebar from './Sidebar';
+import UploadModal from './Modals/UploadModal';
+
 
 
 const DashboardRoutes = () => {
@@ -50,7 +52,7 @@ const DashboardRoutes = () => {
           <Route path="/sku-management" element={<SkuManagement />} />
           <Route path="/notifications" element={<Notifications />} />
           <Route path="*" element={<Navigate to="/dashboard" />} />
-  
+          <Route path="/upload-modal" element={<UploadModal />} />
           {/* Add other routes if needed */}
         </Routes>
       </main>

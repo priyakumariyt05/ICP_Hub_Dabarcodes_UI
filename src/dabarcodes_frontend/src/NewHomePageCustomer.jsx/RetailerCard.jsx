@@ -49,7 +49,7 @@ const RetailerCard = ({
           <p className="text-gray-500">{storeAddress}</p>
         </div>
       </div>
-      <p className="font-bold mt-2 text-[#646464]">
+      <p className="font-sm mt-2 text-[#646464]">
         Store Timing: <span className="text-[#171717]">{storeTiming}</span>
       </p>
       {/* <p className="font-bold mt-2 text-[#646464]">

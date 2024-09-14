@@ -130,7 +130,7 @@ import { useData } from "../ContextApi/DataContext";
 //     discount: "15 off",
 //     disc: "Super smooth and creamy vanilla half and half crowned with s...",
 //     price: "27",
-//     originalPrice: "52", 
+//     originalPrice: "52",
 //   },
 //   {
 //     id: 4,
@@ -146,15 +146,14 @@ import { useData } from "../ContextApi/DataContext";
 //   },
 // ];
 const HomeProductCard = () => {
-
-  const { wishlist, retailerList } = useData()
+  const { wishlist, retailerList } = useData();
 
   const handleViewAllClick = () => {
     // Logic for when the "View All" button is clicked
   };
   return (
     <>
-    <Navbar2/>
+      <Navbar2 />
       <CardDetails />
       <RetailerCarousel
         title="Participating Retailers"
@@ -169,7 +168,7 @@ const HomeProductCard = () => {
         You might also like
       </h1>
       <div className="p-4 space-y-8">
-        <ProductSection2 products={wishlist}  showBorder={false}  />
+        <ProductSection2 products={wishlist} showBorder={false} />
       </div>
       <Footer />
     </>

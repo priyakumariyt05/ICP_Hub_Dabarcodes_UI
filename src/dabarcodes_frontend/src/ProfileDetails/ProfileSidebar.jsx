@@ -7,6 +7,7 @@ const ProfileSidebar = ({ sidebarOpen, currentStep }) => {
     { label: "Contact Details", step: 2 },
     { label: "Additional Information", step: 3 },
     { label: "Privacy Preferences", step: 4 },
+    { label: "Create Password", step: 5 },
   ];
 
   return (

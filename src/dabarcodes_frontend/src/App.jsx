@@ -35,7 +35,6 @@ import PrivacyPreference from "./ProfileDetails/PrivacyPreference";
 import HomePage2 from "./NewHomePageCustomer.jsx/Homepage2";
 import TopSku from "./NewHomePageCustomer.jsx/TopSku";
 
-
 import HomeProductCard from "./NewHomePageCustomer.jsx/HomeProductCard";
 import CreateProfile from "./CreateAccount/CreateProfile";
 import QrCard from "./NewHomePageCustomer.jsx/QrCard";
@@ -54,6 +53,12 @@ import PlansPricing from "./NewHomePageCustomer.jsx/PlansPricing";
 import AccountPage from "./Dashboard/Accountpage";
 import ExploreCategories from "./NewHomePageCustomer.jsx/Explore/ExploreCategories";
 import ExploreBrands from "./NewHomePageCustomer.jsx/Explore/ExploreBrands";
+import PasswordForm from "./Dashboard/PasswordForm";
+import RetailerNear from "./NewHomePageCustomer.jsx/RetailerNear";
+import AddStoreModal from "./Dashboard/Modals/AddStoreModal";
+import CreatePassword from "./ProfileDetails/CreatePassword";
+import AccountCredentialsPopup from "./NewHomePageCustomer.jsx/Modals/AccountCredentialsPopup";
+
 
 function App() {
   return (
@@ -95,10 +100,14 @@ function App() {
         <Route path="/privacy-preference" element={<PrivacyPreference />} />
         <Route path="/personal-details" element={<PersonalDetails />} />
         <Route path="/contact-details" element={<ContactDetails />} />
+        <Route path="/create-password" element={<CreatePassword />} />
+        <Route path="/account-credentials" element={<AccountCredentialsPopup />} />
+
+ 
         {/* HOMEPAGE2 */}
         <Route path="/homepage2" element={<HomePage2 />} />
         <Route path="/top-sku" element={<TopSku />} />
-       
+        <Route path="/retailer-near" element={<RetailerNear />} />
         <Route path="/catergories" element={<ExploreCategories />} />
         <Route path="/explore-brands" element={<ExploreBrands />} />
         <Route path="/home-product-card" element={<HomeProductCard />} />
@@ -122,6 +131,8 @@ function App() {
         <Route path="/dashboard/*" element={<DashboardRoutes />} />
         <Route path="/*" element={<DashboardRoutes />} />
         <Route path="account-page" element={<AccountPage />} />
+        <Route path="password-form" element={<PasswordForm />} />
+        <Route path="add-store-form" element={<AddStoreModal />} />
         {/* <Route path="/dashboard" element={<DashboardRoutes />} /> */}
         <Route path="/feedback" element={<FeedbackForm />} />
         <Route path="/contact-support" element={<ContactSupport />} />

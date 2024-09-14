@@ -16,7 +16,7 @@ const SessionTimeoutModal = () => {
   const formatTime = (seconds) => {
     const minutes = Math.floor(seconds / 60);
     const secs = seconds % 60;
-    return `${minutes} min ${secs} sec`; // Use backticks for template literals
+    return `${minutes} min ${secs} sec`; 
   };
 
   const handleContinue = () => {
