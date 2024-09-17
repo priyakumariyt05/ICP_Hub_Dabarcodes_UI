@@ -65,7 +65,7 @@ export default AccountCredentialsPopup;
 
 
 
-// call to parent components
+// call in parent components
 
 // import React, { useState } from 'react';
 // import AccountCredentialsPopup from './AccountCredentialsPopup';
