@@ -10,6 +10,7 @@ import {
   brands,
   categories,
   products,
+  RandomcardData,
 } from "../Data/data";
 const DataContext = createContext();
 
@@ -23,6 +24,7 @@ export const DataProvider = ({ children }) => {
   const [brandData] =useState(brands);
   const[exploreCategory] =useState(categories)
   const [product] =useState(products)
+  const [randomCardData] =useState(RandomcardData)
 
   return (
     <DataContext.Provider
@@ -36,6 +38,7 @@ export const DataProvider = ({ children }) => {
         brandData,
         exploreCategory,
         product,
+        randomCardData
 
       }}
     >

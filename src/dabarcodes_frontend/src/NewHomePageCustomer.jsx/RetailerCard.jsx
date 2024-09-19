@@ -24,6 +24,7 @@
 
 import React from "react";
 import { MdOutlineDirections } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const RetailerCard = ({
   storeName,
@@ -52,23 +53,26 @@ const RetailerCard = ({
       <p className="font-sm mt-2 text-[#646464]">
         Store Timing: <span className="text-[#171717]">{storeTiming}</span>
       </p>
-      {/* <p className="font-bold mt-2 text-[#646464]">
-          Promotional Offer: <span className="text-[#0D90C1]">{offer}</span>
-        </p> */}
+   
       <div className="flex justify-between items-center mt-2">
         <p className="font-bold text-[#646464]">
           {/* Promotional Offer:   */}
           <span className="text-[#0D90C1] text-sm">{offer}</span>
         </p>
         <p className="font-bold text-[#646464]">
-          {/* Promotional Offer: */}
-          <span className="text-gray-400 inline-flex items-center text-sm ">
-            {direction} 
-       <span className="pl-2">   <MdOutlineDirections /></span>
-          </span>
+    
+          <Link
+            to="/store"
+            className="text-gray-400 inline-flex items-center text-sm cursor-pointer"
+          >
+            {direction}
+            <span className="pl-2">
+              <MdOutlineDirections />
+            </span>
+          </Link>
         </p>
       </div>
-      {children} {/* Allows additional content to be passed inside the card */}
+      {children} 
     </div>
   );
 };

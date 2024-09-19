@@ -46,7 +46,7 @@ const Subscribe = () => {
         {/* Subscribe Button */}
         <div className="md:pb-8 xl:pb-0">
           <Link
-            to="/subscription-plans"
+            to="/plan-pricing"
             className="bg-[#0D90C1] text-white py-2 px-6 rounded-md text-md font-medium"
           >
             Subscribe Now

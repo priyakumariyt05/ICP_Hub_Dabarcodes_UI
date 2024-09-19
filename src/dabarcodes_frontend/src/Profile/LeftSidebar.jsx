@@ -59,7 +59,7 @@ const LeftSidebar = () => {
           to="/setting"
           className={({ isActive }) =>
             isActive
-              ? 'bg-blue-200 p-4 rounded-md'
+              ? 'bg-[#E7F8FE] p-4 rounded-md'
               : 'text-black p-4 rounded-md hover:bg-gray-200'
           }
         >

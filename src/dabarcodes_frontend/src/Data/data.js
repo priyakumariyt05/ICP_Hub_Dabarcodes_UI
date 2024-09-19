@@ -922,3 +922,89 @@ export const products = [
    
   },
 ];
+export const RandomcardData = [
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+  {
+    image: "/image/drink.png",
+    title: "Nestle Ice Coffee",
+    price: "37",
+    originalPrice: "52",
+    weight: "500g Pouch",
+    description:
+      "Super smooth and creamy vanilla half and half crowned with s...",
+    discount: "$15 off",
+    validUntil: "2024, Sept 19",
+    promoter: "Lingo Pvt. Ltd.",
+  },
+];

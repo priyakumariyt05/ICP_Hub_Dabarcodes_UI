@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { BsBookmark, BsThreeDotsVertical, BsQrCode } from "react-icons/bs";
 
 const RandomCard = ({
@@ -47,9 +48,14 @@ const RandomCard = ({
       </div>
 
       {/* QR Code Icon on the right side, outside the card */}
-      <div className="absolute right-2 top-1/2 transform -translate-y-1/2 md:right-0 pl-4  ">
+      {/* <div className="absolute right-2 top-1/2 transform -translate-y-1/2 md:right-0 pl-4  ">
         <BsQrCode className="h-8 w-8 text-gray-600 pl-4 " />
-      </div>
+      </div> */}
+      <div className="absolute right-2 top-1/2 transform -translate-y-1/2 md:right-0 pl-4">
+  <Link to="/overlay">
+    <BsQrCode className="h-8 w-8 text-gray-600 pl-4" />
+  </Link>
+</div>
 
       {/* Card Content */}
       <div className="flex-grow flex flex-col md:flex-row border rounded-lg shadow-md p-4 space-y-4 md:space-y-0 md:m-4 mr-4 pr-4">

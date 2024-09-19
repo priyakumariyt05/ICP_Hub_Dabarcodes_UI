@@ -193,11 +193,12 @@
 // };
 
 // export default ConnectWalletModal;
-import React from "react";
+import React,{useState}from "react";
 import { useNavigate } from "react-router-dom";
 
 const ConnectWalletModal = ({ onClose, onNext }) => {
   const navigate = useNavigate();
+  const [email, setEmail] = useState(""); 
 
   const handleNextClick = () => {
     onNext(); // Call the onNext function to handle navigation
@@ -238,6 +239,8 @@ const ConnectWalletModal = ({ onClose, onNext }) => {
             type="email"
             placeholder="Continue using email"
             className="w-full p-3 border rounded-md mb-4"
+            value={email} // Bind the input value to state
+            onChange={(e) => setEmail(e.target.value)}
           />
           <button
             onClick={handleNextClick}

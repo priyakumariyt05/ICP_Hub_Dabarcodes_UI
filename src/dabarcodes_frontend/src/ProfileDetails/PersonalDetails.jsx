@@ -778,7 +778,7 @@ const PersonalDetails = () => {
     {/* Toggle Button for Sidebar */}
     <button
       onClick={toggleSidebar}
-      className="fixed top-4 left-4 md:hidden z-50 p-2 bg-blue-600 text-white rounded-md"
+      className=" top-4 left-4 md:hidden z-50 p-2 rounded-md"
     >
       {sidebarOpen ? <FaTimes /> : <FaBars />}
     </button>
@@ -787,7 +787,7 @@ const PersonalDetails = () => {
     <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={1} />
 
       {/* Main Content */}
-      <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col">
+      <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
         <h2 className="text-xl font-semibold mb-6">Personal Information</h2>
         <form onSubmit={formik.handleSubmit}>
           {/* Pronouns and name */}
@@ -964,11 +964,11 @@ const PersonalDetails = () => {
               ) : null}
             </div>
           </div>
-          <div className="flex justify-end mt-8">
+          <div className="flex justify-end  mt-10">
             <Link to="/contact-details">
               <button
                 type="submit"
-                className="px-4 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-700"
+                className="px-8 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-700"
               >
                 Next
               </button>

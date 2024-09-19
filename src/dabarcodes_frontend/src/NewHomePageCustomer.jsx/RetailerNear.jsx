@@ -111,7 +111,7 @@ const RetailerNear = () => {
       <div className="flex justify-center items-center mt-4 space-x-2 mb-10">
         {/* Previous Button */}
         <button
-          className={`px-4 py-2 bg-gray-300 rounded ${currentPage === 1 ? 'cursor-not-allowed' : ''}`}
+          className={`px-4 py-2 bg-gray-100 font-roboto rounded ${currentPage === 1 ? 'cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
         >
@@ -131,7 +131,7 @@ const RetailerNear = () => {
 
         {/* Next Button */}
         <button
-          className={`px-4 py-2 bg-gray-300 rounded ${currentPage === totalPages ? 'cursor-not-allowed' : ''}`}
+          className={`px-4 py-2 bg-gray-100 font-roboto rounded ${currentPage === totalPages ? 'cursor-not-allowed' : ''}`}
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
         >

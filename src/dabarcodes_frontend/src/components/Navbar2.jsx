@@ -118,7 +118,8 @@ import React, { useState, useEffect } from "react";
 import { FiSearch, FiBell, FiUser } from "react-icons/fi";
 import { FaBars } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import { MdKeyboardArrowDown } from "react-icons/md"; // Dropdown Icon
+import { MdKeyboardArrowDown } from "react-icons/md"; 
+import BreadCrumb from "./BreadCrumbs";
 
 function Navbar2() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -175,16 +176,16 @@ function Navbar2() {
           </div>
           <nav className="hidden md:flex space-x-4">
             <Link
-              to="/explore-category"
+              to="/catergories"
               className="hover:text-blue-500 text-[#171717] font-roboto"
             >
               Categories
             </Link>
             <Link
-              to="#"
+              to="/explore-brands"
               className="text-[#171717] hover:text-blue-500 font-roboto"
             >
-              Promotions
+              Brands
             </Link>
             <Link
               to="/my-sku"
@@ -208,10 +209,11 @@ function Navbar2() {
         {/* Right section */}
         <div className="flex items-center space-x-4">
           <div className="hidden md:flex items-center space-x-1 text-[#171717]">
-            <span className="text-xs font-roboto">36/95</span>
-            <div className="w-8 h-8 rounded-full ">
-              <img className="rounded-full" src="/image/icon9.png" alt="" />
+          <div className="w-8 h-8 rounded-full ">
+              <img className="rounded-full" src="/image/token.png" alt="" />
             </div>
+            <span className="text-xs font-roboto">3/5</span>
+            
           </div>
           <FiBell className="text-2xl cursor-pointer" />
           <FiUser className="text-2xl cursor-pointer" />
@@ -257,16 +259,16 @@ function Navbar2() {
       {menuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 px-4 py-3 flex flex-col space-y-2 z-20">
           <Link
-            to="#"
+            to="/catergories"
             className="text-[#171717] hover:text-blue-500 font-roboto"
           >
             Categories
           </Link>
           <Link
-            to="#"
+            to="/explore-brands"
             className="text-[#171717] hover:text-blue-500 font-roboto"
           >
-            Promotions
+            Brands
           </Link>
           <Link
             to="/my-sku"
@@ -285,19 +287,26 @@ function Navbar2() {
         </div>
       )}
 
-      <div className="bg-blue-500 text-white text-right py-2 pr-4 font-roboto">
-        How to use daBarcodes
+      <div className="bg-blue-500 text-white text-right py-2 pr-4 font-roboto flex justify-end">
+      {/* <p className="mr-8">Store near me</p> */}
+      <Link to="/retailer-near" className="mr-8">
+  Store near me
+</Link>
+      <p> How to use daBarcodes</p>
       </div>
-
+{/* 
       <div className="px-4 py-2 text-sm text-gray-600 font-roboto">
         <Link to="/" className="hover:underline">
           Home
         </Link>
         /
-        <Link to="/homepage2" className=" hover:underline">
+        <Link to="/homepage" className=" hover:underline">
           SKU
+            
         </Link>
-      </div>
+        <BreadCrumb/>
+      </div> */}
+      <BreadCrumb/>
     </div>
   );
 }

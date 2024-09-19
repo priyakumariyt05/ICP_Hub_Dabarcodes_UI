@@ -1,5 +1,7 @@
 import React from "react";
 import CardOverlay from "./CardOverlay";
+import Navbar2 from "../../components/Navbar2";
+import Footer from "../../components/Footer";
 
 const OverlayMultiple = () => {
   const productData = {
@@ -24,6 +26,7 @@ const OverlayMultiple = () => {
   const retailer = "GT Retailer Ltd.";
   return (
     <>
+    <Navbar2/>
       <div>
         <CardOverlay
           product={productData}
@@ -34,7 +37,7 @@ const OverlayMultiple = () => {
           product={productData}
           qrCodeImage={qrCodeImage}
           retailer={retailer}
-        />{" "}
+        />
         <CardOverlay
           product={productData}
           qrCodeImage={qrCodeImage}
@@ -56,6 +59,7 @@ const OverlayMultiple = () => {
           retailer={retailer}
         />
       </div>
+      <Footer/>
     </>
   );
 };

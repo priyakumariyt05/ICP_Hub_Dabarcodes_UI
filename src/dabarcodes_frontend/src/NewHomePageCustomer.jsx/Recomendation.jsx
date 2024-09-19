@@ -163,6 +163,7 @@
 // export default Recomendation;
 import { GoBookmark } from "react-icons/go";
 import React from "react";
+import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { useData } from "../ContextApi/DataContext";
 
@@ -237,15 +238,17 @@ const ProductCard = ({
 
         {/* Third Row: Column with Two Rows */}
         <div className=" flex flex-col space-y-4 ">
-          <div className="text-sm text-gray-400">
-            <span className="font-medium inline-block">Active Promotion:</span>
+          <div className="text-sm text-gray-600">
+            <span className="font-medium text-sm inline-block">
+              Active Promotion:
+            </span>
             <span className="inline-block  font-bold  text-[#B42700]">
               {promotionValidity}
             </span>
           </div>
 
           <div className="text-sm text-gray-400">
-            <span className="font-medium">
+            <span className="text-sm text-gray-500 font-meduium font-roboto my-2">
               Promoted By: <br />
             </span>
             <span className="text-[13.34px] text-black font-semibold leading-[16.8px] tracking-[-0.1px]">
@@ -255,15 +258,14 @@ const ProductCard = ({
             <br />
             {othersCount && <span> +{othersCount} others</span>}
             <div className="flex justify-between items-center mt-4">
-              {/* <button className="bg-[#0D90C1] text-white px-3 py-1 rounded-lg mr-4">
-              Link Sku
-            </button> */}
-              {/* <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto">
-          Link SKU
-        </button> */}
-              <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto min-w-[100px] flex-shrink-0">
+              {/* <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto min-w-[100px] flex-shrink-0">
                 Link SKU
-              </button>
+              </button> */}
+              <Link to="/home-product-card">
+                <button className="bg-[#0D90C1] text-white px-4 py-2 rounded-lg font-roboto min-w-[100px] flex-shrink-0">
+                  Link SKU
+                </button>
+              </Link>
 
               <button className="text-gray-400 mt-2 sm:mt-0 flex items-center">
                 <GoBookmark className="w-6 h-6" />

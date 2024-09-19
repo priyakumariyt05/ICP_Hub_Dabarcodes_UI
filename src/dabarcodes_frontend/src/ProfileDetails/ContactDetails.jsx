@@ -721,7 +721,7 @@ const ContactDetails = () => {
       {/* Toggle Button for Sidebar */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 md:hidden z-50 p-2 bg-blue-600 text-white rounded-md"
+        className=" top-4 left-4 md:hidden z-50 p-2  rounded-md"
       >
         {sidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -730,11 +730,12 @@ const ContactDetails = () => {
       <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={2} />
 
       {/* Main Content */}
-      <div
+      {/* <div
         className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
           sidebarOpen ? "ml-0" : "md:ml-1/3"
         } transition-all duration-300 ease-in-out`}
-      >
+      > */}
+      <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
         <div>
           <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
           <form onSubmit={formik.handleSubmit}>
@@ -962,11 +963,11 @@ const ContactDetails = () => {
                 ) : null}
               </div>
             </div>
-            <div className="flex justify-between mt-8">
+            <div className="flex justify-between  mt-8 ">
               <Link to="/personal-details">
                 <button
                   type="button"
-                  className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+                  className="px-8 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
                 >
                   Back
                 </button>
@@ -974,7 +975,7 @@ const ContactDetails = () => {
               <Link to="/additional-information">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                  className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
                 >
                   Next
                 </button>

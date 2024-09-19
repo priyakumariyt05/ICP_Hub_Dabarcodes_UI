@@ -746,7 +746,7 @@
 //                 Back
 //               </button>
 //             </Link>
-       
+
 //               <button
 //               type="submit"
 //               className="px-4 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-700"
@@ -762,14 +762,14 @@
 // };
 
 // export default AdditionalInformation;
-// yaha se 
+// yaha se
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import { FaCheck, FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-router-dom";
-import ProfileSidebar from './ProfileSidebar'; // Make sure to import your ProfileSidebar component
+import ProfileSidebar from "./ProfileSidebar"; // Make sure to import your ProfileSidebar component
 
 const AdditionalInformation = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -833,7 +833,7 @@ const AdditionalInformation = () => {
       {/* Toggle Button for Sidebar */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 md:hidden z-50 p-2 bg-blue-600 text-white rounded-md"
+        className=" top-4 left-4 md:hidden z-50 p-2  rounded-md"
       >
         {sidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -842,26 +842,56 @@ const AdditionalInformation = () => {
       <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={3} />
 
       {/* Main Content */}
-      <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
-      >
+      <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
         <h2 className="text-xl font-semibold mb-6">Additional Information</h2>
         <form onSubmit={formik.handleSubmit}>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { id: "genderBiological1", label: "Gender Biological", options: ["Option 1"] },
-              { id: "genderBiological2", label: "Gender Biological", options: ["Option 1"] },
-              { id: "citizenship", label: "Citizenship", options: ["Option 1"] },
-              { id: "income", label: "Income", options: ["Option 1"], prefix: "USD" },
+              {
+                id: "genderBiological1",
+                label: "Gender Biological",
+                options: ["Option 1"],
+              },
+              {
+                id: "genderBiological2",
+                label: "Gender Biological",
+                options: ["Option 1"],
+              },
+              {
+                id: "citizenship",
+                label: "Citizenship",
+                options: ["Option 1"],
+              },
+              {
+                id: "income",
+                label: "Income",
+                options: ["Option 1"],
+                prefix: "USD",
+              },
               { id: "married", label: "Married", options: ["Yes", "No"] },
-              { id: "includeMaid", label: "Include Maid", options: ["Yes", "No"] },
-              { id: "withChildren", label: "With Children", options: ["Yes", "No"] },
-              { id: "ageGroup", label: "Age Group", options: ["18-25", "26-35", "36-45", "46-55", "56+"] },
+              {
+                id: "includeMaid",
+                label: "Include Maid",
+                options: ["Yes", "No"],
+              },
+              {
+                id: "withChildren",
+                label: "With Children",
+                options: ["Yes", "No"],
+              },
+              {
+                id: "ageGroup",
+                label: "Age Group",
+                options: ["18-25", "26-35", "36-45", "46-55", "56+"],
+              },
             ].map(({ id, label, options, prefix }) => (
               <div className="flex flex-col" key={id}>
-                <label htmlFor={id} className="text-gray-800 py-2 font-semibold">{label}</label>
+                <label
+                  htmlFor={id}
+                  className="text-gray-800 py-2 font-semibold"
+                >
+                  {label}
+                </label>
                 {prefix ? (
                   <div className="flex items-center border border-gray-300 rounded-md overflow-hidden">
                     <span className="px-2 text-sm text-gray-600 bg-gray-100 border-r border-gray-300 h-full flex items-center">
@@ -875,7 +905,7 @@ const AdditionalInformation = () => {
                       onChange={formik.handleChange}
                     >
                       <option value="">Select</option>
-                      {options.map(option => (
+                      {options.map((option) => (
                         <option key={option} value={option.toLowerCase()}>
                           {option}
                         </option>
@@ -891,7 +921,7 @@ const AdditionalInformation = () => {
                     onChange={formik.handleChange}
                   >
                     <option value="">Select</option>
-                    {options.map(option => (
+                    {options.map((option) => (
                       <option key={option} value={option.toLowerCase()}>
                         {option}
                       </option>
@@ -899,12 +929,19 @@ const AdditionalInformation = () => {
                   </select>
                 )}
                 {formik.touched[id] && formik.errors[id] ? (
-                  <div className="text-red-500 text-sm">{formik.errors[id]}</div>
+                  <div className="text-red-500 text-sm">
+                    {formik.errors[id]}
+                  </div>
                 ) : null}
               </div>
             ))}
             <div className="flex flex-col">
-              <label htmlFor="spouseName" className="text-gray-800 py-2 font-semibold">Spouse Name</label>
+              <label
+                htmlFor="spouseName"
+                className="text-gray-800 py-2 font-semibold"
+              >
+                Spouse Name
+              </label>
               <input
                 id="spouseName"
                 name="spouseName"
@@ -914,11 +951,18 @@ const AdditionalInformation = () => {
                 onChange={formik.handleChange}
               />
               {formik.touched.spouseName && formik.errors.spouseName ? (
-                <div className="text-red-500 text-sm">{formik.errors.spouseName}</div>
+                <div className="text-red-500 text-sm">
+                  {formik.errors.spouseName}
+                </div>
               ) : null}
             </div>
             <div className="flex flex-col">
-              <label htmlFor="maidName" className="text-gray-800 py-2 font-semibold">Maid Name</label>
+              <label
+                htmlFor="maidName"
+                className="text-gray-800 py-2 font-semibold"
+              >
+                Maid Name
+              </label>
               <input
                 id="maidName"
                 name="maidName"
@@ -928,11 +972,18 @@ const AdditionalInformation = () => {
                 onChange={formik.handleChange}
               />
               {formik.touched.maidName && formik.errors.maidName ? (
-                <div className="text-red-500 text-sm">{formik.errors.maidName}</div>
+                <div className="text-red-500 text-sm">
+                  {formik.errors.maidName}
+                </div>
               ) : null}
             </div>
             <div className="flex flex-col">
-              <label htmlFor="totalHousehold" className="text-gray-800 py-2 font-semibold">Total Household</label>
+              <label
+                htmlFor="totalHousehold"
+                className="text-gray-800 py-2 font-semibold"
+              >
+                Total Household
+              </label>
               <input
                 id="totalHousehold"
                 name="totalHousehold"
@@ -942,7 +993,9 @@ const AdditionalInformation = () => {
                 onChange={formik.handleChange}
               />
               {formik.touched.totalHousehold && formik.errors.totalHousehold ? (
-                <div className="text-red-500 text-sm">{formik.errors.totalHousehold}</div>
+                <div className="text-red-500 text-sm">
+                  {formik.errors.totalHousehold}
+                </div>
               ) : null}
             </div>
           </div>
@@ -951,7 +1004,7 @@ const AdditionalInformation = () => {
             <Link to="/contact-details">
               <button
                 type="button"
-                className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+                className="px-8 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
               >
                 Back
               </button>
@@ -959,10 +1012,18 @@ const AdditionalInformation = () => {
 
             <button
               type="submit"
-              className="px-4 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-600"
+              className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
             >
-        Next
+              Next
             </button>
+            {/* <Link to="/privacy-prefrence">
+                <button
+                  type="submit"
+                  className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                >
+                  Next
+                </button>
+              </Link> */}
           </div>
         </form>
       </div>
@@ -971,33 +1032,6 @@ const AdditionalInformation = () => {
 };
 
 export default AdditionalInformation;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // import React, { useState } from "react";
 // import { useNavigate } from 'react-router-dom';
@@ -1031,7 +1065,7 @@ export default AdditionalInformation;
 
 //   return (
 //     <div className="min-h-screen flex flex-col md:flex-row bg-white p-4 md:p-8 font-roboto relative">
-      
+
 //       {/* Toggle Button for Sidebar */}
 //       <button
 //         onClick={toggleSidebar}

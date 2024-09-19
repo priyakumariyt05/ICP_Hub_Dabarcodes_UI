@@ -532,7 +532,7 @@ const PrivacyPreference = () => {
       {/* Toggle Button for Sidebar */}
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 md:hidden z-50 p-2 bg-blue-600 text-white rounded-md"
+        className=" top-4 left-4 md:hidden z-50 p-2 text-black rounded-md"
       >
         {sidebarOpen ? <FaTimes /> : <FaBars />}
       </button>
@@ -621,14 +621,14 @@ const PrivacyPreference = () => {
           <Link to="/additional-information">
             <button
               type="button"
-              className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+              className="px-8 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
             >
               Back
             </button>
           </Link>
           <Link
             to="/create-password"
-            className="px-4 py-2 bg-blue-400 text-white rounded-md shadow-sm hover:bg-blue-700 inline-block"
+            className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
           >
           Next
           </Link>

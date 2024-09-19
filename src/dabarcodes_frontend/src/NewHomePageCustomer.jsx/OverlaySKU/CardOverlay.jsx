@@ -19,7 +19,9 @@ const CardOverlay = ({ product, qrCodeImage, retailer }) => {
               className="w-20 h-20 object-cover rounded-full mr-4"
             />
             <div>
-              <h2 className="text-2xl font-semibold">{product.name}</h2>
+              <h2 className="text-2xl font-semibold mt-6 ml-4">
+                {product.name}
+              </h2>
             </div>
           </div>
 
@@ -48,7 +50,9 @@ const CardOverlay = ({ product, qrCodeImage, retailer }) => {
           </div>
 
           {/* Product Description */}
-          <p className="text-gray-700 mb-4 mt-4 w-96">{product.description}</p>
+          <p className="text-gray-700 mb-4 mt-4  lg:w-96 md:w-74">
+            {product.description}
+          </p>
 
           {/* Participating Retailer */}
           <div className="p-2 mb-6 w-1/2">
@@ -85,8 +89,6 @@ const CardOverlay = ({ product, qrCodeImage, retailer }) => {
                 </p>
               </div>
               <div className="ml-6 w-1/2">
-                {" "}
-                {/* Add margin-left here */}
                 <p>{product.brand}</p>
                 <p>{product.flavor}</p>
                 <p>{product.consistency}</p>

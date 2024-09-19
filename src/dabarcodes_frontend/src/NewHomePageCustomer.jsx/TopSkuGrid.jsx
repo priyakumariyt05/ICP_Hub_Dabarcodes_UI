@@ -136,8 +136,8 @@ const TopSkuCard = ({ product }) => {
 </Link>
         {/* <FaBookmark className="text-gray-200 cursor-pointer" /> */}
         <button className="text-black p-2">
-          <BsBookmark className="h-4 w-4" />
-        </button>
+            <BsBookmark className="h-6 w-6" />
+          </button>
       </div>
     </div>
   );

@@ -256,7 +256,7 @@ function Navbar() {
       <div className="px-4 py-2 text-sm text-gray-600 font-roboto">
         <Link to="/" className=" hover:underline">Home</Link> / 
         <Link to="/section1" className=" hover:underline">section1</Link> / 
-        <Link to="/homepage" className=" hover:underline">section2</Link>
+        <Link to="/section2" className=" hover:underline">section2</Link>
       </div>
 
       {/* Render ConnectWalletModal if isConnectWalletModalOpen is true */}

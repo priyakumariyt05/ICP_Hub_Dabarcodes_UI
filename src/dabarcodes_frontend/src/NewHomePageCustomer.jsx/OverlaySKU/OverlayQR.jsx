@@ -1,6 +1,8 @@
 import React from "react";
 import CardOverlay from "./CardOverlay";
 import RedemptionTable from "./RedemptionTable";
+import Navbar2 from "../../components/Navbar2";
+import Footer from "../../components/Footer";
 
 const productData = {
   name: "Nestle Ice Coffee",
@@ -53,6 +55,7 @@ const redemptions = [
 const OverlayQR = () => {
   return (
     <>
+      <Navbar2 />
       <div>
         <CardOverlay
           product={productData}
@@ -62,6 +65,7 @@ const OverlayQR = () => {
         />
       </div>
       <RedemptionTable redemptions={redemptions} />
+      <Footer />
     </>
   );
 };
