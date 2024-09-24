@@ -8,8 +8,8 @@ const SectionHeading = ({ title }) => {
   return (
     <>
      
-    <div className="text-center my-8">
-      <h2 className="text-3xl font-bold font-roboto">{title}</h2>
+    <div className="text-center my-10 ">
+      <h2 className="text-3xl font-bold font-roboto text-[#171717] ">{title}</h2>
     </div>
     </>
   );

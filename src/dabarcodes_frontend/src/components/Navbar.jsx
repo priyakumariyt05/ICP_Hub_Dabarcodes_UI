@@ -229,7 +229,7 @@ function Navbar() {
         <div className="auth-buttons">
           <button
             onClick={handleOpenConnectWalletModal}
-            className="login-signup ml-4 text-white font-medium bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded font-roboto"
+            className="login-signup ml-4 text-white font-medium bg-[#0D90C1] hover:bg-blue-700 px-4 py-2 rounded font-roboto"
           >
             Login/Signup
           </button>
@@ -249,7 +249,7 @@ function Navbar() {
         </div>
       )}
 
-      <div className="bg-blue-500 text-white text-right py-2 pr-4 font-roboto">
+      {/* <div className="bg-[#0D90C1] text-white text-right py-2 pr-4 font-roboto">
         How to use daBarcodes
       </div>
 
@@ -257,7 +257,7 @@ function Navbar() {
         <Link to="/" className=" hover:underline">Home</Link> / 
         <Link to="/section1" className=" hover:underline">section1</Link> / 
         <Link to="/section2" className=" hover:underline">section2</Link>
-      </div>
+      </div> */}
 
       {/* Render ConnectWalletModal if isConnectWalletModalOpen is true */}
       {isConnectWalletModalOpen && (

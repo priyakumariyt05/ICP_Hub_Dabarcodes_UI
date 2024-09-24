@@ -490,14 +490,16 @@
 // };
 
 // export default PrivacyPreference;
+
 import React, { useState } from "react";
 import { FaCheck, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ProfileSidebar from "./ProfileSidebar";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
 const PrivacyPreference = () => {
+  const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   // Validation schema for formik
@@ -518,7 +520,9 @@ const PrivacyPreference = () => {
     },
     validationSchema,
     onSubmit: (values) => {
-      console.log(values);
+      console.log("Privacy prefrence",values);
+      navigate("/create-password")
+
       // Handle form submission here
     },
   });
@@ -613,11 +617,7 @@ const PrivacyPreference = () => {
                 </span>
               </label>
             </div>
-          </form>
-        </div>
-
-        {/* Button Container */}
-        <div className="flex justify-between mt-8">
+            <div className="flex justify-between mt-8">
           <Link to="/additional-information">
             <button
               type="button"
@@ -626,13 +626,33 @@ const PrivacyPreference = () => {
               Back
             </button>
           </Link>
-          <Link
-            to="/create-password"
+          <button
+          type="submit"
             className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
           >
           Next
-          </Link>
+          </button>
         </div>
+          </form>
+        </div>
+
+        {/* Button Container */}
+        {/* <div className="flex justify-between mt-8">
+          <Link to="/additional-information">
+            <button
+              type="button"
+              className="px-8 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+            >
+              Back
+            </button>
+          </Link>
+          <button
+          type="submit"
+            className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+          >
+          Next
+          </button>
+        </div> */}
       </div>
     </div>
   );

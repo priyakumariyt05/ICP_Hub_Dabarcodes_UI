@@ -669,13 +669,14 @@
 
 import React, { useState } from "react";
 import { FaCheck, FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate} from "react-router-dom";
 import ProfileSidebar from "./ProfileSidebar";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const ContactDetails = () => {
+  const navigate= useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const formik = useFormik({
     initialValues: {
@@ -707,8 +708,9 @@ const ContactDetails = () => {
       ),
     }),
     onSubmit: (values) => {
-      console.log(values);
+     console.log("contact details",values)
       // Handle form submission here
+      navigate("/additional-information")
     },
   });
 
@@ -730,11 +732,7 @@ const ContactDetails = () => {
       <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={2} />
 
       {/* Main Content */}
-      {/* <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
-      > */}
+
       <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
         <div>
           <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
@@ -803,7 +801,8 @@ const ContactDetails = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="">Select</option>
+                  <option value="select">Select</option>
+                  <option value="india">India</option>
                   {/* Add country options here */}
                 </select>
                 {formik.touched.country && formik.errors.country ? (
@@ -827,7 +826,8 @@ const ContactDetails = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="">Select</option>
+                  <option value="select">Select</option>
+                  <option value="delhi">delhi</option>
                   {/* Add state options here */}
                 </select>
                 {formik.touched.state && formik.errors.state ? (
@@ -851,7 +851,8 @@ const ContactDetails = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="">Select</option>
+                  <option value="select">Select</option>
+                  <option value="delhi">Delhi</option>
                   {/* Add city options here */}
                 </select>
                 {formik.touched.city && formik.errors.city ? (
@@ -898,7 +899,9 @@ const ContactDetails = () => {
                   onChange={formik.handleChange}
                   onBlur={formik.handleBlur}
                 >
-                  <option value="">Select</option>
+                  <option value="select">Select</option>
+                  <option value="current">current</option>
+                  <option value="permanent">permanent</option>
                   {/* Add time options here */}
                 </select>
                 {formik.touched.timeAtAddress && formik.errors.timeAtAddress ? (
@@ -972,14 +975,14 @@ const ContactDetails = () => {
                   Back
                 </button>
               </Link>
-              <Link to="/additional-information">
+
                 <button
                   type="submit"
                   className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
                 >
                   Next
                 </button>
-              </Link>
+
             </div>
           </form>
         </div>
@@ -989,3 +992,315 @@ const ContactDetails = () => {
 };
 
 export default ContactDetails;
+
+
+
+
+
+
+// import React, { useState, useEffect } from "react";
+// import { FaCheck, FaBars, FaTimes } from "react-icons/fa";
+// import { Link, useNavigate } from "react-router-dom";
+// import ProfileSidebar from "./ProfileSidebar";
+// import { useFormik } from "formik";
+// import * as Yup from "yup";
+// import { useUser } from "../ContextApi/UserContext";
+
+// const ContactDetails = () => {
+//   const navigate = useNavigate();
+//   const { userData, loading, error } = useUser();
+//   const [sidebarOpen, setSidebarOpen] = useState(false);
+
+//   // Formik setup
+//   const formik = useFormik({
+//     initialValues: {
+//       phone_number: userData?.phone_number || "",
+//       email_address: userData?.email_address || "",
+//       country: userData?.country || "",
+//       state: userData?.state || "",
+//       city: userData?.city || "",
+//       postal_code: userData?.postal_code || "",
+//       time_at_this_address: userData?.time_at_this_address || "",
+//       retailer_preferences: userData?.retailer_preferences || "",
+//       influencer_referral_id: userData?.influencer_referral_id || "",
+//     },
+//     validationSchema: Yup.object({
+//       phone_number: Yup.string().required("Phone Number is required"),
+//       email_address: Yup.string()
+//         .email("Invalid email address")
+//         .required("Email Address is required"),
+//       country: Yup.string().required("Country is required"),
+//       state: Yup.string().required("State is required"),
+//       city: Yup.string().required("City is required"),
+//       postal_code: Yup.string().required("Postal Code is required"),
+//       time_at_this_address: Yup.string().required(
+//         "Time at this address is required"
+//       ),
+//       retailer_preferences: Yup.string().required(
+//         "Shopping Preferences are required"
+//       ),
+//       influencer_referral_id: Yup.string().required(
+//         "Influencer Referral ID is required"
+//       ),
+//     }),
+//     onSubmit: (values) => {
+//       console.log("Contact details", values);
+//       // Handle form submission here
+//       navigate("/additional-information");
+//     },
+//   });
+
+//   useEffect(() => {
+//     if (userData) {
+//       formik.setValues({
+//         phone_number: userData.phone_number || "",
+//         email_address: userData.email_address || "",
+//         country: userData.country || "",
+//         state: userData.state || "",
+//         city: userData.city || "",
+//         postal_code: userData.postal_code || "",
+//         time_at_this_address: userData.time_at_this_address || "",
+//         retailer_preferences: userData.retailer_preferences || "",
+//         influencer_referral_id: userData.influencer_referral_id || "",
+//       });
+//     }
+//   }, [userData]);
+
+//   const toggleSidebar = () => {
+//     setSidebarOpen(!sidebarOpen);
+//   };
+
+//   if (loading) return <div>Loading...</div>;
+//   if (error) return <div>Error loading user data.</div>;
+
+//   return (
+//     <div className="min-h-screen flex flex-col md:flex-row bg-white p-4 md:p-8 font-roboto relative">
+//       <button
+//         onClick={toggleSidebar}
+//         className="top-4 left-4 md:hidden z-50 p-2 rounded-md"
+//       >
+//         {sidebarOpen ? <FaTimes /> : <FaBars />}
+//       </button>
+//       <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={2} />
+//       <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
+//         <h2 className="text-xl font-semibold mb-6">Contact Information</h2>
+//         <form onSubmit={formik.handleSubmit}>
+//           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="phone_number"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Phone Number <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="phone_number"
+//                 type="text"
+//                 placeholder="Phone Number"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.phone_number}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.phone_number && formik.errors.phone_number ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.phone_number}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="email_address"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Email Address <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="email_address"
+//                 type="email"
+//                 placeholder="Email Address"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.email_address}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.email_address && formik.errors.email_address ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.email_address}
+//                 </div>
+//               ) : null}
+//             </div>
+//           </div>
+//           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="country"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Country <span className="text-red-500">*</span>
+//               </label>
+//               <select
+//                 id="country"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.country}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               >
+//                 <option value="">Select</option>
+//                 <option value="india">India</option>
+//                 {/* Add other countries here */}
+//               </select>
+//               {formik.touched.country && formik.errors.country ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.country}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="state"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 State <span className="text-red-500">*</span>
+//               </label>
+//               <select
+//                 id="state"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.state}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               >
+//                 <option value="">Select</option>
+//                 <option value="delhi">Delhi</option>
+//                 {/* Add other states here */}
+//               </select>
+//               {formik.touched.state && formik.errors.state ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.state}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="city"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 City <span className="text-red-500">*</span>
+//               </label>
+//               <select
+//                 id="city"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.city}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               >
+//                 <option value="">Select</option>
+//                 <option value="delhi">Delhi</option>
+//                 {/* Add other cities here */}
+//               </select>
+//               {formik.touched.city && formik.errors.city ? (
+//                 <div className="text-red-500 text-sm">{formik.errors.city}</div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="postal_code"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Postal Code <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="postal_code"
+//                 type="text"
+//                 placeholder="Postal Code"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.postal_code}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.postal_code && formik.errors.postal_code ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.postal_code}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="time_at_this_address"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Time at this address <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="time_at_this_address"
+//                 type="text"
+//                 placeholder="Time at this address"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.time_at_this_address}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.time_at_this_address && formik.errors.time_at_this_address ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.time_at_this_address}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="retailer_preferences"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//               Retailer Preferences <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="retailer_preferences"
+//                 type="text"
+//                 placeholder="Retailer Preferences"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.retailer_preferences}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.retailer_preferences && formik.errors.retailer_preferences ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.retailer_preferences}
+//                 </div>
+//               ) : null}
+//             </div>
+//             <div className="flex flex-col">
+//               <label
+//                 htmlFor="influencer_referral_id"
+//                 className="text-gray-800 py-2 font-semibold"
+//               >
+//                 Influencer Referral ID <span className="text-red-500">*</span>
+//               </label>
+//               <input
+//                 id="influencer_referral_id"
+//                 type="text"
+//                 placeholder="Influencer Referral ID"
+//                 className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+//                 value={formik.values.influencer_referral_id}
+//                 onChange={formik.handleChange}
+//                 onBlur={formik.handleBlur}
+//               />
+//               {formik.touched.influencer_referral_id && formik.errors.influencer_referral_id ? (
+//                 <div className="text-red-500 text-sm">
+//                   {formik.errors.influencer_referral_id}
+//                 </div>
+//               ) : null}
+//             </div>
+//           </div>
+//           <button
+//             type="submit"
+//             className="mt-6 w-full bg-blue-600 text-white py-3 rounded-lg"
+//           >
+//             Continue
+//           </button>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ContactDetails;

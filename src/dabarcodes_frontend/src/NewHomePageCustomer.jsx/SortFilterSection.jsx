@@ -1,75 +1,4 @@
 
-// import React, { useState } from "react";
-// import { FaSort, FaFilter } from "react-icons/fa";
-// import { VscSettings } from "react-icons/vsc";
-// const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
-//   const [sortOption, setSortOption] = useState("");
-//   const [filterOption, setFilterOption] = useState("");
-
-//   const handleSortChange = (e) => {
-//     setSortOption(e.target.value);
-//   };
-
-//   const handleFilterChange = (e) => {
-//     setFilterOption(e.target.value);
-//   };
-
-//   return (
-//     <>
-//   <div className="p-4 lg:p-10">
-//   {/* Responsive flex container */}
-//   <div className="flex flex-col lg:flex-row justify-between items-left space-y-4 lg:space-y-0">
-//     {/* Title Section */}
-//     <h1 className="text-xl md:text-2xl lg:text-2xl font-semibold font-roboto">
-//       {title}
-//     </h1>
-
-//     {/* Sort and Filter on the right */}
-//     <div className="flex flex-col sm:flex-row items-center sm:space-x-4 lg:ml-auto space-y-2 sm:space-y-0">
-//       {/* Sort Section */}
-//       <div className="relative w-full sm:w-auto">
-//         <select
-//           className="bg-gray-100 p-2 w-full sm:w-auto rounded-md font-roboto appearance-none"
-//           value={sortOption}
-//           onChange={handleSortChange}
-//         >
-//           <option value="">Sort</option>
-//           {sortOptions.map((option, index) => (
-//             <option key={index} value={option.value}>
-//               {option.label}
-//             </option>
-//           ))}
-//         </select>
-//         {/* Sort Icon inside select */}
-//         <VscSettings className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
-//       </div>
-
-//       {/* Filter Section */}
-//       <div className="relative w-full sm:w-auto">
-//         <select
-//           className="bg-gray-100 p-2 pr-10 w-full sm:w-auto rounded-md font-roboto appearance-none"
-//           value={filterOption}
-//           onChange={handleFilterChange}
-//         >
-//           <option value="">Filter</option>
-//           {filterOptions.map((option, index) => (
-//             <option key={index} value={option.value}>
-//               {option.label}
-//             </option>
-//           ))}
-//         </select>
-//         {/* Filter Icon inside select */}
-//         <VscSettings className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
-//       </div>
-//     </div>
-//   </div>
-// </div>
-
-//     </>
-//   );
-// };
-
-// export default SortFilterSection;
 import React, { useState } from "react";
 import { VscSettings } from "react-icons/vsc";
 import { FaSearch } from "react-icons/fa";
@@ -121,7 +50,7 @@ const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
           </div>
 
           {/* Filter Section */}
-          <div className="relative w-full sm:w-auto">
+          <div className="relative w-full sm:w-auto ">
             <select
               className=" p-2 pr-10 w-full sm:w-auto rounded-md font-roboto appearance-none"
               value={filterOption}
