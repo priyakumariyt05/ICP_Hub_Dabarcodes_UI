@@ -249,15 +249,8 @@ function Navbar() {
         </div>
       )}
 
-      {/* <div className="bg-[#0D90C1] text-white text-right py-2 pr-4 font-roboto">
-        How to use daBarcodes
-      </div>
-
-      <div className="px-4 py-2 text-sm text-gray-600 font-roboto">
-        <Link to="/" className=" hover:underline">Home</Link> / 
-        <Link to="/section1" className=" hover:underline">section1</Link> / 
-        <Link to="/section2" className=" hover:underline">section2</Link>
-      </div> */}
+    
+      
 
       {/* Render ConnectWalletModal if isConnectWalletModalOpen is true */}
       {isConnectWalletModalOpen && (

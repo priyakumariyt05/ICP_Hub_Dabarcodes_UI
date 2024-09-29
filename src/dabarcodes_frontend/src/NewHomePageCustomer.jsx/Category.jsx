@@ -1,6 +1,7 @@
 
 import React from "react";
 import Slider from "react-slick";
+import { Link } from "react-router-dom"; 
 import CategoryCard from "../ReusableComponents/CategoryCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -52,12 +53,14 @@ const Category = () => {
     <>
       <div className="p-8">
         <div className="flex justify-between items-center mt-10 mb-10">
-          <h1 className="lg:text-2xl md:text-xl font-bold font-butler ml-4">
+          <h1 className="lg:text-2xl md:text-xm font-bold  lg:ml-4 sm:ml-0">
             Explore Promotions by Category
           </h1>
-          <button className="text-blue-500 border-b-2 border-blue-500 pb-1 hover:bg-blue-100">
-            View all
-          </button>
+          <Link to="/top-category"> 
+  <button className="text-black  pb-1 hover:bg-blue-100">
+    View all
+  </button>
+</Link>
         </div>
 
         <Slider {...settings}>

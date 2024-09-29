@@ -3,6 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { useData } from "../ContextApi/DataContext";
+import { useRef } from "react"; 
 
 const ProductCard = ({
   imageUrl,
@@ -17,12 +18,12 @@ const ProductCard = ({
   promotedBy,
   othersCount,
   linkSku,
-  borderColor = "#f97316",
+  // borderColor = "#f97316",
 }) => {
   return (
     <div
-      className="border border-orange-200 rounded-lg shadow-lg p-4 flex items-start space-x-4 w-full max-w-lg font-roboto "
-      style={{ border: `0.5px solid ${borderColor}` }}
+      className="border border-[#FED3D2] rounded-lg shadow-md  p-4 flex items-start space-x-4 w-full max-w-lg font-roboto "
+      // style={{ border: `0.5px solid ${borderColor}` }}
     >
       {/* Left Section - Product Image and Discount Label */}
       <div className="w-1/5 flex flex-col items-center ">
@@ -115,55 +116,55 @@ const ProductCard = ({
   );
 };
 
-const ProductSlider = ({ products = [] }) => {
-  const settings = {
-    dots: false,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 2.5, // Show 2.5 slides
-    slidesToScroll: 1,
-    centerMode: true, // Centers the active slide
-    centerPadding: "0", // Remove padding around the center slide
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2.5,
-        },
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 1,
-          centerMode: false, // Disable center mode on smaller screens
-        },
-      },
-    ],
-  };
+// const ProductSlider = ({ products = [] }) => {
+//   const settings = {
+//     dots: false,
+//     infinite: true,
+//     speed: 500,
+//     slidesToShow: 2.5, // Show 2.5 slides
+//     slidesToScroll: 1,
+//     centerMode: true, // Centers the active slide
+//     centerPadding: "0", // Remove padding around the center slide
+//     responsive: [
+//       {
+//         breakpoint: 1024,
+//         settings: {
+//           slidesToShow: 2.5,
+//         },
+//       },
+//       {
+//         breakpoint: 768,
+//         settings: {
+//           slidesToShow: 1,
+//           centerMode: false, // Disable center mode on smaller screens
+//         },
+//       },
+//     ],
+//   };
 
-  return (
-    <div className="max-w-7xl mx-auto px-4 py-6 overflow-hidden">
-      <Slider {...settings}>
-        {products.map((product, index) => (
-          <div key={index} className="px-2">
-            <ProductCard
-              imageUrl={product.imageUrl}
-              productName={product.productName}
-              price={product.price}
-              originalPrice={product.originalPrice}
-              size={product.size}
-              description={product.description}
-              discount={product.discount}
-              promotionValidity={product.promotionValidity}
-              promotedBy={product.promotedBy}
-              othersCount={product.othersCount}
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
-  );
-};
+//   return (
+//     <div className="max-w-7xl mx-auto px-4 py-6 overflow-hidden">
+//       <Slider {...settings}>
+//         {products.map((product, index) => (
+//           <div key={index} className="px-2">
+//             <ProductCard
+//               imageUrl={product.imageUrl}
+//               productName={product.productName}
+//               price={product.price}
+//               originalPrice={product.originalPrice}
+//               size={product.size}
+//               description={product.description}
+//               discount={product.discount}
+//               promotionValidity={product.promotionValidity}
+//               promotedBy={product.promotedBy}
+//               othersCount={product.othersCount}
+//             />
+//           </div>
+//         ))}
+//       </Slider>
+//     </div>
+//   );
+// };
 
 // const products = [
 //   {
@@ -246,6 +247,73 @@ const ProductSlider = ({ products = [] }) => {
 
 //   },
 // ];
+
+
+
+const ProductSlider = ({ products = [] }) => {
+  const sliderRef = useRef(null); // Create a reference to the slider
+
+  const settings = {
+    dots: false,
+    infinite: true, // Allow infinite scrolling
+    speed: 500,
+    slidesToShow: 2.5,
+    slidesToScroll: 1,
+    autoplay: true, // Enable autoplay
+    autoplaySpeed: 2000, // Speed of autoplay in milliseconds
+    centerMode: false, // Disable center mode
+    centerPadding: "0", // Remove padding around the center slide
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2.5,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          centerMode: false,
+        },
+      },
+    ],
+  };
+
+  const handleCardClick = () => {
+    if (sliderRef.current) {
+      sliderRef.current.slickPause(); // Pause the slider when clicked
+
+      // Automatically resume the slider after 5 seconds
+      setTimeout(() => {
+        sliderRef.current.slickPlay(); // Resume the slider after the timeout
+      }, 5000); // 5 seconds pause
+    }
+  };
+
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-6  overflow-hidden">
+      <Slider ref={sliderRef} {...settings}>
+        {products.map((product, index) => (
+          <div key={index} className="px-2" onClick={handleCardClick}>
+            <ProductCard
+              imageUrl={product.imageUrl}
+              productName={product.productName}
+              price={product.price}
+              originalPrice={product.originalPrice}
+              size={product.size}
+              description={product.description}
+              discount={product.discount}
+              promotionValidity={product.promotionValidity}
+              promotedBy={product.promotedBy}
+              othersCount={product.othersCount}
+            />
+          </div>
+        ))}
+      </Slider>
+    </div>
+  );
+};
 
 const Recomendation = () => {
   const { product } = useData();

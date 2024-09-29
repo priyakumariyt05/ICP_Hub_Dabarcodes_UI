@@ -742,28 +742,7 @@ const AdditionalInformation = () => {
                   />
                 </div>
 
-                {/* <div className="flex flex-col">
-                  <label
-                    htmlFor="income"
-                    className="text-gray-800 py-2 font-semibold"
-                  >
-                    Income
-                  </label>
-                  <Field
-                    as="select"
-                    id="income"
-                    name="income"
-                    className="mt-1 block p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-                  >
-                    <option value="">Select</option>
-                    <option value="option1">Option 1</option>
-                  </Field>
-                  <ErrorMessage
-                    name="income"
-                    component="div"
-                    className="text-red-600"
-                  />
-                </div> */}
+               
 
                 <div className="flex flex-col">
                   <label
@@ -986,7 +965,7 @@ const AdditionalInformation = () => {
                 <Link to="/contact-details">
                   <button
                     type="button"
-                    className="px-4 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
+                    className="px-8 py-2 bg-white border border-blue-600 text-blue-600 rounded-md shadow-sm hover:bg-blue-50"
                   >
                     Back
                   </button>
@@ -994,7 +973,7 @@ const AdditionalInformation = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                  className="px-8 py-2 bg-[#0D90C1]  text-white rounded-md shadow-sm hover:bg-blue-700"
                 >
                   Next
                 </button>

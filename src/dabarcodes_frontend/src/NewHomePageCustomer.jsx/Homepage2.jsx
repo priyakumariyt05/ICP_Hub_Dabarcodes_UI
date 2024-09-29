@@ -483,7 +483,7 @@ const HomePage2 = () => {
     <>
       <Navbar2 />
       <div className="flex items-center justify-center mb-10 mt-4 md:mt-4">
-        <h1 className="mt-10 font-butler text-[2rem] sm:text-[2.25rem] md:text-[2.44rem] leading-[2.5rem] sm:leading-[2.75rem] md:leading-[2.925rem] text-center text-[#171717]">
+        <h1 className="mt-10 font-semibold text-[2rem] sm:text-[2.25rem] md:text-[2.44rem] leading-[2.5rem] sm:leading-[2.75rem] md:leading-[2.925rem] text-center text-[#171717]">
           Top SKU's Of The Week
         </h1>
       </div>

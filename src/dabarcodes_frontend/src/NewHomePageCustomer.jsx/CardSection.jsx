@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const CardSection = ({ product }) => {
   return (
     <>
-      <div className="border border-red-500 rounded-lg p-4 flex flex-col justify-between bg-white shadow-sm w-full">
+      <div className="border border-[#FED3D2] rounded-lg shadow-md p-4 flex flex-col justify-between bg-white  w-full">
         <div className="flex items-center justify-between mb-4">
           <img
             src={product.image}

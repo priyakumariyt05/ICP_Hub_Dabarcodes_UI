@@ -29,7 +29,7 @@ const HomeProductCard = () => {
 
       {/* SEction  */}
 
-      <h1 className=" mt-10 font-butler text-[32px] sm:text-[36px] md:text-[39px] font-[20px]leading-[40px] sm:leading-[44px] md:leading-[46.8px] text-center text-[#171717]">
+      <h1 className=" mt-10  text-[32px] sm:text-[36px] md:text-[39px] font-[20px]leading-[40px] sm:leading-[44px] md:leading-[46.8px] text-center text-[#171717]">
         You might also like
       </h1>
       <div className="p-4 space-y-8">

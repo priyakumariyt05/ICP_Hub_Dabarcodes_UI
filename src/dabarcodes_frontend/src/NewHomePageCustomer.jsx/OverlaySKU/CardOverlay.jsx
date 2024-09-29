@@ -7,7 +7,7 @@ const CardOverlay = ({ product, qrCodeImage, retailer }) => {
   //   const [tableData, setTableData] = useState(redemptions);
 
   return (
-    <div className="p-8 max-w-4xl  font-roboto lg:m-4">
+    <div className="p-8 max-w-7xl  font-roboto lg:m-4 flex justify-evenly ">
       {/* Product Info and QR Code */}
       <div className="flex flex-col lg:flex-row items-start lg:items-start justify-between">
         <div className="lg:w-2/3">

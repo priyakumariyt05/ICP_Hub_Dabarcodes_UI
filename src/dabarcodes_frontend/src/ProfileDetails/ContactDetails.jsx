@@ -978,7 +978,7 @@ const ContactDetails = () => {
 
                 <button
                   type="submit"
-                  className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+                  className="px-8 py-2 bg-[#0D90C1]  text-white rounded-md shadow-sm hover:bg-blue-700"
                 >
                   Next
                 </button>

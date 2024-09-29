@@ -545,7 +545,9 @@ const PrivacyPreference = () => {
       <ProfileSidebar sidebarOpen={sidebarOpen} currentStep={4} />
 
       {/* Main Content */}
-      <div className="bg-white w-full md:w-2/3 p-8 flex flex-col justify-between ml-auto">
+      
+      <div className="bg-white w-full md:w-2/3 p-6 md:p-8 flex flex-col lg:mt-0 sm:mt-12">
+      {/* <div className="bg-white w-full md:w-2/3 p-8 flex flex-col justify-between ml-auto"> */}
         <div className="flex-grow">
           <h2 className="text-xl font-semibold mb-6">Privacy Settings</h2>
           <form onSubmit={formik.handleSubmit}>
@@ -628,7 +630,7 @@ const PrivacyPreference = () => {
           </Link>
           <button
           type="submit"
-            className="px-8 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700"
+            className="px-8 py-2 bg-[#0D90C1]  text-white rounded-md shadow-sm hover:bg-blue-700"
           >
           Next
           </button>

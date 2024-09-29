@@ -4,14 +4,12 @@
 
 
 // import { NavLink, Route, Routes } from 'react-router-dom';
-// import PrivacyAndSecurity from './PrivacyAndSecurity';
+
 // import GeneralSetting from './GeneralSetting';
-// import SupportFeedback from './SupportFeedback';
-// import LogoutSetting from './LogoutSetting';
+
 // import Navbar2 from '../../components/Navbar2';
 // import Footer from '../../components/Footer';
-// import FeedbackForm from './FeedbackForm';
-// import ContactSupport from './ContactSupport';
+
 
 
 // const Setting = () => {
@@ -88,65 +86,117 @@
 
 // export default Setting
 
-import React from 'react'
-import LeftSidebar from '../LeftSidebar'
-import { MdSearch } from 'react-icons/md'
+// import React from 'react'
+// import LeftSidebar from '../LeftSidebar'
+// import { MdSearch } from 'react-icons/md'
 
 
-import { NavLink, Route, Routes } from 'react-router-dom';
-import PrivacyAndSecurity from './PrivacyAndSecurity';
-import GeneralSetting from './GeneralSetting';
-import SupportFeedback from './SupportFeedback';
-import LogoutSetting from './LogoutSetting';
-import Navbar2 from '../../components/Navbar2';
-import Footer from '../../components/Footer';
-import FeedbackForm from './FeedbackForm';
-import ContactSupport from './ContactSupport';
-import LoginActivity from './LoginActivity';
+// import { NavLink, Route, Routes } from 'react-router-dom';
+
+// import GeneralSetting from './GeneralSetting';
+// import SupportFeedback from './SupportFeedback';
+
+// import Navbar2 from '../../components/Navbar2';
+// import Footer from '../../components/Footer';
+// import FeedbackForm from './FeedbackForm';
+// import ContactSupport from './ContactSupport';
+// import LoginActivity from './LoginActivity';
+// import { useState } from 'react';
 
 
-const Setting = () => {
-  return (
+// const Setting = () => {
+//   const [selectedComponent, setSelectedComponent] = useState("settings");
+
+//   const handleComponentSwitch = (component) => {
+//     setSelectedComponent(component);
+//   };
+//   return (
     
-    <>
-    <Navbar2/>
-    <div className="flex flex-col md:flex-row min-h-screen p-6">
-                <LeftSidebar />
-                <main className="flex-1 p-6 md:p-10">
-                    {/* <h1 className="text-2xl font-bold mb-6">My Linked SKUs</h1> */}
-                    <div className="flex items-center justify-between mb-8">
-      <h1 className="text-2xl font-bold">Setting</h1>
+//     <>
+//     <Navbar2/>
+//     <div className="flex flex-col md:flex-row min-h-screen p-6">
+//                 <LeftSidebar />
+//                 <main className="flex-1 p-6 md:p-10">
+//                     {/* <h1 className="text-2xl font-bold mb-6">My Linked SKUs</h1> */}
+//                     <div className="flex items-center justify-between mb-8">
+//       <h1 className="text-2xl font-bold">Setting</h1>
 
      
-    </div>
+//     </div>
 
-<GeneralSetting/>
-<hr className="my-6 border-t-2 border-gray-300" /> 
-     <LoginActivity/>
-     <hr className="my-8 border-t-2 border-gray-300" /> 
-           <SupportFeedback/>
+// <GeneralSetting/>
+// <hr className="my-6 border-t-2 border-gray-300" /> 
+//      <LoginActivity/>
+//      <hr className="my-8 border-t-2 border-gray-300" /> 
+//            <SupportFeedback/>
 
 
-           <Routes>
+//            <Routes>
          
-            <Route path="support-feedback/*" element={<SupportFeedback />} />
+//             <Route path="support-feedback/*" element={<SupportFeedback />} />
        
            
-          </Routes>
+//           </Routes>
 
-
-      
+//           {/* {selectedComponent === "feedback" && (
+//         <Feedback handleComponentSwitch={handleComponentSwitch} />
+//       )} */}
+//       {selectedComponent === "feedback" && (
+//              <FeedbackForm handleComponentSwitch={handleComponentSwitch} />
+//            )}
       
 
     
              
-</main>
-  </div>
-  <Footer/>
-    </>
+// </main>
+//   </div>
+//   <Footer/>
+//     </>
     
-  )
-}
+//   )
+// }
 
-export default Setting
+// export default Setting
 
+
+import React, { useState } from "react";
+
+// Importing necessary components
+import GeneralSetting from "./GeneralSetting";
+import FeedbackForm from "./FeedbackForm";
+import Navbar2 from "../../components/Navbar2";
+import LeftSidebar from "../LeftSidebar";
+
+const Setting = () => {
+  const [selectedComponent, setSelectedComponent] = useState("settings");
+
+  const handleComponentSwitch = (component) => {
+    setSelectedComponent(component);
+  };
+
+  return (
+    <>
+      <Navbar2 />
+      <div className="flex flex-col md:flex-row min-h-screen p-6">
+        <LeftSidebar />
+        <main className="flex-1 p-6 md:p-10">
+          {/* <div className="flex items-center justify-between mb-8">
+            <h1 className="text-2xl font-bold">Settings</h1>
+          </div> */}
+          {selectedComponent === "settings" && (
+            <GeneralSetting handleComponentSwitch={handleComponentSwitch} />
+          )}
+          {/* Uncomment and implement if needed */}
+          {/* {selectedComponent === "contact" && (
+            <Contact handleComponentSwitch={handleComponentSwitch} />
+          )} */}
+          {selectedComponent === "feedback" && (
+            <FeedbackForm handleComponentSwitch={handleComponentSwitch} />
+          )}
+        </main>
+      </div>
+    </>
+  );
+};
+
+export default Setting;

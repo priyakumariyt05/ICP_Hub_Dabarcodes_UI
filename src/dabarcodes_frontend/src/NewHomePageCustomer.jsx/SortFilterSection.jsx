@@ -2,11 +2,12 @@
 import React, { useState } from "react";
 import { VscSettings } from "react-icons/vsc";
 import { FaSearch } from "react-icons/fa";
+import { HiAdjustmentsHorizontal } from "react-icons/hi2";
 
 const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
   const [sortOption, setSortOption] = useState("");
   const [filterOption, setFilterOption] = useState("");
-  const [searchQuery, setSearchQuery] = useState("");
+  // const [searchQuery, setSearchQuery] = useState("");
 
   const handleSortChange = (e) => {
     setSortOption(e.target.value);
@@ -16,9 +17,9 @@ const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
     setFilterOption(e.target.value);
   };
 
-  const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-  };
+  // const handleSearchChange = (e) => {
+  //   setSearchQuery(e.target.value);
+  // };
 
   return (
     <div className="p-4 lg:p-10">
@@ -46,7 +47,7 @@ const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
               ))}
             </select>
             {/* Sort Icon inside select */}
-            <VscSettings className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
+            <HiAdjustmentsHorizontal  className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
           </div>
 
           {/* Filter Section */}
@@ -64,11 +65,11 @@ const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
               ))}
             </select>
             {/* Filter Icon inside select */}
-            <VscSettings className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
+            <HiAdjustmentsHorizontal className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
           </div>
 
           {/* Search Input Section */}
-          <div className="relative w-full sm:w-auto">
+          {/* <div className="relative w-full sm:w-auto">
             <input
               type="text"
               placeholder="Search..."
@@ -76,9 +77,9 @@ const SortFilterSection = ({ title, sortOptions, filterOptions }) => {
               onChange={handleSearchChange}
               className=" p-2 w-full sm:w-auto rounded-md font-roboto border border-gray-300 focus:outline-none focus:border-blue-500"
             />
-            {/* Search Icon inside input */}
+            
             <FaSearch className="absolute right-2 top-3 text-gray-500 pointer-events-none" />
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

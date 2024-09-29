@@ -397,7 +397,7 @@ const SubscriptionProfile = () => {
   <main className="w-full md:w-3/4 p-10 mt-10 md:mt-0 md:ml-6 mb-10 rounded-md flex-grow">
     <h1
       className="text-[31px] font-extrabold text-[#000000] mb-6 leading-[37.2px] text-left"
-      style={{ fontFamily: 'Butler, serif' }}
+      
     >
     My Subscription
     </h1>

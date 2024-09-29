@@ -57,8 +57,12 @@ import HorizontalStep from "./HorizontalStep";
 
 const ProfileSidebar = ({sidebarOpen, currentStep}) => {
   return (
+    // <div
+    //   className={`md:bg-[#D1EDFF] bg-transparent md:w-1/3 w-full p-6 rounded-lg transition-transform duration-300 ease-in-out 
+    //     ${sidebarOpen ? "fixed top-0 left-0 h-full z-40" : "hidden"} md:block`}
+    // >
     <div
-      className={`md:bg-[#D1EDFF] bg-transparent md:w-1/3 w-full p-6 rounded-lg transition-transform duration-300 ease-in-out 
+      className={`w-full md:w-1/4 bg-[#B5E8FB] md:bg-[#D1EDFF] p-4 shadow-lg bg-transparent rounded-lg md:h-[calc(100vh-2rem)] 
         ${sidebarOpen ? "fixed top-0 left-0 h-full z-40" : "hidden"} md:block`}
     >
       <div className="md:mb-8 hidden md:block">

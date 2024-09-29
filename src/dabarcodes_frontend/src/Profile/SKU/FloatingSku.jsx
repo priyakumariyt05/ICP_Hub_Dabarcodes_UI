@@ -1,13 +1,14 @@
 import React from "react";
-
 import CustomDoughnutChart from "../CustomDoughnutChart";
-import GetQrCodeButton from "./GetQrCodeButton";
-import {useData} from "../../ContextApi/DataContext";
-import RandomCard from "../../NewHomePageCustomer.jsx/RandomCard";
-// import { MdSearch } from "react-icons/md";
+
+import { useData } from "../../ContextApi/DataContext";
+
+import { productData } from "../../Data/giftCarddata";
+import SkuCard from "../SkuCard";
+
 
 const FloatingSku = () => {
-  const {randomCardData} = useData();
+  // const {randomCardData} = useData()
   const data = {
     labels: ["Used", "Unused", "Pending"],
     datasets: [
@@ -32,6 +33,7 @@ const FloatingSku = () => {
       },
     },
   };
+
   return (
     <>
       <div className="space-y-6">
@@ -70,26 +72,10 @@ const FloatingSku = () => {
             </div>
           </div>
         </section>
-        <div className="flex justify-end mt-6">
-          <GetQrCodeButton />
-        </div>
-        {/* Random card section */}
-        <div className="min-h-screen justify-left">
-          {randomCardData.map((card, index) => (
-            <RandomCard
-              key={index}
-              image={card.image}
-              title={card.title}
-              price={card.price}
-              originalPrice={card.originalPrice}
-              weight={card.weight}
-              description={card.description}
-              discount={card.discount}
-              validUntil={card.validUntil}
-              promoter={card.promoter}
-            />
-          ))}
-        </div>
+
+
+        
+       <SkuCard Data={productData}/>
       </div>
     </>
   );

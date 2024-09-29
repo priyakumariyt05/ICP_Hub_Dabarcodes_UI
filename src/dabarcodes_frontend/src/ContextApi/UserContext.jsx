@@ -233,13 +233,13 @@ import { HttpAgent, Actor } from "@dfinity/agent";
 import { Principal } from "@dfinity/principal";
 import { idlFactory } from "../../../declarations/dabarcodes_backend/dabarcodes_backend.did.js"; // Adjust path as necessary
 
-const canisterId = "dmalx-m4aaa-aaaaa-qaanq-cai"; // Backend canister ID
+const canisterId = "dmalx-m4aaa-aaaaa-qaanq-cai"; 
 
 // Create an agent for IC communication
 const agent = new HttpAgent({ host: "http://127.0.0.1:4943" });
 
 if (process.env.NODE_ENV === "development") {
-  agent.fetchRootKey(); // Fetch the root key in development mode
+  agent.fetchRootKey(); 
 }
 
 // Create actor to interact with the backend
@@ -274,7 +274,7 @@ export const UserProvider = ({ children }) => {
   };
 
   useEffect(() => {
-    createUserAccount(); // Optionally pass userProfileData if needed
+    createUserAccount(); 
   }, []);
 
   return (
@@ -284,6 +284,22 @@ export const UserProvider = ({ children }) => {
   );
 };
 export const useUser = () => React.useContext(UserContext);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React, { createContext, useEffect, useState } from "react";
 // import { HttpAgent, Actor } from "@dfinity/agent";
 // import { Principal } from "@dfinity/principal";

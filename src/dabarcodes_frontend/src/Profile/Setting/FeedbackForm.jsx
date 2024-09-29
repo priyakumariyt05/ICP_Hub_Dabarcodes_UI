@@ -80,8 +80,9 @@
 // export default FeedbackForm;
 import React, { useState } from 'react';
 import { FaRegWindowMaximize } from 'react-icons/fa';
+import { IoArrowBack } from 'react-icons/io5';
 
-const FeedbackForm = () => {
+const FeedbackForm = ({ handleComponentSwitch }) => {
   const [selectedRating, setSelectedRating] = useState('Good');
   const [additionalFeedback, setAdditionalFeedback] = useState('');
   const [isContactable, setIsContactable] = useState(false);
@@ -104,7 +105,15 @@ const FeedbackForm = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6 md:p-8 lg:p-12">
+    <div className="max-w-3xl mx-auto p-6">
+    <div className="flex gap-4 text-balance">
+          <IoArrowBack
+            className="cursor-pointer"
+            onClick={() => handleComponentSwitch("settings")}
+            size={24}
+          />
+          <p>Back to General Settings</p>
+        </div>
       <h1 className="text-2xl lg:text-3xl font-semibold mb-4 font-roboto">Support and Feedback</h1>
       
       <h2 className="text-lg md:text-xl font-medium mb-2 font-roboto">Feedback</h2>
