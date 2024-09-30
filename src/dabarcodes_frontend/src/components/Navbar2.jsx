@@ -695,29 +695,34 @@ function Navbar2() {
                 <FiUser className="text-2xl cursor-pointer" />
               </button>
               {openDropdown === "profile" && (
-                <ul className="absolute mt-2 bg-white border rounded-md shadow-lg right-0 w-40 z-10">
+                <ul className="absolute mt-2 bg-white border rounded-md shadow-lg right-0 w-64 z-10 p-4 text-black font-medium">
                   {/* View Profile */}
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <li className="flex items-center px-2 py-1  cursor-pointer">
                     <Link to="/profile"> Profile Overview</Link>
                   </li>
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <li className="flex items-center px-2 py-1  cursor-pointer">
                     <Link to="/subscription-profile">
                       Manage your Subscriptions
                     </Link>
                   </li>
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <li className="flex items-center px-2 py-1 cursor-pointer">
                     <Link to="/my-sku">View Linked Sku</Link>
                   </li>
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <li className="flex items-center px-2 py-1 cursor-pointer">
                     <Link to="/utility-tokens">My Utility Token</Link>
                   </li>
                   {/* Settings */}
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                  <li className="flex items-center px-2 py-1 cursor-pointer">
                     <Link to="/settings">Saved Sku</Link>
                   </li>
                   {/* Logout */}
-                  <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-                    <Link to="/logout">Logout</Link>
+                  <li className="flex items-center px-2 py-1  cursor-pointer mt-6 pb-4">
+                    <Link
+                      to="/logout"
+                      className="flex items-center justify-center px-4 py-2 mt-6 mb-4 bg-[#E7F8FE] text-black rounded hover:bg-sky-100 hover:border   border-[#0D90C1] cursor-pointer"
+                    >
+                      Logout
+                    </Link>
                   </li>
                 </ul>
               )}
@@ -756,54 +761,64 @@ function Navbar2() {
           </Link>
         </div> */}
         <div className="fixed bottom-0 left-0 right-0 bg-white shadow-md py-2 md:hidden flex justify-around text-[#0D90C1] border-t border-gray-200 font-roboto">
-      <Link to="/home" className="flex flex-col items-center text-xs">
-        <FiHome className="text-2xl" />
-        <span>Home</span>
-      </Link>
+          <Link to="/home" className="flex flex-col items-center text-xs">
+            <FiHome className="text-2xl" />
+            <span>Home</span>
+          </Link>
 
-      {/* Tokens link with modal trigger */}
-      <div className="flex flex-col items-center text-xs cursor-pointer" onClick={openToken}>
-        <FiUser className="text-2xl" />
-        <span>Tokens</span>
-      </div>
+          {/* Tokens link with modal trigger */}
+          <div
+            className="flex flex-col items-center text-xs cursor-pointer"
+            onClick={openToken}
+          >
+            <FiUser className="text-2xl" />
+            <span>Tokens</span>
+          </div>
 
-      {/* Notifications link with modal trigger */}
-      <div className="flex flex-col items-center text-xs cursor-pointer" onClick={openNotifications}>
-        <FiBell className="text-2xl" />
-        <span>Notifications</span>
-      </div>
+          {/* Notifications link with modal trigger */}
+          <div
+            className="flex flex-col items-center text-xs cursor-pointer"
+            onClick={openNotifications}
+          >
+            <FiBell className="text-2xl" />
+            <span>Notifications</span>
+          </div>
 
-      {/* Profile link with dropdown trigger */}
-      <div className="flex flex-col items-center text-xs cursor-pointer" onClick={() => toggleDropdown('profile')}>
-        <FiUser className="text-2xl" />
-        <span>Profile</span>
-      </div>
+          {/* Profile link with dropdown trigger */}
+          <div
+            className="flex flex-col items-center text-xs cursor-pointer"
+            onClick={() => toggleDropdown("profile")}
+          >
+            <FiUser className="text-2xl" />
+            <span>Profile</span>
+          </div>
 
-      {/* Profile dropdown (conditionally rendered) */}
-      {openDropdown === "profile" && (
-        <ul className="absolute bottom-16 bg-white border rounded-md shadow-lg w-40 z-10">
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/profile">Profile Overview</Link>
-          </li>
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/subscription-profile">Manage your Subscriptions</Link>
-          </li>
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/my-sku">View Linked Sku</Link>
-          </li>
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/utility-tokens">My Utility Token</Link>
-          </li>
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/settings">Saved Sku</Link>
-          </li>
-          <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
-            <Link to="/logout">Logout</Link>
-          </li>
-        </ul>
-      )}
-
-    </div>
+          {/* Profile dropdown (conditionally rendered) */}
+          {openDropdown === "profile" && (
+            <ul className="absolute bottom-16 bg-white border rounded-md shadow-lg w-40 z-10">
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/profile">Profile Overview</Link>
+              </li>
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/subscription-profile">
+                  Manage your Subscriptions
+                </Link>
+              </li>
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/my-sku">View Linked Sku</Link>
+              </li>
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/utility-tokens">My Utility Token</Link>
+              </li>
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/settings">Saved Sku</Link>
+              </li>
+              <li className="flex items-center px-2 py-1 hover:bg-gray-100 cursor-pointer">
+                <Link to="/logout">Logout</Link>
+              </li>
+            </ul>
+          )}
+        </div>
 
         {menuOpen && (
           <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 px-4 py-3 flex flex-col space-y-2 z-20">

@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import { useKeenSlider } from "keen-slider/react";
 // import "keen-slider/keen-slider.min.css";
@@ -94,12 +93,16 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
   const visibleProducts = products.slice(0, 4);
 
   return (
-    <div className={`my-4 md:my-6 lg:my-8 p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg ${showBorder ? 'border' : ''}`}>
+    <div
+      className={`my-4 md:my-6 lg:my-8 p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg ${
+        showBorder ? "border" : ""
+      }`}
+    >
       <div className="flex md:flex-row justify-between mb-4 md:mb-6">
         <h2 className="font-bold text-xl">{title}</h2>
         {products.length > 4 && (
           <Link
-            to="/top-sku"  // Update this with the actual route where you want to navigate
+            to="/top-sku" // Update this with the actual route where you want to navigate
             className="text-black hover:underline font-roboto"
           >
             View All
@@ -113,7 +116,7 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
         </div>
       ) : (
         <div ref={sliderRef} className="keen-slider">
-          {visibleProducts.map((product) => (
+          {visibleProducts.map((product, id) => (
             <div key={product.id} className="keen-slider__slide">
               <CardSection product={product} />
             </div>
@@ -125,3 +128,12 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
 };
 
 export default ProductSection2;
+{
+  /* <div ref={sliderRef} className="keen-slider">
+{visibleProducts.map((product) => (
+  <div key={product.id} className="keen-slider__slide">
+    <CardSection product={product} />
+  </div>
+))}
+</div> */
+}

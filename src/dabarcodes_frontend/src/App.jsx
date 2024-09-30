@@ -137,6 +137,7 @@ import TopCategory from "./NewHomePageCustomer.jsx/TopCategory";
 import TokensModal from "./NewHomePageCustomer.jsx/Modals/TokensModal"
 import LinkedSku from "./NewHomePageCustomer.jsx/Modals/LinkedSku"
 import NotificationsModals from "./NewHomePageCustomer.jsx/Modals/NotifcationModals"
+import Loading from "./components/Loading";
 const ConnectWalletModal = lazy(() => import("./SmallPages/ConnectWalletModal"));
 const RoleSelectionModal = lazy(() => import("./SmallPages/RoleSelectionModal"));
 const UtilityTokenCard = lazy(() => import("./SmallPages/UtilityTokenCard"));
@@ -180,7 +181,7 @@ const LoginForm = lazy(() => import("./ProfileDetails/LoginForm"));
 function App() {
   return (
     <Router>
-      <Suspense fallback={<div>Loading...</div>}>
+      <Suspense fallback={<Loading/>}>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/*" element={<Home />} />

@@ -498,6 +498,7 @@ const HomePage2 = () => {
       </div>
 
       <Category />
+      {/* <Explore_Category/> */}
       <div className="mx-auto p-4 ">
         <div className="p-4 space-y-8">
           <ProductSection2 title="Top SKU" products={topSku} />
