@@ -133,7 +133,7 @@ const SkuCard = ({ Data }) => {
               <p className="text-base text-[#646464]">{product.others}</p>
               <div className="flex items-center gap-4">
                 <div className="w-fit rounded-md mt-1 text-white bg-[#0D90C1]">
-                  <button className="px-4 py-1">Link SKU</button>
+                  <button className="px-4 py-1">Linked</button>
                 </div>
                 <CiBookmark size={24} className="mt-1 text-[#6B696B]" />
               </div>

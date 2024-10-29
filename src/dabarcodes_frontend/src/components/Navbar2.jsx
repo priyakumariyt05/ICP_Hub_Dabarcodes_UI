@@ -843,7 +843,7 @@ function Navbar2() {
           </div>
         )}
 
-        <div className="bg-blue-500 text-white py-2 px-4 font-roboto flex justify-between md:justify-end">
+        <div className="bg-[#0D90C1]  text-white py-2 px-4 font-roboto flex justify-between md:justify-end">
           <Link to="/retailer-near" className="mr-8">
             Store near me
           </Link>

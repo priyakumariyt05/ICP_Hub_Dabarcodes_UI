@@ -1,59 +1,120 @@
 
-import NotificationCard from "./NotificationsCard";
-import Sidebar from "./Sidebar";
+import React, {useState} from "react";
+import {CiCircleQuestion} from "react-icons/ci";
 
-const notifications = [
+const cardItems = ["All", "Promotions", "Supplier Requests", "Miscellaneous"];
+
+const cardData = [
   {
-    title: "Upcoming Promotion Opportunity",
-    description: `A seasonal promotion event is coming up. Consider creating a special promotion to attract more customers during this high-traffic period.\n\nSKU #24680 from Supplier ABC Industries to attract more customers during this high-traffic period. Highlight this product to maximize visibility and drive sales. Coordinate with the supplier to ensure optimal stock levels and promotional support.`,
-    showActions: false
+    title: "New Promotion Request from Supplier",
+    description:
+      "Supplier XYZ has submitted a new promotion request for Product Nestle Coffee 500g pouch.",
+    dateRange: "Promotion Timeline: 2024, Oct 7 to 2024, Oct 19",
+    buttonText: "View Request",
+    category: "Promotions",
+  },
+  {
+    title: "Promotion Expiring Soon",
+    description:
+      "Promotion #24689 from Supplier ABC Industries is attracting more customers... expiring in [X] days.",
+    buttonText: "View Request",
+    category: "Promotions",
+  },
+  {
+    title: "Low Stock",
+    description:
+      "Product [Product Name] has reached a low stock level. Only [X] units remain.",
+    buttonText: "View Request",
+    category: "Supplier Requests",
   },
   {
     title: "Upcoming Promotion Opportunity",
-    description: `A seasonal promotion event is coming up. Consider creating a special promotion to attract more customers during this high-traffic period.\n\nSKU #24680 from Supplier ABC Industries to attract more customers during this high-traffic period. Highlight this product to maximize visibility and drive sales. Coordinate with the supplier to ensure optimal stock levels and promotional support.`,
-    showActions: true
+    description:
+      "A seasonal promotion is coming up... attract more customers using high-traffic products.",
+    buttonText: "View Request",
+    category: "Miscellaneous",
   },
-  {
-    title: "Upcoming Promotion Opportunity",
-    description: `A seasonal promotion event is coming up. Consider creating a special promotion to attract more customers during this high-traffic period. Work with Supplier ABC to adjust stock levels and maximize impact.`,
-    showActions: false
-  },
-  {
-    title: "Upcoming Promotion Opportunity",
-    description: `A seasonal promotion event is coming up. Consider creating a special promotion to attract more customers during this high-traffic period.\n\nSKU #24680 from Supplier ABC Industries to attract more customers during this high-traffic period. Highlight this product to maximize visibility and drive sales. Coordinate with the supplier to ensure optimal stock levels and promotional support.`,
-    showActions: false
-  },
-  {
-    title: "Upcoming Promotion Opportunity",
-    description: `Promotion event approaching soon. Coordinate to ensure timely execution.\n\nSKU #24680 from Supplier ABC Industries to attract more customers during this high-traffic period. Highlight this product to maximize visibility and drive sales. Coordinate with the supplier to ensure optimal stock levels and promotional support.`,
-    showActions: false
-  },
-  {
-    title: "Upcoming Promotion Opportunity",
-    description: `Promotion event approaching soon. Maximize customer reach.`,
-    showActions: false
-  }
 ];
 
-function Notifications() {
-  return (
-    <div className="flex h-screen font-roboto">
-      <Sidebar />
-      {/* Main */}
-      <div className="flex-grow p-6 bg-gray-100 overflow-y-auto md:ml-64 transition-all duration-300 ease-in-out">
-        <h2 className="text-2xl font-semibold mb-6">Notifications</h2>
+const Notifications = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
 
-        {notifications.map((notification, index) => (
-          <NotificationCard
-            key={index}
-            title={notification.title}
-            description={notification.description}
-            showActions={notification.showActions}
-          />
+  const handleItemClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  // Filter cards based on the active category
+  const filteredData =
+    activeIndex === 0
+      ? cardData
+      : cardData.filter((card) => card.category === cardItems[activeIndex]);
+
+  return (
+    <>
+      <div>
+        {/* Notification Tabs */}
+        <ul className="flex md:flex-row flex-col md:justify-start md:items-start md:gap-6 gap-4">
+          <CiCircleQuestion size={20} className="text-[#37352F]" />
+          {cardItems.map((item, index) => (
+            <li
+              key={item}
+              onClick={() => handleItemClick(index)}
+              className={`cursor-pointer flex items-center ${
+                activeIndex === index
+                  ? "font-semibold underline decoration-black underline-offset-8"
+                  : ""
+              }`}
+            >
+              {item}
+              {activeIndex === index && (
+                <p className="bg-[#FE5F33] underline w-4 h-4 border text-white rounded-[3px] text-center text-xs ml-2">
+                  {filteredData.length}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+        <hr className="hidden md:block border-t-2 mt-4 border-[#F5F5F5]" />
+      </div>
+
+      {/* Card List */}
+      <div className="overflow-y-auto max-h-[400px] hide-scrollbar">
+        {filteredData.map((card, index) => (
+          <div key={card.title + index}>
+            <CardComponent
+              title={card.title}
+              description={card.description}
+              dateRange={card.dateRange}
+              buttonText={card.buttonText}
+            />
+            <hr className="block border-t-2 mt-4 border-[#F5F5F5]" />
+          </div>
         ))}
+      </div>
+    </>
+  );
+};
+
+const CardComponent = ({title, description, dateRange, buttonText}) => {
+  return (
+    <div className="p-4 bg-white border border-[#E5E5E5] rounded-md shadow-sm mb-6 md:flex justify-between items-center">
+      {/* Left Side: Card Content */}
+      <div>
+        <p className="font-semibold text-md">{title}</p>
+        <p className="text-sm text-[#646464] mt-2">{description}</p>
+        {dateRange && (
+          <p className="text-sm text-[#646464] mt-2">{dateRange}</p>
+        )}
+      </div>
+
+      {/* Right Side: Button */}
+      <div className="mt-4 md:mt-0 text-right">
+        <button className="border border-[#0D90C1] text-[#0D90C1] px-4 py-2 rounded hover:bg-[#E7F8FE] font-medium">
+          {buttonText}
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default Notifications;

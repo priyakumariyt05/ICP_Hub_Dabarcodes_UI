@@ -7,7 +7,7 @@ const About = () => {
       <div className="container">
         <div className="box">
           <div className="header">
-            <h1 className="font-butler"> What is DaBarcodes</h1>
+            <h1 className=""> What is DaBarcodes</h1>
             <p>
               daBarcodes bridges the gap between customers, suppliers, and
               retailers through a unique promotional platform. Whether you're
@@ -17,7 +17,7 @@ const About = () => {
           </div>
           <div className="boxes">
             <div className="smallboxes">
-              <p className="font-butler">
+              <p className="">
                 Start Your Savings <br /> Journey
               </p>
               <div className="image">
@@ -29,7 +29,7 @@ const About = () => {
             </div>
 
             <div className="smallboxes">
-              <p className="font-butler">
+              <p className="">
                 Insights and <br />
                 Preferences
               </p>
@@ -41,7 +41,7 @@ const About = () => {
               </div>
             </div>
             <div className="smallboxes">
-              <p className="font-butler">
+              <p className="">
                 Promote Your <br />
                 Products Effortlessly
               </p>

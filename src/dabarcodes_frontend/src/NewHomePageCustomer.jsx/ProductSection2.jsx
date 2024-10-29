@@ -111,29 +111,37 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
       </div>
 
       {loading ? (
-        <div className="flex justify-center items-center h-48">
+        <div className="flex justify-center items-center h-48 ">
           <p className="text-lg">Loading...</p>
         </div>
       ) : (
-        <div ref={sliderRef} className="keen-slider">
+                  <div ref={sliderRef} className="keen-slider">
           {visibleProducts.map((product, id) => (
             <div key={product.id} className="keen-slider__slide">
               <CardSection product={product} />
             </div>
           ))}
-        </div>
+        </div> 
+     
       )}
     </div>
   );
 };
 
 export default ProductSection2;
-{
-  /* <div ref={sliderRef} className="keen-slider">
-{visibleProducts.map((product) => (
-  <div key={product.id} className="keen-slider__slide">
-    <CardSection product={product} />
-  </div>
-))}
-</div> */
-}
+   {/* <div ref={sliderRef} className="keen-slider">
+          {visibleProducts.map((product, id) => (
+            <div key={product.id} className="keen-slider__slide">
+              <CardSection product={product} />
+            </div>
+          ))}
+        </div> */}
+
+  
+    //     <div  ref={sliderRef} className="keen-slider">
+       
+    //    {visibleProducts.map((product, index) => (
+    
+    //      <CardSection key={index} product={product} className="keen-slider__slide "/>
+    //    ))}
+    //  </div>

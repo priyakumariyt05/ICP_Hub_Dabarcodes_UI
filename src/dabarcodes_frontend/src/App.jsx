@@ -167,16 +167,19 @@ const ContactSupport = lazy(() => import("./Profile/Setting/ContactSupport"));
 const OverlayQR = lazy(() => import("./NewHomePageCustomer.jsx/OverlaySKU/OverlayQR"));
 const OverlayMultiple = lazy(() => import("./NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple"));
 const PlansPricing = lazy(() => import("./NewHomePageCustomer.jsx/PlansPricing"));
-const AccountPage = lazy(() => import("./Dashboard/Accountpage"));
+// const AccountPage = lazy(() => import("./Dashboard/Accountpage"));
 const ExploreCategories = lazy(() => import("./NewHomePageCustomer.jsx/Explore/ExploreCategories"));
 const ExploreBrands = lazy(() => import("./NewHomePageCustomer.jsx/Explore/ExploreBrands"));
-const PasswordForm = lazy(() => import("./Dashboard/PasswordForm"));
+// const PasswordForm = lazy(() => import("./Dashboard/PasswordForm"));
 const RetailerNear = lazy(() => import("./NewHomePageCustomer.jsx/RetailerNear"));
-const AddStoreModal = lazy(() => import("./Dashboard/Modals/AddStoreModal"));
+// const AddStoreModal = lazy(() => import("./Dashboard/Modals/AddStoreModal"));
 const CreatePassword = lazy(() => import("./ProfileDetails/CreatePassword"));
 const AccountCredentialsPopup = lazy(() => import("./NewHomePageCustomer.jsx/Modals/AccountCredentialsPopup"));
 const Store = lazy(() => import("./NewHomePageCustomer.jsx/StoreInformation/Store"));
 const LoginForm = lazy(() => import("./ProfileDetails/LoginForm"));
+import OperationalRoutes from "./RetailerSide/Operational/OperationalRoutes"
+import SupportWorkerRoutes from "./RetailerSide/SupportWorker/SupportWorkerRoutes";
+
 
 function App() {
   return (
@@ -235,10 +238,12 @@ function App() {
           {/* HOMEPAGE End */}
 
           <Route path="/filter" element={<Filter />} />
-          <Route path="/dashboard/*" element={<DashboardRoutes />} />
-          <Route path="/account-page" element={<AccountPage />} />
+          <Route path="/dashboard/*" element={<DashboardRoutes/>} />
+          <Route path="/operational-manager/*" element={<OperationalRoutes />} />
+          <Route path="/support-worker/*" element={<SupportWorkerRoutes />} />
+          {/* <Route path="/account-page" element={<AccountPage />} />
           <Route path="/password-form" element={<PasswordForm />} />
-          <Route path="/add-store-form" element={<AddStoreModal />} />
+          <Route path="/add-store-form" element={<AddStoreModal />} /> */}
           <Route path="/feedback" element={<FeedbackForm />} />
           <Route path="/contact-support" element={<ContactSupport />} />
         </Routes>
