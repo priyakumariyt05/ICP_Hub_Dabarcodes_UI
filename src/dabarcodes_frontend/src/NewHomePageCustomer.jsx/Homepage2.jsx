@@ -468,6 +468,7 @@ import Footer from "../components/Footer";
 import Navbar2 from "../components/Navbar2";
 import { useData } from "../ContextApi/DataContext";
 import BestCombo from "./BestCombo";
+import LinkedSku from "./Modals/LinkedSku";
 
 const HomePage2 = () => {
   const { wishlist, linkedSku, topSku, upComingOffer, retailerList, combo } =
@@ -495,6 +496,7 @@ const HomePage2 = () => {
           <ProductSection2 title="My Linked SKU" products={linkedSku} />
           <ProductSection2 title="Upcoming Offer" products={upComingOffer} />
         </div>
+        <LinkedSku/>
       </div>
 
       <Category />

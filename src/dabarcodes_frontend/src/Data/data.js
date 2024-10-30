@@ -1,7 +1,7 @@
 export const wishlistData = [
    
   {
-    id: 5,
+    id: 6,
     image: "/image/drink.png",
     promotionValidity: "valid untill 2024, Sept 19",
     name: "Nestle Ice Coffee",
@@ -71,7 +71,7 @@ export const wishlistData = [
  export const linkedSkuData = [
    
   {
-    id: 5,
+    id: 1,
     image: "/image/drink.png",
     promotionValidity: "valid untill 2024, Sept 19",
     name: "Nestle Ice Coffee",
@@ -84,7 +84,7 @@ export const wishlistData = [
     othersCount: "4",
   }, 
     {
-      id: 5,
+      id: 2,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -98,7 +98,7 @@ export const wishlistData = [
       othersCount: "4",
     },
     {
-      id: 6,
+      id: 3,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -111,7 +111,7 @@ export const wishlistData = [
       othersCount: "4",
     },
     {
-      id: 7,
+      id: 4,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -124,7 +124,7 @@ export const wishlistData = [
       othersCount: "4",
     },
     {
-      id: 8,
+      id: 5,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -419,7 +419,7 @@ export const wishlistData = [
  export const UpcomingOffer = [
    
   {
-    id: 5,
+    id: 1,
     image: "/image/drink.png",
     promotionValidity: "valid untill 2024, Sept 19",
     name: "Nestle Ice Coffee",
@@ -487,7 +487,7 @@ export const wishlistData = [
   export const TopSku = [
  
     {
-      id: 5,
+      id: 1,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -500,7 +500,7 @@ export const wishlistData = [
       othersCount: "4",
     },  
     {
-      id: 5,
+      id: 2,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -513,7 +513,7 @@ export const wishlistData = [
       othersCount: "4",
     },   
       {
-        id: 5,
+        id: 3,
         image: "/image/drink.png",
         promotionValidity: "valid untill 2024, Sept 19",
         name: "Nestle Ice Coffee",
@@ -525,7 +525,7 @@ export const wishlistData = [
         originalPrice: "52",
         othersCount: "4",
       },  {
-      id: 5,
+      id: 4,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -549,7 +549,7 @@ export const wishlistData = [
       originalPrice: "52",
       othersCount: "4",
     },   {
-      id: 5,
+      id: 6,
       image: "/image/drink.png",
       promotionValidity: "valid untill 2024, Sept 19",
       name: "Nestle Ice Coffee",
@@ -804,42 +804,42 @@ export const wishlistData = [
     },
   ];
   export const brands = [
-    {id: 1, name: "Nestle", logo: "/image/brand.png"},
-    {id: 2, name: "Pepsi", logo: "/image/brand.png"},
+    {id: 1, name: "Nestle", logo: "/image/nescafe.png"},
+    {id: 2, name: "Pepsi", logo: "/image/pepsi.png"},
     {id: 3, name: "Starbucks", logo: "/image/brand.png"},
-    {id: 4, name: "McDonalds", logo: "/image/brand.png"},
-    {id: 5, name: "Burger King", logo: "/image/brand.png"},
-    {id: 6, name: "Britannia", logo: "/image/brand.png"},
-    {id: 7, name: "McCain", logo: "/image/brand.png"},
-    {id: 8, name: "Kissan", logo: "/image/brand.png"},
-    {id: 9, name: "Mother Dairy", logo: "/image/brand.png"},
-    {id: 10, name: "Veeba", logo: "/image/brand.png"},
-    {id: 11, name: "Parle", logo: "/image/brand.png"},
-    {id: 12, name: "Paper Boat", logo: "/image/brand.png"},
-    {id: 13, name: "RockRider", logo: "/image/brand.png"},
-    {id: 14, name: "Saffola", logo: "/image/brand.png"},
-    {id: 15, name: "Dominos Pizza", logo: "/image/brand.png"},
+    {id: 4, name: "McDonalds", logo: "/image/Mc.png"},
+    {id: 5, name: "Burger King", logo: "/image/Bgking.png"},
+    {id: 6, name: "Britannia", logo: "/image/Britaania.png"},
+    {id: 7, name: "McCain", logo: "/image/mcCan.png"},
+    {id: 8, name: "Kissan", logo: "/image/kissan.png"},
+    {id: 9, name: "Mother Dairy", logo: "/image/motherdairy.png"},
+    {id: 10, name: "Veeba", logo: "/image/veeba.png"},
+    {id: 11, name: "Parle", logo: "/image/parle.png"},
+    {id: 12, name: "Paper Boat", logo: "/image/paperboat.png"},
+    {id: 13, name: "Rooh Afza", logo: "/image/roohafza.png"},
+    {id: 14, name: "Saffola", logo: "/image/saffola.png"},
+    {id: 15, name: "Dominos Pizza", logo: "/image/dominos.png"},
   // Add more brands...
 ];
 export const categories = [
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
+  { id: 1, name: "Snacks", logo: "/image/snack.png" },
+  { id: 2, name: "Meat Products", logo: "/image/meat.png" },
+  { id: 3, name: "Beverages", logo: "/image/category.png" },
+  { id: 4, name: "Frozen Food", logo: "/image/frozen.png" },
 
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
+  { id: 5, name: "Sea Food", logo: "/image/fish.png" },
+  { id: 6, name: "Oil Product", logo: "/image/oil.png" },
+  { id: 7, name: "Fruits and Vegetable", logo: "/image/fruits2.png" },
+  { id: 8, name: "Fruits", logo: "/image/fruit.png" },
 
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
+  { id: 9, name: "Bakery", logo: "/image/bakery.png" },
+  { id: 10, name: "Veggies", logo: "/image/veggie1.png" },
+  { id: 11, name: "Soft Drink", logo: "/image/softdrink.png" },
 
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
-  { id: 2, name: "Beverages", logo: "/image/category.png" },
+  { id: 12, name: "Sweet Fruits", logo: "/image/sweetfruit.png" },
+  { id: 13, name: "Veggies", logo: "/image/veggie2.png" },
+  { id: 14, name: "Poultry Food", logo: "/image/poultry.png" },
+  { id: 15, name: "Fruits", logo: "/image/fruits2.png" },
 ];
 export const products = [
   {

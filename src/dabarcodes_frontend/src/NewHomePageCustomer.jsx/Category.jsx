@@ -1,4 +1,3 @@
-
 import React from "react";
 import Slider from "react-slick";
 import { Link } from "react-router-dom"; 
@@ -9,13 +8,13 @@ import "slick-carousel/slick/slick-theme.css";
 const Category = () => {
 
   const categories = [
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
-    { name: "Snacks", image: "/image/category.png" },
+    { name: "Snacks", image: "/image/snack.png" },
+    { name: "Baverage", image: "/image/category.png" },
+    { name: "Frozen Food", image: "/image/frozen.png" },
+    { name: "Fruit", image: "/image/fruit.png" },
+    { name: "Meat Product", image: "/image/meat.png" },
+    { name: "Sea Food", image: "/image/fish.png" },
+    { name: "Veggies", image: "/image/category.png" },
   ];
 
   const settings = {
