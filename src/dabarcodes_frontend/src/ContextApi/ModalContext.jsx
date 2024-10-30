@@ -18,13 +18,12 @@ export const ModalProvider = ({ children }) => {
 
   //
   const [isTokenOpen, setIsTokenOpen] = useState(false);
-  // const [isProfileModalOpen, setIsProfileModalOpen] = useState(false);
-  // const [isNotificitionsOn, setIsNotificitionsOn] = useState(false);
+
   const [isNotificationsOn, setIsNotificationsOn] = useState(false);
   const [linkedSKU, setLinkedSKU] = useState(false);
 
   const [isCoupanOn, setIsCoupanOn] = useState(false);
-  // const [linkedSKU, setIsLinkedSKU] = useState(false);
+
   const [isSingleQR, SetIsSingleQR] = useState(false);
   const [isMultiQR, SetIsMultiQR] = useState(false);
   

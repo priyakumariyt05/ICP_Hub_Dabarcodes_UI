@@ -62,14 +62,6 @@ const Documentation = () => {
     <div className="p-6">
       {/* Back button with arrow icon */}
       <div className="flex flex-grow">
-        {/* <button
-          className="mb-4 text-[#0D90C1]  underline flex items-center"
-          onClick={() => navigate(-1)} // Go back to the previous page
-        >
-         
-          <FaArrowLeft className="mr-4 border border-black border-spacing-1 rounded-full text-4xl p-2" />{" "}
-     
-        </button> */}
         <BackButton/>
         <h1 className="text-2xl font-bold ">Documentations</h1>
       </div>

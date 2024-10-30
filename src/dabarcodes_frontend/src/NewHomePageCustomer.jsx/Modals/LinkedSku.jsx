@@ -1,5 +1,3 @@
-
-
 import React, { useState } from "react";
 import Modal from "./Modal";
 import { useModal } from "../../ContextApi/ModalContext";
@@ -26,14 +24,14 @@ const LinkedSku = () => {
   return (
     <Modal
       isOpen={linkedSKU}
-      onClose={handleCloseFloatingModal} // Close handler
+      onClose={handleCloseFloatingModal} 
       className="mx-4 md:mx-0"
       mainclass="flex justify-center items-center overflow-x-hidden "
     >
       {/* Conditionally render modals so that only one is visible at a time */}
       {isFloatingModal ? (
         <FloatingSkuModal
-          onClose={handleCloseFloatingModal} // Use the new close handler
+          onClose={handleCloseFloatingModal} 
           onBackToFixedSku={handleBackToFixedSku}
         />
       ) : (

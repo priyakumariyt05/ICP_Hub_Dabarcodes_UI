@@ -128,7 +128,6 @@ import React, {useState, useEffect} from "react";
 import {FiSearch, FiBell, FiUser} from "react-icons/fi";
 import {Link} from "react-router-dom";
 import {FiChevronDown} from "react-icons/fi";
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
 import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
 
 function TopNavbar() {
@@ -234,12 +233,7 @@ function TopNavbar() {
           <FiBell className="text-2xl cursor-pointer" />
         </Link>
 
-        {/* <button
-          onClick={() => toggleDropdown("profile")}
-          className="flex items-center space-x-1 text-gray-700"
-        >
-          <FiUser className="text-2xl cursor-pointer" />
-        </button> */}
+       
         <Link to="/dashboard/profile-data">
           <button
             onClick={() => toggleDropdown("profile")}

@@ -45,9 +45,7 @@ const PlansPricing = () => {
                 </li>
               ))}
             </ul>
-            {/* <button className="w-full py-2 bg-[#0D90C1] text-white rounded-lg hover:bg-blue-600">
-              Subscribe
-            </button> */}
+         
             <Link to="/dashboard/subscription-plan">
               <button className="w-full py-2 bg-[#0D90C1] text-white rounded-lg hover:bg-blue-600">
                 Subscribe

@@ -337,6 +337,7 @@ import StorePromotionDetailsPage from "./StoreManagement/StoreDetail/StorePromot
 import PromotionalDetailsPopup from "./Modals/PromotionalDetailsPopup";
 import ProductNoPromotion from "./ProductManagement/ProductDetail/ProductNoPromotion";
 import ProductPromotion from "./ProductManagement/ProductDetail/ProductPromotion";
+import SupplierDetailPage from "./SupplierManagement/SupplierDetail/SupplierDetailPage";
 
 const DashboardRoutes = () => {
   const location = useLocation(); // Get current route location
@@ -433,7 +434,10 @@ const DashboardRoutes = () => {
               element={<ProductNoPromotion />}
             />
             {/* store details pages routes  end */}
+            {/* suppplier detail page */}
+            <Route path="supplier-detail-page" element={<SupplierDetailPage />} />
             {/* Other routes */}
+
 
             {/* <Route path="upload-modal" element={<UploadModal />} /> */}
             <Route path="admin-create" element={<AccountPage />} />

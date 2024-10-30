@@ -274,12 +274,12 @@ import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {Link, useLocation} from "react-router-dom";
 
 const Sidebar = () => {
-  const [openSection, setOpenSection] = useState(""); // Store the active section
-  const location = useLocation(); // Get the current route
+  const [openSection, setOpenSection] = useState(""); 
+  const location = useLocation(); 
 
   // Toggle function to open/close a section
   const handleToggle = (section) => {
-    setOpenSection((prev) => (prev === section ? "" : section)); // Close if same section is clicked
+    setOpenSection((prev) => (prev === section ? "" : section));
   };
 
   return (

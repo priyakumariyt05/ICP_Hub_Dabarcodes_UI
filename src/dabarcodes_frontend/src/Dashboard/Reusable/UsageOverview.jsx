@@ -1,13 +1,13 @@
-import React from 'react';
-import Chart from './Chart/Chart';
+import React from "react";
+import Chart from "./Chart/Chart";
 
-const UsageOverview = ({ 
-  title, 
-  value, 
-  valueLabel, 
-  chartData, 
-  chartOptions, 
-  selectOptions 
+const UsageOverview = ({
+  title,
+  value,
+  valueLabel,
+  chartData,
+  chartOptions,
+  selectOptions,
 }) => {
   return (
     <div className="bg-white p-6 rounded-lg shadow-md col-span-2">

@@ -619,7 +619,7 @@ const Store = () => {
               placeholder="Search"
               value={searchTerm}
               onChange={handleSearch}
-              className="border rounded p-2 w-full pr-10" // Adjust padding for icon space
+              className="border rounded p-2 w-full pr-10" 
             />
             <IoSearchOutline className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
           </div>

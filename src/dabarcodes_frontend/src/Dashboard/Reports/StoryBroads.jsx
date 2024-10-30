@@ -113,16 +113,6 @@ const StoryBroads = () => {
             </div>
           </>
         )}
-        {/* {selectedTab === "watch" && (
-          <>
-            <div className="bg-[#B5E8FB] p-4 rounded shadow">
-              Top Products Sold
-            </div>
-            <div className="bg-[#B5E8FB] p-4 rounded shadow">
-              Top Units Sold
-            </div>
-          </>
-        )} */}
         {selectedTab === "watch" && (
           <>
             <div

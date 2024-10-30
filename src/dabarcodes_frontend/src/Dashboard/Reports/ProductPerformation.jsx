@@ -484,8 +484,8 @@ const ProductPerformance = () => {
   // Function to handle tab change and hide the detailed view
   const handleTabChange = (tab) => {
     setSelectedTab(tab);
-    setShowDetail(false); // Hide the detail view when a tab is changed
-    setActiveCard(null); // Reset active card when changing tabs
+    setShowDetail(false); 
+    setActiveCard(null); 
   };
 
   // Function to handle card click and set the active card

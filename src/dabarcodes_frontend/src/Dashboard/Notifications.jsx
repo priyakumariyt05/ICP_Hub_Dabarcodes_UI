@@ -98,7 +98,7 @@ const Notifications = () => {
 const CardComponent = ({title, description, dateRange, buttonText}) => {
   return (
     <div className="p-4 bg-white border border-[#E5E5E5] rounded-md shadow-sm mb-6 md:flex justify-between items-center">
-      {/* Left Side: Card Content */}
+      {/* Left Side Card Content */}
       <div>
         <p className="font-semibold text-md">{title}</p>
         <p className="text-sm text-[#646464] mt-2">{description}</p>
@@ -107,7 +107,7 @@ const CardComponent = ({title, description, dateRange, buttonText}) => {
         )}
       </div>
 
-      {/* Right Side: Button */}
+      {/* Right Side Button */}
       <div className="mt-4 md:mt-0 text-right">
         <button className="border border-[#0D90C1] text-[#0D90C1] px-4 py-2 rounded hover:bg-[#E7F8FE] font-medium">
           {buttonText}

@@ -7,31 +7,31 @@ const AverageRedemptionRate = () => {
           {
             label: "Revenue",
             data: [10000, 40000, 20000, 50000, 60000, 40000, 20000],
-            borderColor: "#3b82f6", // Blue line
-            tension: 0, // Curved line
-            pointRadius: 5, // Dot size
-            pointBackgroundColor: "#3b82f6", // Dot color
+            borderColor: "#3b82f6",
+            tension: 0, 
+            pointRadius: 5,
+            pointBackgroundColor: "#3b82f6", 
           },
         ],
       };
     
       const chartOptions = {
         responsive: true,
-        maintainAspectRatio: false, // Prevents fixed aspect ratio to allow full width
+        maintainAspectRatio: false,
         plugins: {
-          legend: {display: false}, // Hide legend
+          legend: {display: false}, 
           tooltip: {
-            enabled: true, // Disable tooltips completely
+            enabled: true,
           },
         },
         scales: {
           x: {
-            grid: {display: false}, // Hide vertical grid lines
+            grid: {display: false}, 
           },
           y: {
             beginAtZero: true,
-            ticks: {stepSize: 10000}, // Control y-axis steps
-            grid: {color: "#e5e7eb"}, // Light gray grid lines
+            ticks: {stepSize: 10000},
+            grid: {color: "#e5e7eb"},
           },
         },
       };

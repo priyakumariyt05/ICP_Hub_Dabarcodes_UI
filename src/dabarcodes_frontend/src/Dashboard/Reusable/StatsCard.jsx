@@ -1,25 +1,6 @@
-// import React from "react";
-
-// const StatsCard = ({title, value, timeFrame, percentageChange}) => {
-//   return (
-//     <div className="border border-gray-200 rounded-lg p-4 w-full max-w-xs">
-//       <div className="flex justify-between items-center mb-2">
-//         <h2 className="text-lg font-semibold">{title}</h2>
-//         <span className="text-gray-500">{timeFrame}</span>
-//       </div>
-//       <div className="text-2xl font-bold mb-2">{value}</div>
-//       <div className="flex items-center text-green-500">
-//         <span className="text-xs">{percentageChange > 0 ? "▲" : "▼"}</span>
-//         <span className="ml-1 text-sm">{percentageChange}%</span>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default StatsCard;
 import React from "react";
 
-const StatsCard = ({title, value, percentageChange}) => {
+const StatsCard = ({ title, value, percentageChange }) => {
   return (
     <div className="border border-gray-200 rounded-lg p-4 w-full max-w-xs">
       <div className="flex justify-between items-center mb-2">
@@ -48,5 +29,3 @@ const StatsCard = ({title, value, percentageChange}) => {
 };
 
 export default StatsCard;
-
-

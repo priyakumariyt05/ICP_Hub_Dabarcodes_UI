@@ -1,11 +1,9 @@
 import React from "react";
-import {Doughnut} from "react-chartjs-2";
-import {Chart as ChartJS, ArcElement, Tooltip, Legend} from "chart.js";
-
-// Register necessary components for Chart.js
+import { Doughnut } from "react-chartjs-2";
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const DonutChart = ({data}) => {
+const DonutChart = ({ data }) => {
   const chartData = {
     labels: [
       "Whole Grain Oats",
@@ -33,7 +31,7 @@ const DonutChart = ({data}) => {
           "#B0E0E6",
         ],
         borderWidth: 2,
-        cutout: "70%", // This makes the chart a donut
+        cutout: "70%", //chart a donut
       },
     ],
   };
@@ -82,4 +80,3 @@ const DonutChart = ({data}) => {
 };
 
 export default DonutChart;
-
