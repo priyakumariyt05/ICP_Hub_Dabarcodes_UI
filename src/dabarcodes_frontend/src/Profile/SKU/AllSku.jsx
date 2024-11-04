@@ -135,6 +135,12 @@ const AllSku = () => {
       legend: {
         display: false,
       },
+      tooltip: {
+      enabled: false, // Hide tooltips that show on hover
+    },
+    datalabels: {
+      display: false, // Hide data labels within the chart
+    },
     },
   };
 

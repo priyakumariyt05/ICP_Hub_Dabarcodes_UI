@@ -32,6 +32,12 @@ const  UnlinkedSku = () => {
       legend: {
         display: false,
       },
+      tooltip: {
+        enabled: false, 
+      },
+      datalabels: {
+        display: false, 
+      },
     },
   };
 
