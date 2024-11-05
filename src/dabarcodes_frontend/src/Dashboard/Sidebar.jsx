@@ -270,8 +270,15 @@
 // export default Sidebar;
 import React, {useState} from "react";
 import {FaHome, FaChartBar, FaStore, FaProductHunt} from "react-icons/fa";
+import StorefrontIcon from '@mui/icons-material/Storefront';
+import HomeIcon from '@mui/icons-material/Home';
 import {AiOutlineMinus, AiOutlinePlus} from "react-icons/ai";
 import {Link, useLocation} from "react-router-dom";
+import InventoryIcon from '@mui/icons-material/Inventory';
+import { FaRegUser } from "react-icons/fa";
+import { MdEqualizer } from "react-icons/md";
+
+import { TfiMedall } from "react-icons/tfi";
 
 const Sidebar = () => {
   const [openSection, setOpenSection] = useState(""); 
@@ -292,7 +299,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <FaHome className="inline-block mr-2" /> Home
+              <HomeIcon className="inline-block mr-2" /> Home
             </div>
             {openSection === "home" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
@@ -331,7 +338,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <Link to="/dashboard/store" className="flex items-center">
-              <FaStore className="inline-block mr-2" /> Store Management
+              <StorefrontIcon className="inline-block mr-2" /> Store Management
             </Link>
             {openSection === "store" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
@@ -384,7 +391,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <Link to="/dashboard/plan-pricing" className="flex items-center">
-              <FaStore className="inline-block mr-2" /> Subscription Management
+              <TfiMedall className="inline-block mr-2" /> Subscription Management
             </Link>
             {openSection === "subscription" ? (
               <AiOutlineMinus />
@@ -401,7 +408,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <FaChartBar className="inline-block mr-2" /> Reports
+              <MdEqualizer className="inline-block mr-2" /> Reports
             </div>
             {openSection === "reports" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
@@ -441,7 +448,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <Link to="/dashboard/Role" className="flex items-center">
-              <FaStore className="inline-block mr-2" /> Role Management
+              <FaRegUser className="inline-block mr-2" /> Employee Management
             </Link>
             {openSection === "role" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
@@ -454,7 +461,7 @@ const Sidebar = () => {
         >
           <div className="flex justify-between items-center">
             <div>
-              <FaStore className="inline-block mr-2" /> Supplier Management
+              <InventoryIcon className="inline-block mr-2" /> Supplier Management
             </div>
             {openSection === "supplier" ? (
               <AiOutlineMinus />

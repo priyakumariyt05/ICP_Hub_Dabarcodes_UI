@@ -418,7 +418,7 @@ const StoreDetailsPage = ({storeData}) => {
         {/* Image on the left */}
         <div className="border-2 border-gray-300 rounded-full p-2 w-24 h-24 flex items-center justify-center">
           <img
-            src={storeInfo.logo || "/image/image 72.png"}
+            src={storeInfo.logo || "/image/reliance.png"}
             alt="Reliance Store Logo"
             // className="w-20 h-20 rounded-full"
           />

@@ -16,32 +16,32 @@
 // import Home from "./Layout/Home";
 // import DashboardRoutes from "./Dashboard/DashboardRoutes";
 // import PrivacyPreference from "./ProfileDetails/PrivacyPreference";
-// import HomePage2 from "./NewHomePageCustomer.jsx/Homepage2";
-// import TopSku from "./NewHomePageCustomer.jsx/TopSku";
-// import HomeProductCard from "./NewHomePageCustomer.jsx/HomeProductCard";
-// // import QrCard from "./NewHomePageCustomer.jsx/QrCard";
-// import SessionExpiredModal from "./NewHomePageCustomer.jsx/SessionExpiredModal";
-// import SessionTimeoutModal from "./NewHomePageCustomer.jsx/SessionTimeOutModal";
-// import SkuOverlay from "./NewHomePageCustomer.jsx/SkuOverlay";
-// import PaymentDetailsCard from "./NewHomePageCustomer.jsx/PaymentDetailsCard";
+// import HomePage2 from "./NewHomePageCustomer/Homepage2";
+// import TopSku from "./NewHomePageCustomer/TopSku";
+// import HomeProductCard from "./NewHomePageCustomer/HomeProductCard";
+// // import QrCard from "./NewHomePageCustomer/QrCard";
+// import SessionExpiredModal from "./NewHomePageCustomer/SessionExpiredModal";
+// import SessionTimeoutModal from "./NewHomePageCustomer/SessionTimeOutModal";
+// import SkuOverlay from "./NewHomePageCustomer/SkuOverlay";
+// import PaymentDetailsCard from "./NewHomePageCustomer/PaymentDetailsCard";
 
 // import Setting from "./Profile/Setting/Setting";
 
 // import FeedbackForm from "./Profile/Setting/FeedbackForm";
 // import ContactSupport from "./Profile/Setting/ContactSupport";
-// import OverlayQR from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayQR";
-// import OverlayMultiple from "./NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple";
-// import PlansPricing from "./NewHomePageCustomer.jsx/PlansPricing";
+// import OverlayQR from "./NewHomePageCustomer/OverlaySKU/OverlayQR";
+// import OverlayMultiple from "./NewHomePageCustomer/OverlaySKU/OverlayMultiple";
+// import PlansPricing from "./NewHomePageCustomer/PlansPricing";
 // import AccountPage from "./Dashboard/Accountpage";
-// import ExploreCategories from "./NewHomePageCustomer.jsx/Explore/ExploreCategories";
-// import ExploreBrands from "./NewHomePageCustomer.jsx/Explore/ExploreBrands";
+// import ExploreCategories from "./NewHomePageCustomer/Explore/ExploreCategories";
+// import ExploreBrands from "./NewHomePageCustomer/Explore/ExploreBrands";
 // import PasswordForm from "./Dashboard/PasswordForm";
-// import RetailerNear from "./NewHomePageCustomer.jsx/RetailerNear";
+// import RetailerNear from "./NewHomePageCustomer/RetailerNear";
 // import AddStoreModal from "./Dashboard/Modals/AddStoreModal";
 // import CreatePassword from "./ProfileDetails/CreatePassword";
-// import AccountCredentialsPopup from "./NewHomePageCustomer.jsx/Modals/AccountCredentialsPopup";
-// import Store from "./NewHomePageCustomer.jsx/StoreInformation/Store";
-// // import NotificationsModals from "./NewHomePageCustomer.jsx/Modals/NotifcationModals";
+// import AccountCredentialsPopup from "./NewHomePageCustomer/Modals/AccountCredentialsPopup";
+// import Store from "./NewHomePageCustomer/StoreInformation/Store";
+// // import NotificationsModals from "./NewHomePageCustomer/Modals/NotifcationModals";
 // import LoginForm from "./ProfileDetails/LoginForm";
 
 // function App() {
@@ -126,10 +126,10 @@
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import React, { lazy, Suspense } from "react";
-import TopCategory from "./NewHomePageCustomer.jsx/TopCategory";
-import TokensModal from "./NewHomePageCustomer.jsx/Modals/TokensModal";
-import LinkedSku from "./NewHomePageCustomer.jsx/Modals/LinkedSku";
-import NotificationsModals from "./NewHomePageCustomer.jsx/Modals/NotifcationModals";
+import TopCategory from "./NewHomePageCustomer/TopCategory";
+import TokensModal from "./NewHomePageCustomer/Modals/TokensModal";
+import LinkedSku from "./NewHomePageCustomer/Modals/LinkedSku";
+import NotificationsModals from "./NewHomePageCustomer/Modals/NotifcationModals";
 import Loading from "./components/Loading";
 const ConnectWalletModal = lazy(() =>
   import("./SmallPages/ConnectWalletModal")
@@ -157,51 +157,47 @@ const DashboardRoutes = lazy(() => import("./Dashboard/DashboardRoutes"));
 const PrivacyPreference = lazy(() =>
   import("./ProfileDetails/PrivacyPreference")
 );
-const HomePage2 = lazy(() => import("./NewHomePageCustomer.jsx/Homepage2"));
-const TopSku = lazy(() => import("./NewHomePageCustomer.jsx/TopSku"));
+const HomePage2 = lazy(() => import("./NewHomePageCustomer/Homepage2"));
+const TopSku = lazy(() => import("./NewHomePageCustomer/TopSku"));
 const HomeProductCard = lazy(() =>
-  import("./NewHomePageCustomer.jsx/HomeProductCard")
+  import("./NewHomePageCustomer/HomeProductCard")
 );
 const SessionExpiredModal = lazy(() =>
-  import("./NewHomePageCustomer.jsx/SessionExpiredModal")
+  import("./NewHomePageCustomer/SessionExpiredModal")
 );
 const SessionTimeoutModal = lazy(() =>
-  import("./NewHomePageCustomer.jsx/SessionTimeOutModal")
+  import("./NewHomePageCustomer/SessionTimeOutModal")
 );
-const SkuOverlay = lazy(() => import("./NewHomePageCustomer.jsx/SkuOverlay"));
+const SkuOverlay = lazy(() => import("./NewHomePageCustomer/SkuOverlay"));
 const PaymentDetailsCard = lazy(() =>
-  import("./NewHomePageCustomer.jsx/PaymentDetailsCard")
+  import("./NewHomePageCustomer/PaymentDetailsCard")
 );
 const Setting = lazy(() => import("./Profile/Setting/Setting"));
 const FeedbackForm = lazy(() => import("./Profile/Setting/FeedbackForm"));
 const ContactSupport = lazy(() => import("./Profile/Setting/ContactSupport"));
 const OverlayQR = lazy(() =>
-  import("./NewHomePageCustomer.jsx/OverlaySKU/OverlayQR")
+  import("./NewHomePageCustomer/OverlaySKU/OverlayQR")
 );
 const OverlayMultiple = lazy(() =>
-  import("./NewHomePageCustomer.jsx/OverlaySKU/OverlayMultiple")
+  import("./NewHomePageCustomer/OverlaySKU/OverlayMultiple")
 );
-const PlansPricing = lazy(() =>
-  import("./NewHomePageCustomer.jsx/PlansPricing")
-);
+const PlansPricing = lazy(() => import("./NewHomePageCustomer/PlansPricing"));
 
 const ExploreCategories = lazy(() =>
-  import("./NewHomePageCustomer.jsx/Explore/ExploreCategories")
+  import("./NewHomePageCustomer/Explore/ExploreCategories")
 );
 const ExploreBrands = lazy(() =>
-  import("./NewHomePageCustomer.jsx/Explore/ExploreBrands")
+  import("./NewHomePageCustomer/Explore/ExploreBrands")
 );
 
-const RetailerNear = lazy(() =>
-  import("./NewHomePageCustomer.jsx/RetailerNear")
-);
+const RetailerNear = lazy(() => import("./NewHomePageCustomer/RetailerNear"));
 
 const CreatePassword = lazy(() => import("./ProfileDetails/CreatePassword"));
 const AccountCredentialsPopup = lazy(() =>
-  import("./NewHomePageCustomer.jsx/Modals/AccountCredentialsPopup")
+  import("./NewHomePageCustomer/Modals/AccountCredentialsPopup")
 );
 const Store = lazy(() =>
-  import("./NewHomePageCustomer.jsx/StoreInformation/Store")
+  import("./NewHomePageCustomer/StoreInformation/Store")
 );
 const LoginForm = lazy(() => import("./ProfileDetails/LoginForm"));
 import OperationalRoutes from "./RetailerSide/Operational/OperationalRoutes";

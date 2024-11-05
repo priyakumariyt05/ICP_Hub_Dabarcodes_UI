@@ -1,11 +1,9 @@
-
-
-import React, {useState, useEffect} from "react";
-import {FiSearch, FiBell, FiUser} from "react-icons/fi";
-import {Link} from "react-router-dom";
-import {FiChevronDown} from "react-icons/fi";
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
-import CountryDropdown from "../../NewHomePageCustomer.jsx/Modals/CountryDropdown";
+import React, { useState, useEffect } from "react";
+import { FiSearch, FiBell, FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { FiChevronDown } from "react-icons/fi";
+// import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
+import CountryDropdown from "../../NewHomePageCustomer/Modals/CountryDropdown";
 
 function TopNavbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -135,5 +133,3 @@ function TopNavbar() {
 }
 
 export default TopNavbar;
-
-

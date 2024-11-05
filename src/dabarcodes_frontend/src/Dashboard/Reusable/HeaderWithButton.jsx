@@ -41,11 +41,9 @@
 
 // export default HeaderWithButton;
 
-
-
 // import React, {useState, useRef, useEffect} from "react";
 // import Modal from "../Modals/Modal";
-// // import Modal from "../../NewHomePageCustomer.jsx/Modals/Modal"
+// // import Modal from "../../NewHomePageCustomer/Modals/Modal"
 // import BackButton from "./BackButton";
 // import ProductUploadModal from "../Modals/ProductUploadModal";
 // import AddProductForm from "../ProductManagement/AddProductForm";
@@ -222,17 +220,20 @@
 
 // export default HeaderWithButton;
 
-
-
-import React, {useState, useRef} from "react";
+import React, { useState, useRef } from "react";
 import Modal from "../Modals/Modal";
 import BackButton from "./BackButton";
 
-const HeaderWithButton = ({heading, buttonText, modalOptions, modalTitle}) => {
+const HeaderWithButton = ({
+  heading,
+  buttonText,
+  modalOptions,
+  modalTitle,
+}) => {
   const [showModal, setShowModal] = useState(false);
   const [selectedOption, setSelectedOption] = useState(null);
   const buttonRef = useRef(null);
-  const [modalPosition, setModalPosition] = useState({top: 0, left: 0});
+  const [modalPosition, setModalPosition] = useState({ top: 0, left: 0 });
 
   const handleButtonClick = () => {
     if (buttonRef.current) {
@@ -308,5 +309,3 @@ const HeaderWithButton = ({heading, buttonText, modalOptions, modalTitle}) => {
 };
 
 export default HeaderWithButton;
-
-

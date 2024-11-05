@@ -1,4 +1,3 @@
-
 // import React, {useState, useEffect} from "react";
 // import {FiSearch, FiBell, FiUser, FiHome} from "react-icons/fi";
 // import {FaBars} from "react-icons/fa";
@@ -6,13 +5,11 @@
 
 // import {FiChevronDown} from "react-icons/fi";
 
-
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
+// import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
 // function TopNavbar() {
- 
+
 //   const [menuOpen, setMenuOpen] = useState(false);
 //   const [openDropdown, setOpenDropdown] = useState(null);
-
 
 //   const [selectedCountry, setSelectedCountry] = useState({
 //     flag: "https://flagcdn.com/in.svg",
@@ -56,7 +53,6 @@
 //             />
 //           </div>
 
-
 //           {/* Notification and Profile Dropdown */}
 //           <div className="hidden md:flex items-center space-x-6">
 //             <div className="hidden md:flex items-center relative w-full max-w-xs mx-auto">
@@ -88,7 +84,6 @@
 //               </div>
 //             </div>
 
-       
 //             <Link to="/dashboard/notifications" title="Notifications">
 //               <FiBell className="text-3xl cursor-pointer" />
 //             </Link>
@@ -124,12 +119,12 @@
 // export default TopNavbar;
 // Responsive but looks not very well
 
-import React, {useState, useEffect} from "react";
-import {FiSearch, FiBell, FiUser} from "react-icons/fi";
-import {Link} from "react-router-dom";
-import {FiChevronDown} from "react-icons/fi";
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
-import CountryDropdown from "../../NewHomePageCustomer.jsx/Modals/CountryDropdown";
+import React, { useState, useEffect } from "react";
+import { FiSearch, FiBell, FiUser } from "react-icons/fi";
+import { Link } from "react-router-dom";
+import { FiChevronDown } from "react-icons/fi";
+// import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
+import CountryDropdown from "../../NewHomePageCustomer/Modals/CountryDropdown";
 
 function TopNavbar() {
   const [openDropdown, setOpenDropdown] = useState(null);
@@ -259,5 +254,3 @@ function TopNavbar() {
 }
 
 export default TopNavbar;
-
-

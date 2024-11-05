@@ -1,8 +1,8 @@
 import React from "react";
 import CustomDoughnutChart from "../../Profile/CustomDoughnutChart";
 
-import SubscriptionManagement from "../../NewHomePageCustomer.jsx/SubscriptionManagement";
-import PlanCard from "../../NewHomePageCustomer.jsx/PlanCard";
+import SubscriptionManagement from "../../NewHomePageCustomer/SubscriptionManagement";
+import PlanCard from "../../NewHomePageCustomer/PlanCard";
 
 const SubscriptionPlan = () => {
   const data = {
@@ -32,10 +32,7 @@ const SubscriptionPlan = () => {
 
   return (
     <>
-
-
       <div className="flex flex-col md:flex-row min-h-screen p-6">
-   
         <main className="w-full md:w-3/4 p-10 mt-10 md:mt-0 md:ml-6 mb-10 rounded-md flex-grow">
           <h1 className="text-[31px] font-extrabold text-[#000000] mb-6 leading-[37.2px] text-left">
             My Subscription
@@ -75,8 +72,6 @@ const SubscriptionPlan = () => {
           </div>
         </main>
       </div>
-
- 
     </>
   );
 };

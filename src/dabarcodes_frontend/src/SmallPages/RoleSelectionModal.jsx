@@ -85,7 +85,7 @@ const RoleSelectionModal = ({ onClose }) => {
     if (selectedRole === "customer") {
       navigate("/login-page");
     } else if (selectedRole === "retailer") {
-      navigate("/dashboard");
+      navigate("/dashboard/admin-create");
     } else if (selectedRole === "supplier") {
       navigate("/login-page");
     }

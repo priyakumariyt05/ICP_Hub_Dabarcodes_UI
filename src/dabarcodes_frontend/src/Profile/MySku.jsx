@@ -109,11 +109,10 @@
 // import LeftSidebar from "./LeftSidebar";
 // import Navbar2 from "../components/Navbar2";
 // import Footer from "../components/Footer";
-// import RandomCard from "../NewHomePageCustomer.jsx/RandomCard";
+// import RandomCard from "../NewHomePageCustomer/RandomCard";
 // import { MdSearch } from "react-icons/md";
 
 // const MySku = () => {
-
 
 //   const data = {
 //     labels: ["Used", "Unused", "Pending"],
@@ -161,8 +160,6 @@
 //               />
 //             </div>
 //           </div>
-
-
 
 //           <div className="flex flex-wrap items-start space-x-4 border border-gray-300 rounded-xl mb-4">
 //             <div className="p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto">
@@ -305,18 +302,17 @@
 
 // export default MySku;
 import React from "react";
-import {NavLink, Route, Routes, Navigate} from "react-router-dom";
+import { NavLink, Route, Routes, Navigate } from "react-router-dom";
 
 import LeftSidebar from "./LeftSidebar";
 import Navbar2 from "../components/Navbar2";
 import Footer from "../components/Footer";
 
-
 import AllSku from "./SKU/AllSku";
 import LinkedSku from "./SKU/LinkedSku";
 import FloatingSku from "./SKU/FloatingSku";
 import WishlistSku from "./SKU/WislhlistSku";
-import  { useState } from "react";
+import { useState } from "react";
 
 import { FaSearch } from "react-icons/fa";
 import UnlinkedSku from "./SKU/UnlinkedSku";
@@ -333,9 +329,10 @@ const MySku = () => {
       <div className="flex flex-col md:flex-row min-h-screen p-6">
         <LeftSidebar />
         <main className="flex-1 p-6 md:p-10">
-     
           <div className="flex flex-col md:flex-row items-center justify-between mb-4 md:mb-8">
-            <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-0">My SKUs</h1>
+            <h1 className="text-xl md:text-2xl font-bold mb-4 md:mb-0">
+              My SKUs
+            </h1>
 
             {/* Responsive Search Input */}
             <div className="relative w-full sm:w-auto">
@@ -354,7 +351,7 @@ const MySku = () => {
             <div className="flex flex-wrap items-start space-x-4 border border-gray-300 rounded-xl mb-4">
               <NavLink
                 to="all-sku"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto ${
                     isActive ? "font-bold" : "font-medium"
                   }`
@@ -364,7 +361,7 @@ const MySku = () => {
               </NavLink>
               <NavLink
                 to="linked-sku"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto ${
                     isActive ? "font-bold" : "font-medium"
                   }`
@@ -374,7 +371,7 @@ const MySku = () => {
               </NavLink>
               <NavLink
                 to="floating-sku"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto ${
                     isActive ? "font-bold" : "font-medium"
                   }`
@@ -384,7 +381,7 @@ const MySku = () => {
               </NavLink>
               <NavLink
                 to="sku-wishlist"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto ${
                     isActive ? "font-bold" : "font-medium"
                   }`
@@ -394,7 +391,7 @@ const MySku = () => {
               </NavLink>
               <NavLink
                 to="unlinked-sku"
-                className={({isActive}) =>
+                className={({ isActive }) =>
                   `p-4 rounded-md text-center flex-shrink-0 w-full sm:w-auto ${
                     isActive ? "font-bold" : "font-medium"
                   }`
@@ -403,7 +400,6 @@ const MySku = () => {
                 <p className="text-medium font-roboto">Unlinked SKUs</p>
               </NavLink>
             </div>
-            
 
             <Routes>
               <Route path="/" element={<Navigate to="all-sku" />} />

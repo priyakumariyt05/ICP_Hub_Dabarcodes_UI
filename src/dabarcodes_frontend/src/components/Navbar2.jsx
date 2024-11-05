@@ -307,7 +307,7 @@
 // import { MdKeyboardArrowDown } from "react-icons/md";
 // import BreadCrumb from "./BreadCrumbs";
 // import { useModal } from "../ContextApi/ModalContext";
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
+// import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
 
 // function Navbar2({ onViewProfile }) {
 //   const { openNotifications } = useModal();
@@ -567,10 +567,10 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { FiChevronDown } from "react-icons/fi";
 import BreadCrumb from "./BreadCrumbs";
 import { useModal } from "../ContextApi/ModalContext";
-import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
-import NotificationsModals from "../NewHomePageCustomer.jsx/Modals/NotifcationModals";
-import TokensModal from "../NewHomePageCustomer.jsx/Modals/TokensModal";
-// import CountryDropdown from "../NewHomePageCustomer.jsx/Modals/CountryDropdown";
+import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
+import NotificationsModals from "../NewHomePageCustomer/Modals/NotifcationModals";
+import TokensModal from "../NewHomePageCustomer/Modals/TokensModal";
+// import CountryDropdown from "../NewHomePageCustomer/Modals/CountryDropdown";
 
 function Navbar2() {
   const { openNotifications, openToken, closeToken, isTokenOpen } = useModal();

@@ -6,7 +6,7 @@ const Hero = () => {
     <>
             <section id="home" className="hero">
   <div className="hero-text">
-    <h1 className="font-butler font-extra-bold text-hero-heading leading-hero-heading">
+    <h1 className=" font-extra-bold text-hero-heading leading-hero-heading">
       Unlock Amazing <span className="highlight text-[#0D90C1]">Promotions</span> with daBarcodes
     </h1>
     <p>

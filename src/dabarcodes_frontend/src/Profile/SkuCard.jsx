@@ -1,4 +1,3 @@
-
 import { CiBookmark } from "react-icons/ci";
 import { AiOutlineQrcode } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
@@ -6,8 +5,8 @@ import { IoMdMore } from "react-icons/io";
 import { useState } from "react";
 import MenuBar from "./Menubar";
 import { useModal } from "../ContextApi/ModalContext";
-import SingleQRModal from "../NewHomePageCustomer.jsx/Modals/SingleQRModel";
-import MultiQRModal from "../NewHomePageCustomer.jsx/Modals/MultipleQRModal";
+import SingleQRModal from "../NewHomePageCustomer/Modals/SingleQRModel";
+import MultiQRModal from "../NewHomePageCustomer/Modals/MultipleQRModal";
 
 const insertLineBreaks = (text, interval = 29) => {
   const parts = [];
@@ -66,7 +65,9 @@ const SkuCard = ({ Data }) => {
       <div
         onClick={selectedCards.length >= 1 ? openMultiQR : null}
         className={`w-fit h-fit rounded-md mt-1 text-white ${
-          selectedCards.length >= 1 ? "bg-[#0D90C1] cursor-pointer" : "bg-blue-400 cursor-not-allowed"
+          selectedCards.length >= 1
+            ? "bg-[#0D90C1] cursor-pointer"
+            : "bg-blue-400 cursor-not-allowed"
         }`}
       >
         <button className="px-4 py-1" disabled={selectedCards.length < 1}>
