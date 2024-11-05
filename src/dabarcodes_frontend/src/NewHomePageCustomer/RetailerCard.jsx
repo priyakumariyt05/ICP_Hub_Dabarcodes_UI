@@ -14,6 +14,7 @@ const RetailerCard = ({
 }) => {
   return (
     <>
+   
     <Link
   to="/store"
   className="block text-gray-400 cursor-pointer"
@@ -44,7 +45,7 @@ const RetailerCard = ({
         </span>
       </p>
     </div>
-    {children}
+
   </div>
 </Link>
 
