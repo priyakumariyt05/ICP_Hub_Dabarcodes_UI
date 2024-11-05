@@ -1,20 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
-import { Link } from "react-router-dom"; 
+import {Link} from "react-router-dom";
 import CategoryCard from "../ReusableComponents/CategoryCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-
 const Category = () => {
-
   const categories = [
-    { name: "Snacks", image: "/image/snack.png" },
-    { name: "Baverage", image: "/image/category.png" },
-    { name: "Frozen Food", image: "/image/frozen.png" },
-    { name: "Fruit", image: "/image/fruit.png" },
-    { name: "Meat Product", image: "/image/meat.png" },
-    { name: "Sea Food", image: "/image/fish.png" },
-    { name: "Veggies", image: "/image/category.png" },
+    {name: "Snacks", image: "/image/snack.png"},
+    {name: "Beverage", image: "/image/category.png"},
+    {name: "Frozen Food", image: "/image/frozen.png"},
+    {name: "Fruit", image: "/image/fruit.png"},
+    {name: "Meat Product", image: "/image/meat.png"},
+    {name: "Sea Food", image: "/image/fish.png"},
+    {name: "Veggies", image: "/image/category.png"},
   ];
 
   const settings = {
@@ -49,30 +47,33 @@ const Category = () => {
   };
 
   return (
-    <>
-      <div className="p-8">
-        <div className="flex justify-between items-center mt-10 mb-10">
-          <h1 className="lg:text-2xl md:text-xm font-bold  lg:ml-4 sm:ml-0">
-            Explore Promotions by Category
-          </h1>
-          <Link to="/top-category"> 
-  <button className="text-black  pb-1 hover:bg-blue-100">
-    View all
-  </button>
-</Link>
-        </div>
+    <div className="p-8">
+      <div className="flex justify-between items-center mt-10 mb-10">
+        <h1 className="lg:text-2xl md:text-xm font-bold lg:ml-4 sm:ml-0">
+          Explore Promotions by Category
+        </h1>
+        <Link to="/top-category">
+          <button className="text-black pb-1 hover:bg-blue-100">
+            View all
+          </button>
+        </Link>
+      </div>
 
-        <Slider {...settings}>
-          {categories.map((category, index) => (
-            <div key={index}>
+      <Slider {...settings}>
+        {categories.map((category, index) => (
+          <Link
+            key={index}
+            to="/top-category"
+            state={{selectedCategory: category.name}} 
+          >
+            <div>
               <CategoryCard category={category} />
             </div>
-          ))}
-        </Slider>
-      </div>
-    </>
+          </Link>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
 export default Category;
-
