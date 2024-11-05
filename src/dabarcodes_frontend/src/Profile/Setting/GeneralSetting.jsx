@@ -1,177 +1,9 @@
-
-// import React, { useState } from "react";
-
-// const GeneralSetting = () => {
-//   const [emailNotificationsEnabled, setEmailNotificationsEnabled] = useState(false);
-//   const [mobileNotificationsEnabled, setMobileNotificationsEnabled] = useState(false);
-
-//   const handleEmailToggle = () => {
-//     setEmailNotificationsEnabled(!emailNotificationsEnabled);
-//   };
-
-//   const handleMobileToggle = () => {
-//     setMobileNotificationsEnabled(!mobileNotificationsEnabled);
-//   };
-
-//   return (
-//     <div className="flex flex-col md:flex-row min-h-screen">
-//       <div className="flex flex-col w-full md:flex-col min-h-screen pt-6">
-//         <h2 className="text-xl font-semibold mb-6 font-roboto">General Settings</h2>
-//         <form>
-//           <div className="mb-6">
-//             <label htmlFor="language-preference" className="block text-xl font-medium text-gray-700">
-//               Language Preference
-//             </label>
-//             <input
-//               id="language-preference"
-//               name="language-preference"
-//               className="mt-1 block w-full p-2 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
-//               value=""
-//               onChange=""
-//             />
-//           </div>
-
-//           {/* Email Notification */}
-//           <div className="flex items-center justify-between mb-6">
-//             <h2 className="text-xl font-semibold">Email Notifications</h2>
-//             <label className="inline-flex items-center cursor-pointer">
-//               <input
-//                 type="checkbox"
-//                 className="sr-only"
-//                 checked={emailNotificationsEnabled}
-//                 onChange={handleEmailToggle}
-//               />
-//               <div className="w-10 h-6 bg-blue-400 rounded-full shadow-inner"></div>
-//               <div
-//                 className={`dot absolute w-6 h-6 bg-white rounded-full shadow transform transition ${
-//                   emailNotificationsEnabled ? "translate-x-4" : ""
-//                 }`}
-//               ></div>
-//             </label>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 All SKUs and Reminders
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 SKUs only
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 Important Reminders only
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-
-//           {/* Mobile Notification */}
-//           <div className="flex items-center justify-between mb-6">
-//             <h2 className="text-xl font-semibold">Mobile Notifications</h2>
-//             <label className="inline-flex items-center cursor-pointer">
-//               <input
-//                 type="checkbox"
-//                 className="sr-only"
-//                 checked={mobileNotificationsEnabled}
-//                 onChange={handleMobileToggle}
-//               />
-//               <div className="w-10 h-6 bg-blue-400 rounded-full shadow-inner"></div>
-//               <div
-//                 className={`dot absolute w-6 h-6 bg-white rounded-full shadow transform transition ${
-//                   mobileNotificationsEnabled ? "translate-x-4" : ""
-//                 }`}
-//               ></div>
-//             </label>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 All SKUs and Reminders
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 SKUs only
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-
-//           <div className="mb-4">
-//             <label className="inline-flex items-center">
-//               <input
-//                 type="checkbox"
-//                 className="form-checkbox text-blue-600"
-//               />
-//               <span className="ml-2 text-lg font-medium font-roboto leading-6 text-[#171717]">
-//                 Important Reminders only
-//               </span>
-//             </label>
-//             <p className="ml-6 mt-1 text-[14px] text-[#646464] font-roboto">
-//               Notify me all SKUs and reminders that have been created
-//             </p>
-//           </div>
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default GeneralSetting;
 import React, { useState } from "react";
 import { deviceData } from "../../Data/giftCarddata";
-// import { languageOptions, privacyPreferences } from "../extras/data";
 import { IoLanguage } from "react-icons/io5";
- import LoginActivity from './LoginActivity';
+import LoginActivity from "./LoginActivity";
 import { GrFormNext } from "react-icons/gr";
-import {languageOptions } from "../../Data/data";
+import { languageOptions } from "../../Data/data";
 
 const GeneralSetting = ({ handleComponentSwitch }) => {
   const initialFormData = {
@@ -250,7 +82,7 @@ const GeneralSetting = ({ handleComponentSwitch }) => {
         <label htmlFor="language-select" className="text-sm font-medium">
           Select Your Preferred Language
         </label>
-         <select 
+        <select
           id="language-select"
           className="mt-1 block w-full p-2 border border-gray-300 rounded appearance-none"
           value={formData.language}
@@ -338,10 +170,7 @@ const GeneralSetting = ({ handleComponentSwitch }) => {
 
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
-      <LoginActivity/>
-
-
-
+      <LoginActivity />
       <hr className="h-px my-8 bg-gray-200 border-0 dark:bg-gray-700" />
 
       <div className="Roboto space-y-4 font-extrabold text-base">

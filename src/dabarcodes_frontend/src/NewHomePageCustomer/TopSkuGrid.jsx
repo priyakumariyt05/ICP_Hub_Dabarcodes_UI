@@ -208,7 +208,7 @@
 import React, { useState } from "react";
 import { FaBookmark } from "react-icons/fa";
 import { BsBookmark } from "react-icons/bs";
-import { useModal } from "../ContextApi/ModalContext"; 
+import { useModal } from "../ContextApi/ModalContext";
 import LinkedSku from "./Modals/LinkedSku";
 
 const TopSkuCard = ({ product, openModalWithId }) => {
@@ -278,14 +278,14 @@ const TopSkuCard = ({ product, openModalWithId }) => {
 };
 
 const TopSkuGrid = ({ products }) => {
-  const { openLinkedSku } = useModal(); // Context for opening modal
-  const [selectedProductId, setSelectedProductId] = useState(null); // Track selected product ID
+  const { openLinkedSku } = useModal();
+  const [selectedProductId, setSelectedProductId] = useState(null);
 
   // Function to open modal with specific product ID
   const openModalWithId = (id) => {
-    console.log("Selected Product ID:", id); // Log the ID for debugging
-    setSelectedProductId(id); // Store the ID in state
-    openLinkedSku(); // Open the modal
+    console.log("Selected Product ID:", id);
+    setSelectedProductId(id);
+    openLinkedSku();
   };
 
   return (
@@ -294,10 +294,10 @@ const TopSkuGrid = ({ products }) => {
         <TopSkuCard
           key={product.id}
           product={product}
-          openModalWithId={openModalWithId} // Pass the function to each card
+          openModalWithId={openModalWithId}
         />
       ))}
-      <LinkedSku productId={selectedProductId} /> {/* Pass ID to modal */}
+      <LinkedSku productId={selectedProductId} />
     </div>
   );
 };

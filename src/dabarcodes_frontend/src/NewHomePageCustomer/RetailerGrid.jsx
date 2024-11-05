@@ -5,9 +5,7 @@ import { useData } from "../ContextApi/DataContext";
 
 const RetailerGrid = () => {
   const { retailerList } = useData();
-
-
-  return (
+return (
     <div className="p-10">
       {/* Header Section */}
       <div className="flex justify-between items-center mb-8 font-roboto">

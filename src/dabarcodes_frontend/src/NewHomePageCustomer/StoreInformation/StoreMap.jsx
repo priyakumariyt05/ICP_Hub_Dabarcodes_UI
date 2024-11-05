@@ -3,16 +3,15 @@ import {MapContainer, TileLayer, Marker, Popup} from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// React icons for location, open status, directions, and link
 import {FiMapPin, FiClock, FiExternalLink} from "react-icons/fi";
 import {TbDirections} from "react-icons/tb";
 
 const StoreMap = ({store}) => {
   const {name, address, openStatus, openTime, coords} = store;
 
-  // Custom icon for map markers
+  
   const customIcon = new L.Icon({
-    iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png", // Sample marker icon
+    iconUrl: "https://cdn-icons-png.flaticon.com/512/684/684908.png",
     iconSize: [38, 38],
   });
 

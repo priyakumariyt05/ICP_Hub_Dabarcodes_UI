@@ -1,12 +1,8 @@
 import Footer from "../components/Footer";
-
 import Navbar2 from "../components/Navbar2";
-
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import LeftSidebar from "../Profile/LeftSidebar";
-
 const CreateProfile = () => {
   // State management for form fields
   const [sidebarOpen, setSidebarOpen] = useState(false);

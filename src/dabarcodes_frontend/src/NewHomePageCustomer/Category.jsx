@@ -1,18 +1,18 @@
 import React from "react";
 import Slider from "react-slick";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import CategoryCard from "../ReusableComponents/CategoryCard";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const Category = () => {
   const categories = [
-    {name: "Snacks", image: "/image/snack.png"},
-    {name: "Beverage", image: "/image/category.png"},
-    {name: "Frozen Food", image: "/image/frozen.png"},
-    {name: "Fruit", image: "/image/fruit.png"},
-    {name: "Meat Product", image: "/image/meat.png"},
-    {name: "Sea Food", image: "/image/fish.png"},
-    {name: "Veggies", image: "/image/category.png"},
+    { name: "Snacks", image: "/image/snack.png" },
+    { name: "Beverage", image: "/image/category.png" },
+    { name: "Frozen Food", image: "/image/frozen.png" },
+    { name: "Fruit", image: "/image/fruit.png" },
+    { name: "Meat Product", image: "/image/meat.png" },
+    { name: "Sea Food", image: "/image/fish.png" },
+    { name: "Veggies", image: "/image/category.png" },
   ];
 
   const settings = {
@@ -64,7 +64,7 @@ const Category = () => {
           <Link
             key={index}
             to="/top-category"
-            state={{selectedCategory: category.name}} 
+            state={{ selectedCategory: category.name }}
           >
             <div>
               <CategoryCard category={category} />

@@ -1,303 +1,5 @@
-// import React from 'react'
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import Dashboard from './Dashboard'
-// import PromotionManagement from './PromotionManagement'
-// import SkuManagement from './SkuManagement'
-// import Notifications from './Notifications'
-// import Sidebar from './Sidebar'
-
-// const DashboardRoutes = () => {
-//   return (
-//     <div>
-//           <Router>
-//       <div className="flex">
-//         <Sidebar />
-//         <main className="flex-1 ">
-//           <Routes>
-//             <Route path="/dashboard" element={<Dashboard />} />
-//             <Route path="/promotion-management" element={<PromotionManagement />} />
-//             <Route path="/sku-management" element={<SkuManagement/>} />
-//             <Route path="/notification" element={<Notifications/>} />
-       
-           
-//           </Routes>
-//         </main>
-//       </div>
-//     </Router>
-//     </div>
-//   )
-// }
-
-// export default DashboardRoutes
-// DashboardRoutes.js
-// import React from 'react';
-// import { Route, Routes,Navigate } from 'react-router-dom';
-// import Dashboard from './Dashboard';
-// import PromotionManagement from './PromotionManagement';
-// import SkuManagement from './SkuManagement';
-// import Notifications from './Notifications';
-// import Sidebar from './Sidebar';
-// import UploadModal from './Modals/UploadModal';
-
-
-
-// const DashboardRoutes = () => {
-//   return (
-//     <div className="flex">
-//       <Sidebar />
-//       <main className="flex-1">
-//         <Routes>
-//           <Route path="/" element={<Dashboard />} />
-//           <Route path="/promotion-management" element={<PromotionManagement />} />
-//           <Route path="/sku-management" element={<SkuManagement />} />
-//           <Route path="/notifications" element={<Notifications />} />
-//           <Route path="*" element={<Navigate to="/dashboard" />} />
-//           <Route path="/upload-modal" element={<UploadModal />} />
-//           {/* Add other routes if needed */}
-//         </Routes>
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default DashboardRoutes;
-// import React from "react";
-// import {Route, Routes, Navigate} from "react-router-dom";
-// import Dashboard from "./Dashboard";
-// import PromotionManagement from "./PromotionManagement";
-// import SkuManagement from "./SkuManagement";
-// import Notifications from "./Notifications";
-// import Sidebar from "./Sidebar";
-// import UploadModal from "./Modals/UploadModal";
-// import AccountPage from "./CreateAccount/Accountpage";
-
-// const DashboardRoutes = () => {
-//   return (
-//     <>
-//       <div className="flex">
-//         <Sidebar />
-//         <main className="flex-1">
-//           <Routes>
-//             {/* Default dashboard route */}
-//             <Route path="/" element={<Dashboard />} />
-//             {/* Sub-routes */}
-//             <Route
-//               path="promotion-management"
-//               element={<PromotionManagement />}
-//             />
-//             <Route path="sku-management" element={<SkuManagement />} />
-//             <Route path="notifications" element={<Notifications />} />
-//             <Route path="upload-modal" element={<UploadModal />} />
-//             {/* Catch-all route */}
-//             <Route path="*" element={<Navigate to="/dashboard" />} />
-//           </Routes>
-//         </main>
-//       </div>
-//       <div>
-//         <Routes>
-//           <Route path="admin-create" element={<AccountPage />} />
-//         </Routes>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default DashboardRoutes;
-// import React from "react";
-// import {Route, Routes, Navigate, useLocation} from "react-router-dom";
-// import Dashboard from "./Dashboard";
-// import PromotionManagement from "./PromotionManagement";
-// import SkuManagement from "./SkuManagement";
-// import Notifications from "./Notifications";
-// import Sidebar from "./Sidebar";
-// import UploadModal from "./Modals/UploadModal";
-// import AccountPage from "./CreateAccount/Accountpage";
-// import EmailVerificationPage from "./CreateAccount/EmailVerificationPage";
-// import VerificationPage from "./CreateAccount/VerificationPage";
-// import AdminLogin from "./CreateAccount/AdminLogin";
-// import AdminPassword from "./CreateAccount/AdminPassword";
-
-// const DashboardRoutes = () => {
-//   const location = useLocation(); // Get current route location
-
-//   return (
-//     <div className="flex">
-//       {/* Render Sidebar only if not on admin-create route */}
-//       {/* {location.pathname !== "/dashboard/admin-create" && <Sidebar />} */}
-//       {location.pathname !== "/dashboard/admin-create" &&
-//         location.pathname !== "/dashboard/email-verification" &&
-//         location.pathname !== "/dashboard/verification-page" &&
-//         location.pathname !== "/dashboard/admin-login" &&
-//         location.pathname !== "/dashboard/admin-password" && <Sidebar />}
-
-//       <main className="flex-1">
-//         <Routes>
-//           {/* Default dashboard route */}
-//           <Route path="/" element={<Dashboard />} />
-//           {/* Sub-routes */}
-//           <Route
-//             path="promotion-management"
-//             element={<PromotionManagement />}
-//           />
-//           <Route path="sku-management" element={<SkuManagement />} />
-//           <Route path="notifications" element={<Notifications />} />
-//           <Route path="upload-modal" element={<UploadModal />} />
-//           <Route path="admin-create" element={<AccountPage />} />{" "}
-//           <Route
-//             path="email-verification"
-//             element={<EmailVerificationPage />}
-//           />
-//           <Route path="verification-page" element={<VerificationPage />} />
-//           <Route path="admin-login" element={<AdminLogin />} />
-//           <Route path="admin-password" element={<AdminPassword />} />
-//           {/* <Route
-//             path="upload-modal"
-//             element={
-//               <UploadModal onClose={() => <Navigate to="/dashboard" />} />
-//             } 
-//           />*/}
-//           {/* admin-create route */}
-//           {/* Catch-all route */}
-//           <Route path="*" element={<Navigate to="/dashboard" />} />
-//         </Routes>
-//       </main>
-//     </div>
-//   );
-// };
-
-// export default DashboardRoutes;
-    //  import React from "react";
-    //  import {Route, Routes, Navigate, useLocation} from "react-router-dom";
-    //  import Dashboard from "./Dashboard";
-    //  import PromotionManagement from "./PromotionManagement";
-    //  import SkuManagement from "./SkuManagement";
-    //  import Notifications from "./Notifications";
-    //  import Sidebar from "./Sidebar";
-    //  import TopNavbar from "./TopNavbar"; // Import TopNavbar
-    //  import UploadModal from "./Modals/UploadModal";
-    //  import AccountPage from "./CreateAccount/Accountpage";
-    //  import EmailVerificationPage from "./CreateAccount/EmailVerificationPage";
-    //  import VerificationPage from "./CreateAccount/VerificationPage";
-    //  import AdminLogin from "./CreateAccount/AdminLogin";
-    //  import AdminPassword from "./CreateAccount/AdminPassword";
-
-    //  const DashboardRoutes = () => {
-    //    const location = useLocation(); // Get current route location
-
-    //    return (
-    //      <div className="flex">
-         
-    //        {/* Render Sidebar only if not on specific routes */}
-    //        {location.pathname !== "/dashboard/admin-create" &&
-    //          location.pathname !== "/dashboard/email-verification" &&
-    //          location.pathname !== "/dashboard/verification-page" &&
-    //          location.pathname !== "/dashboard/admin-login" &&
-    //          location.pathname !== "/dashboard/admin-password" && <Sidebar />}
-
-    //        <div className="flex-1">
-    //          {/* Top Navbar */}
-    //          <TopNavbar />
-
-    //          {/* Main content area */}
-    //          <main className="p-4">
-    //            <Routes>
-    //              {/* Default dashboard route */}
-    //              <Route path="/" element={<Dashboard />} />
-    //              {/* Sub-routes */}
-    //              <Route
-    //                path="promotion-management"
-    //                element={<PromotionManagement />}
-    //              />
-    //              <Route path="sku-management" element={<SkuManagement />} />
-    //              <Route path="notifications" element={<Notifications />} />
-    //              <Route path="upload-modal" element={<UploadModal />} />
-    //              <Route path="admin-create" element={<AccountPage />} />{" "}
-    //              <Route
-    //                path="email-verification"
-    //                element={<EmailVerificationPage />}
-    //              />
-    //              <Route
-    //                path="verification-page"
-    //                element={<VerificationPage />}
-    //              />
-    //              <Route path="admin-login" element={<AdminLogin />} />
-    //              <Route path="admin-password" element={<AdminPassword />} />
-    //              {/* Catch-all route */}
-    //              <Route path="*" element={<Navigate to="/dashboard" />} />
-    //            </Routes>
-    //          </main>
-    //        </div>
-    //      </div>
-    //    );
-    //  };
-
-    //  export default DashboardRoutes;
-// import React from "react";
-// import {Route, Routes, Navigate, useLocation} from "react-router-dom";
-// import Dashboard from "./Dashboard";
-// import PromotionManagement from "./PromotionManagement";
-// import SkuManagement from "./SkuManagement";
-// import Notifications from "./Notifications";
-// import Sidebar from "./Sidebar";
-// import TopNavbar from "./TopNavbar"; // Import TopNavbar
-// import UploadModal from "./Modals/UploadModal";
-// import AccountPage from "./CreateAccount/Accountpage";
-// import EmailVerificationPage from "./CreateAccount/EmailVerificationPage";
-// import VerificationPage from "./CreateAccount/VerificationPage";
-// import AdminLogin from "./CreateAccount/AdminLogin";
-// import AdminPassword from "./CreateAccount/AdminPassword";
-
-// const DashboardRoutes = () => {
-//   const location = useLocation(); // Get current route location
-
-//   return (
-//     <div className="h-screen flex flex-col">
-//       {/* Top Navbar should be outside the flex-row containing Sidebar and content */}
-//       <TopNavbar />
-
-//       <div className="flex flex-1">
-//         {/* Render Sidebar only if not on specific routes */}
-//         {location.pathname !== "/dashboard/admin-create" &&
-//           location.pathname !== "/dashboard/email-verification" &&
-//           location.pathname !== "/dashboard/verification-page" &&
-//           location.pathname !== "/dashboard/admin-login" &&
-//           location.pathname !== "/dashboard/admin-password" && <Sidebar />}
-
-//         <div className="flex-1 p-4">
-//           {/* Main content area */}
-//           <Routes>
-//             {/* Default dashboard route */}
-//             <Route path="/" element={<Dashboard />} />
-//             {/* Sub-routes */}
-//             <Route
-//               path="promotion-management"
-//               element={<PromotionManagement />}
-//             />
-//             <Route path="sku-management" element={<SkuManagement />} />
-//             <Route path="notifications" element={<Notifications />} />
-//             <Route path="upload-modal" element={<UploadModal />} />
-//             <Route path="admin-create" element={<AccountPage />} />
-//             <Route
-//               path="email-verification"
-//               element={<EmailVerificationPage />}
-//             />
-//             <Route path="verification-page" element={<VerificationPage />} />
-//             <Route path="admin-login" element={<AdminLogin />} />
-//             <Route path="admin-password" element={<AdminPassword />} />
-//             {/* Catch-all route */}
-//             <Route path="*" element={<Navigate to="/dashboard" />} />
-//           </Routes>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default DashboardRoutes;
-
-
 import React from "react";
-import {Route, Routes, Navigate, useLocation} from "react-router-dom";
+import { Route, Routes, Navigate, useLocation } from "react-router-dom";
 // import Dashboard from "./Dashboard";
 // import PromotionManagement from "./PromotionManagement";
 // import SkuManagement from "./SkuManagement";
@@ -338,7 +40,6 @@ import PromotionalDetailsPopup from "./Modals/PromotionalDetailsPopup";
 import ProductNoPromotion from "./ProductManagement/ProductDetail/ProductNoPromotion";
 import ProductPromotion from "./ProductManagement/ProductDetail/ProductPromotion";
 import SupplierDetailPage from "./SupplierManagement/SupplierDetail/SupplierDetailPage";
-
 const DashboardRoutes = () => {
   const location = useLocation(); // Get current route location
 
@@ -425,19 +126,18 @@ const DashboardRoutes = () => {
               path="/store-dashboard/store-promotion-details-page"
               element={<StorePromotionDetailsPage />}
             />
-            <Route
-              path="/product/promotion"
-              element={<ProductPromotion />}
-            />
+            <Route path="/product/promotion" element={<ProductPromotion />} />
             <Route
               path="/product/no-promotion"
               element={<ProductNoPromotion />}
             />
             {/* store details pages routes  end */}
             {/* suppplier detail page */}
-            <Route path="supplier-detail-page" element={<SupplierDetailPage />} />
+            <Route
+              path="supplier-detail-page"
+              element={<SupplierDetailPage />}
+            />
             {/* Other routes */}
-
 
             {/* <Route path="upload-modal" element={<UploadModal />} /> */}
             <Route path="admin-create" element={<AccountPage />} />
@@ -457,7 +157,6 @@ const DashboardRoutes = () => {
 };
 
 export default DashboardRoutes;
-
 
 // Responsive But looks not very well//
 // import React from "react";
@@ -552,4 +251,3 @@ export default DashboardRoutes;
 // };
 
 // export default DashboardRoutes;
-

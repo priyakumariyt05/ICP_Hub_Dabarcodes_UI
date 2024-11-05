@@ -1,16 +1,5 @@
-// import React from 'react'
-
-// const SupplierList = () => {
-//   return (
-//     <div>SupplierList</div>
-//   )
-// }
-
-// export default SupplierList
-
 import React, { useState } from "react";
 import BackButton from "../Reusable/BackButton";
-
 const SupplierList = () => {
   // State management
   const [suppliers, setSuppliers] = useState([

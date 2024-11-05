@@ -1,9 +1,7 @@
 import React from "react";
 import Modal from "./Modal";
 import { useModal } from "../../ContextApi/ModalContext";
-
 import { productData } from "../../Data/giftCarddata";
-// import Multi_QR_Details from "../../profile/extras/Multi_QR_Details";
 import Multi_QR_Details from "../../Profile/Multi_QR_Details";
 
 const MultiQRModal = ({ selectedProductIds }) => {

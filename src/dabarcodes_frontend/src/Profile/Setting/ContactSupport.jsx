@@ -3,31 +3,23 @@ import React, { useState } from 'react';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
 
 const ContactSupport = () => {
-  // State for the form fields
-  const [formData, setFormData] = useState({
+ const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
     email: '',
     message: ''
   });
 
-  // Contact details (you can set dynamic values here)
   const contactEmail = 'support@yourcompany.com';
   const contactPhone = '+91 98183 23 2309';
-
-  // Handler for form inputs
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
-
-  // Handler for form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
     console.log('Form Data Submitted:', formData);
-
-    // Clear form after submission
     setFormData({
       firstName: '',
       lastName: '',

@@ -10,7 +10,7 @@ const storeData = {
   address: "10493 Maple Avenue, Bogalusa, LA 65131-4419",
   openStatus: "Open",
   openTime: "until 11 pm",
-  coords: [51.505, -0.09], // Latitude and Longitude for London example
+  coords: [51.505, -0.09], 
 };
 
 function Store() {

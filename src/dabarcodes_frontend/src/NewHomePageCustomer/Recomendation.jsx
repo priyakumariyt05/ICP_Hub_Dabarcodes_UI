@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Slider from "react-slick";
 import { useData } from "../ContextApi/DataContext";
-import { useRef } from "react"; 
+import { useRef } from "react";
 
 const ProductCard = ({
   imageUrl,
@@ -21,10 +21,7 @@ const ProductCard = ({
   // borderColor = "#f97316",
 }) => {
   return (
-    <div
-      className="border border-[#FED3D2] rounded-lg shadow-md  p-4 flex items-start space-x-4 w-full max-w-lg font-roboto "
-      // style={{ border: `0.5px solid ${borderColor}` }}
-    >
+    <div className="border border-[#FED3D2] rounded-lg shadow-md  p-4 flex items-start space-x-4 w-full max-w-lg font-roboto ">
       {/* Left Section - Product Image and Discount Label */}
       <div className="w-1/5 flex flex-col items-center ">
         <img
@@ -116,153 +113,19 @@ const ProductCard = ({
   );
 };
 
-// const ProductSlider = ({ products = [] }) => {
-//   const settings = {
-//     dots: false,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 2.5, // Show 2.5 slides
-//     slidesToScroll: 1,
-//     centerMode: true, // Centers the active slide
-//     centerPadding: "0", // Remove padding around the center slide
-//     responsive: [
-//       {
-//         breakpoint: 1024,
-//         settings: {
-//           slidesToShow: 2.5,
-//         },
-//       },
-//       {
-//         breakpoint: 768,
-//         settings: {
-//           slidesToShow: 1,
-//           centerMode: false, // Disable center mode on smaller screens
-//         },
-//       },
-//     ],
-//   };
-
-//   return (
-//     <div className="max-w-7xl mx-auto px-4 py-6 overflow-hidden">
-//       <Slider {...settings}>
-//         {products.map((product, index) => (
-//           <div key={index} className="px-2">
-//             <ProductCard
-//               imageUrl={product.imageUrl}
-//               productName={product.productName}
-//               price={product.price}
-//               originalPrice={product.originalPrice}
-//               size={product.size}
-//               description={product.description}
-//               discount={product.discount}
-//               promotionValidity={product.promotionValidity}
-//               promotedBy={product.promotedBy}
-//               othersCount={product.othersCount}
-//             />
-//           </div>
-//         ))}
-//       </Slider>
-//     </div>
-//   );
-// };
-
-// const products = [
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$3 off",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$3 off",
-//     promotionInfo: "Active Promotion",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$3 off",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$3 off",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$3 off",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-//   {
-//     imageUrl: "/image/drink.png",
-//     productName: "Nestle Ice Coffee",
-//     price: "12",
-//     originalPrice: "15",
-//     size: "500g Pouch",
-//     description: "Refreshing drink, perfect for any occasion...",
-//     discount: "$13 off",
-//     promotionValidity: "Valid Until 2024, Oct 5",
-//     promotedBy: "Lingo Pvt Ltd",
-//     othersCount: 2,
-
-//   },
-// ];
-
-
-
 const ProductSlider = ({ products = [] }) => {
-  const sliderRef = useRef(null); // Create a reference to the slider
+  const sliderRef = useRef(null);
 
   const settings = {
     dots: false,
-    infinite: true, // Allow infinite scrolling
+    infinite: true,
     speed: 500,
     slidesToShow: 2.5,
     slidesToScroll: 1,
-    autoplay: true, // Enable autoplay
-    autoplaySpeed: 2000, // Speed of autoplay in milliseconds
-    centerMode: false, // Disable center mode
-    centerPadding: "0", // Remove padding around the center slide
+    autoplay: true,
+    autoplaySpeed: 2000,
+    centerMode: false,
+    centerPadding: "0",
     responsive: [
       {
         breakpoint: 1024,
@@ -282,11 +145,10 @@ const ProductSlider = ({ products = [] }) => {
 
   const handleCardClick = () => {
     if (sliderRef.current) {
-      sliderRef.current.slickPause(); // Pause the slider when clicked
+      sliderRef.current.slickPause();
 
-      // Automatically resume the slider after 5 seconds
       setTimeout(() => {
-        sliderRef.current.slickPlay(); // Resume the slider after the timeout
+        sliderRef.current.slickPlay();
       }, 5000); // 5 seconds pause
     }
   };

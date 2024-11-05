@@ -9,7 +9,7 @@ const SessionTimeoutModal = () => {
       const timer = setTimeout(() => setTimeLeft(timeLeft - 1), 1000);
       return () => clearTimeout(timer);
     } else {
-      // Optionally handle timeout logic here
+      // Optional
     }
   }, [timeLeft]);
 
@@ -22,20 +22,20 @@ const SessionTimeoutModal = () => {
   const handleContinue = () => {
     // Logic for continue action
     alert("Continue working");
-    setIsOpen(false); // Close the modal after continuing
+    setIsOpen(false); 
   };
 
   const handleLogOff = () => {
     // Logic for log off action
     alert("Logging off");
-    setIsOpen(false); // Close the modal after logging off
+    setIsOpen(false); 
   };
 
   const handleClose = () => {
-    setIsOpen(false); // Logic for closing the modal
+    setIsOpen(false); 
   };
 
-  if (!isOpen) return null; // Don't render if the modal is closed
+  if (!isOpen) return null; 
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50">

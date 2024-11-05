@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React from "react";
+import { NavLink } from "react-router-dom";
 
 const LeftSidebar = () => {
   return (
@@ -9,8 +9,8 @@ const LeftSidebar = () => {
           to="/profile"
           className={({ isActive }) =>
             isActive
-              ? 'bg-[#E7F8FE]  p-4 rounded-md'
-              : 'text-black p-4 rounded-md hover:bg-gray-200 '
+              ? "bg-[#E7F8FE]  p-4 rounded-md"
+              : "text-black p-4 rounded-md hover:bg-gray-200 "
           }
         >
           Profile
@@ -19,18 +19,18 @@ const LeftSidebar = () => {
           to="/subscription-profile"
           className={({ isActive }) =>
             isActive
-              ? 'bg-[#E7F8FE] p-4 rounded-md'
-              : 'text-black p-4 rounded-md hover:bg-gray-200'
+              ? "bg-[#E7F8FE] p-4 rounded-md"
+              : "text-black p-4 rounded-md hover:bg-gray-200"
           }
         >
-          Subscription 
+          Subscription
         </NavLink>
         <NavLink
           to="/my-sku"
           className={({ isActive }) =>
             isActive
-              ? 'bg-[#E7F8FE] p-4 rounded-md'
-              : 'text-black p-4 rounded-md hover:bg-gray-200'
+              ? "bg-[#E7F8FE] p-4 rounded-md"
+              : "text-black p-4 rounded-md hover:bg-gray-200"
           }
         >
           My SKUs
@@ -45,12 +45,12 @@ const LeftSidebar = () => {
         >
           Promotional Coupons
         </NavLink> */}
- <NavLink
+        <NavLink
           to="/utility-tokens"
           className={({ isActive }) =>
             isActive
-              ? 'bg-[#E7F8FE] p-4 rounded-md'
-              : 'text-black p-4 rounded-md hover:bg-gray-200'
+              ? "bg-[#E7F8FE] p-4 rounded-md"
+              : "text-black p-4 rounded-md hover:bg-gray-200"
           }
         >
           Utility Tokens
@@ -59,11 +59,11 @@ const LeftSidebar = () => {
           to="/setting"
           className={({ isActive }) =>
             isActive
-              ? 'bg-[#E7F8FE] p-4 rounded-md'
-              : 'text-black p-4 rounded-md hover:bg-gray-200'
+              ? "bg-[#E7F8FE] p-4 rounded-md"
+              : "text-black p-4 rounded-md hover:bg-gray-200"
           }
         >
-       Setting
+          Setting
         </NavLink>
       </nav>
     </aside>

@@ -7,8 +7,7 @@ const SkuOverlay = () => {
     <>
       <CardDetails />
       <QrCard />
-
-      <CardDetails />
+       <CardDetails />
       <QrCard />
       <CardDetails />
       <QrCard />

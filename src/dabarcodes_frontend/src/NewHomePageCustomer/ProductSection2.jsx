@@ -153,17 +153,15 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
       },
     },
   });
-
-  // State to manage loading status
   const [loading, setLoading] = useState(true);
 
-  // Simulating data fetching
+  //  data fetching
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Simulate loading completion
-    }, 1000); // Adjust the delay as needed
+      setLoading(false); 
+    }, 1000); 
 
-    return () => clearTimeout(timer); // Clean up the timer
+    return () => clearTimeout(timer); 
   }, []);
 
   // Limit the number of products displayed
@@ -184,7 +182,7 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
         <h2 className="font-bold text-xl">{title}</h2>
         {products.length > 4 && (
           <Link
-            to="/top-sku" // Update this with the actual route where you want to navigate
+            to="/top-sku" 
             className="text-black hover:underline font-roboto"
           >
             View All
@@ -202,7 +200,7 @@ const ProductSection2 = ({ title, products, showBorder = true }) => {
             <div key={product.id} className="keen-slider__slide">
               <CardSection 
                 product={product} 
-                onClick={() => handleCardClick(product.id)} // Pass the click handler
+                onClick={() => handleCardClick(product.id)} 
               />
             </div>
           ))}

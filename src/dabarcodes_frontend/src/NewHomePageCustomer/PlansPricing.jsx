@@ -33,7 +33,7 @@ const PlansPricing = () => {
           <div
             key={index}
             className="border rounded-lg p-6 w-full max-w-sm shadow-md hover:shadow-lg"
-            style={{ borderColor: index === 1 ? "#00BFFF" : "#e5e7eb" }} // Add border color for prepaid
+            style={{ borderColor: index === 1 ? "#00BFFF" : "#e5e7eb" }}
           >
             <h3 className="text-xl font-semibold mb-4">{plan.title}</h3>
             <div className="text-3xl font-bold mb-1">
@@ -45,7 +45,7 @@ const PlansPricing = () => {
               {plan.features.map((feature, i) => (
                 <li key={i} className="flex items-center">
                   <div className="bg-blue-400 text-white rounded-full w-6 h-6 flex items-center justify-center mr-4">
-                    <FaCheck className="w-3 h-3" /> {/* Smaller FaCheck icon */}
+                    <FaCheck className="w-3 h-3" /> 
                   </div>
                   {feature}
                 </li>

@@ -10,11 +10,7 @@ const RetailerNear = () => {
   const { retailerList } = useData();
   const [currentPage, setCurrentPage] = useState(1);
   const retailersPerPage = 9;
-
-  // Calculate total pages
   const totalPages = Math.ceil(retailerList.length / retailersPerPage);
-
-  // Calculate the indices for current page's retailers
   const indexOfLastRetailer = currentPage * retailersPerPage;
   const indexOfFirstRetailer = indexOfLastRetailer - retailersPerPage;
   const currentRetailers = retailerList.slice(indexOfFirstRetailer, indexOfLastRetailer);

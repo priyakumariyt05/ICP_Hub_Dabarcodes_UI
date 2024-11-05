@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import Slider from "react-slick";
 import RetailerCard from "./RetailerCard";
@@ -13,12 +11,12 @@ const RetailerCarousel = ({
   onViewAllClick,
 }) => {
   const settings = {
-    dots: false, // Hide the dots
-    arrows: false, // Hide the arrows
+    dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 3, // Show 3 cards per slide
-    slidesToScroll: 1, // Scroll one slide at a time
+    slidesToShow: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 1024,

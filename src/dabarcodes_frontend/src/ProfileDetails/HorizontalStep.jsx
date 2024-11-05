@@ -1,25 +1,29 @@
-
 import React, { useState, useEffect } from "react";
 import { FaCheck } from "react-icons/fa";
 
 const HorizontalStep = ({ currentStep }) => {
   const [isVisible, setIsVisible] = useState(true);
-  const steps = [{ step: 1 }, { step: 2 }, { step: 3 }, { step: 4 }, { step: 5 }];
+  const steps = [
+    { step: 1 },
+    { step: 2 },
+    { step: 3 },
+    { step: 4 },
+    { step: 5 },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-   
-      if (window.scrollY > 100) { 
+      if (window.scrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
     };
-window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     // Clean up the event listener
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 

@@ -27,9 +27,6 @@ export const ModalProvider = ({ children }) => {
   const [isSingleQR, SetIsSingleQR] = useState(false);
   const [isMultiQR, SetIsMultiQR] = useState(false);
   
-
-  // const openLinkedSKU = () => setIsLinkedSKU(true);
-  // const closeLinkedSKU = () => setIsLinkedSKU(false);
   const openLinkedSku = () => setLinkedSKU(true);
   const closeLinkedSKU = () => setLinkedSKU(false);
 
@@ -70,11 +67,7 @@ const closeNotifications = () => {
         openConnectWalletModal,
         closeConnectWalletModal,
         //
-        // isTokenOpen,
-        // isProfileModalOpen,
-        // isNotificitionsOn,
-        // isCoupanOn,
-        //
+      
         
         isTokenOpen,
         openToken,
@@ -91,9 +84,7 @@ const closeNotifications = () => {
         openCoupan,
         closeCoupan,
         //
-        // openLinkedSKU,
-        // closeLinkedSKU,
-        // linkedSKU,
+      
         linkedSKU, openLinkedSku, closeLinkedSKU,
         //
         

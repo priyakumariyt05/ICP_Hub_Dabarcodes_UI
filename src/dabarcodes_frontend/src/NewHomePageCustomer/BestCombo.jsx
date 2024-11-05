@@ -1,4 +1,3 @@
-
 import React from "react";
 
 import CardSection from "./CardSection";
@@ -28,7 +27,9 @@ const BestCombo = ({ data }) => {
   return (
     <div className="my-4 md:my-6 lg:my-8 border p-4 md:p-5 lg:p-6 rounded-md md:rounded-lg shadow-md md:shadow-lg m-8">
       <div className="flex  justify-between items-center my-4">
-        <p className="font-semibold lg:text-[20px] text-[16px]">Best Combo Offers</p>
+        <p className="font-semibold lg:text-[20px] text-[16px]">
+          Best Combo Offers
+        </p>
         <a
           href="#"
           className="text-[#0D90C1] text-sm md:text-base cursor-pointer hover:underline underline-offset-4"

@@ -1,4 +1,3 @@
-
 // import React from "react";
 // import { FaBookmark } from "react-icons/fa";
 // import { BsBookmark } from "react-icons/bs";
@@ -81,7 +80,6 @@
 
 // export default CardSection;
 
-
 // import React from "react";
 // import { FaBookmark } from "react-icons/fa";
 // import { BsBookmark } from "react-icons/bs";
@@ -154,7 +152,7 @@
 //           Link SKU
 //         </button>
 //         <LinkedSku />
-        
+
 //           {/* <FaBookmark className="text-black cursor-pointer" /> */}
 //           <button className="text-black p-2">
 //             <BsBookmark className="h-6 w-6" />
@@ -167,43 +165,21 @@
 
 // export default CardSection;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
 import { FaBookmark } from "react-icons/fa";
 import { BsBookmark } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { useModal } from "../ContextApi/ModalContext";
 import LinkedSku from "./Modals/LinkedSku";
-const CardSection = ({ product,onClick }) => {
-  const {openLinkedSku} =useModal()
+const CardSection = ({ product, onClick }) => {
+  const { openLinkedSku } = useModal();
   return (
     <>
-      <div className="border border-[#FED3D2] rounded-lg shadow-md p-4 flex flex-col justify-between bg-white  w-full "onClick={onClick}>
-        <div className="flex items-center justify-between mb-4 " >
+      <div
+        className="border border-[#FED3D2] rounded-lg shadow-md p-4 flex flex-col justify-between bg-white  w-full "
+        onClick={onClick}
+      >
+        <div className="flex items-center justify-between mb-4 ">
           <img
             src={product.image}
             alt={product.name}
@@ -257,14 +233,13 @@ const CardSection = ({ product,onClick }) => {
         </div>
 
         <div className="flex justify-between items-center mt-4">
-        <button
-          onClick={openLinkedSku}
-          className="bg-[#0D90C1] text-white text-medium px-4 py-1 rounded font-roboto"
-        >
-          Link SKU
-        </button>
-      
-        
+          <button
+            onClick={openLinkedSku}
+            className="bg-[#0D90C1] text-white text-medium px-4 py-1 rounded font-roboto"
+          >
+            Link SKU
+          </button>
+
           {/* <FaBookmark className="text-black cursor-pointer" /> */}
           <button className="text-black p-2">
             <BsBookmark className="h-6 w-6" />
