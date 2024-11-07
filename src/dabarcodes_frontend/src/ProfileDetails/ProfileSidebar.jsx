@@ -13,10 +13,8 @@ const ProfileSidebar = ({ sidebarOpen, currentStep }) => {
       </div>
       <h2 className="text-xl font-bold mb-8 md:block hidden">Create Account</h2>
 
-      {/* Render Vertical Stepper on Large Screens */}
       <VerticalStep currentStep={currentStep} />
 
-      {/* Render Horizontal Stepper on Medium and Small Screens */}
       <HorizontalStep currentStep={currentStep} />
     </div>
   );
