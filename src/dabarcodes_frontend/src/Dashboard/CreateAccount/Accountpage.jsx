@@ -1,24 +1,19 @@
-
-import React, {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
-
-
-
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import Asidebar from "../Asidebar";
 
 const AccountPage = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-      const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
-
-    const handleImageUpload = (event) => {
-      setImage(URL.createObjectURL(event.target.files[0]));
-    };
+  const handleImageUpload = (event) => {
+    setImage(URL.createObjectURL(event.target.files[0]));
+  };
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white p-4 md:p-8 font-roboto">

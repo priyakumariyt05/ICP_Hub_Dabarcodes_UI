@@ -7,14 +7,11 @@ export const ModalProvider = ({ children }) => {
   const [isConnectWalletModalOpen, setIsConnectWalletModalOpen] =
     useState(false);
 
-
   const openRoleModal = () => setIsRoleModalOpen(true);
   const closeRoleModal = () => setIsRoleModalOpen(false);
 
   const openConnectWalletModal = () => setIsConnectWalletModalOpen(true);
   const closeConnectWalletModal = () => setIsConnectWalletModalOpen(false);
-
- 
 
   //
   const [isTokenOpen, setIsTokenOpen] = useState(false);
@@ -26,7 +23,7 @@ export const ModalProvider = ({ children }) => {
 
   const [isSingleQR, SetIsSingleQR] = useState(false);
   const [isMultiQR, SetIsMultiQR] = useState(false);
-  
+
   const openLinkedSku = () => setLinkedSKU(true);
   const closeLinkedSKU = () => setLinkedSKU(false);
 
@@ -36,13 +33,13 @@ export const ModalProvider = ({ children }) => {
   const openProfile = () => setIsProfileModalOpen(true);
   const closeProfile = () => setIsProfileModalOpen(false);
 
-const openNotifications = () => {
-  setIsNotificationsOn(true);
-};
+  const openNotifications = () => {
+    setIsNotificationsOn(true);
+  };
 
-const closeNotifications = () => {
-  setIsNotificationsOn(false);
-};
+  const closeNotifications = () => {
+    setIsNotificationsOn(false);
+  };
 
   const openCoupan = () => setIsCoupanOn(true);
   const closeCoupan = () => setIsCoupanOn(false);
@@ -67,8 +64,7 @@ const closeNotifications = () => {
         openConnectWalletModal,
         closeConnectWalletModal,
         //
-      
-        
+
         isTokenOpen,
         openToken,
         closeToken,
@@ -76,19 +72,20 @@ const closeNotifications = () => {
         openProfile,
         closeProfile,
         //
-       
-        isNotificationsOn, 
-        openNotifications, 
+
+        isNotificationsOn,
+        openNotifications,
         closeNotifications,
         //
         openCoupan,
         closeCoupan,
         //
-      
-        linkedSKU, openLinkedSku, closeLinkedSKU,
+
+        linkedSKU,
+        openLinkedSku,
+        closeLinkedSKU,
         //
-        
-        
+
         isSingleQR,
         openQR,
         closeQR,
