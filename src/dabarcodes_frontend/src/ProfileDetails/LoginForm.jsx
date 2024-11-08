@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 import { Link } from "react-router-dom";
-import Asidebar from "../Dashboard/Asidebar";
+import Asidebar from "../ReusableComponents/Asidebar";
 
 const LoginForm = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -42,13 +42,12 @@ const LoginForm = () => {
       </button>
 
       {/* Sidebar */}
-      <Asidebar sidebarOpen={sidebarOpen} />
+      <Asidebar sidebarOpen={sidebarOpen} title="Become Our Customer" />
 
       {/* Main Content */}
       <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
+        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${sidebarOpen ? "ml-0" : "md:ml-1/3"
+          } transition-all duration-300 ease-in-out`}
       >
         {/*MainContent*/}
 

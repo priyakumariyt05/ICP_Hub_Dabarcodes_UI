@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-import {Link, useNavigate} from "react-router-dom";
-import Asidebar from "../Asidebar";
+import { Link, useNavigate } from "react-router-dom";
+import Asidebar from "../../ReusableComponents/Asidebar";
 
 const AdminLogin = () => {
-  const navigate =useNavigate()
+  const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -26,7 +26,7 @@ const AdminLogin = () => {
     e.preventDefault();
     const validationErrors = validate();
     if (Object.keys(validationErrors).length === 0) {
-      console.log({email, password});
+      console.log({ email, password });
     } else {
       setErrors(validationErrors);
     }
@@ -49,9 +49,8 @@ const AdminLogin = () => {
 
       {/* Main Content */}
       <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
+        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${sidebarOpen ? "ml-0" : "md:ml-1/3"
+          } transition-all duration-300 ease-in-out`}
       >
         {/*MainContent*/}
 

@@ -228,64 +228,64 @@
 // };
 
 // export default AdminPassword;
-import React, {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
-import {useNavigate} from "react-router-dom";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
-import {useFormik} from "formik";
+import { useFormik } from "formik";
 import * as Yup from "yup";
-import {Link} from "react-router-dom";
-import Asidebar from "../Asidebar";
+import { Link } from "react-router-dom";
+import Asidebar from "../../ReusableComponents/Asidebar";
 
 const AdminPassword = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-      const [showPassword, setShowPassword] = useState(false);
-    const [passwordStrength, setPasswordStrength] = useState({
-      minLength: false,
-      uppercase: false,
-      number: false,
-      specialChar: false,
-    });
-    const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+  const [passwordStrength, setPasswordStrength] = useState({
+    minLength: false,
+    uppercase: false,
+    number: false,
+    specialChar: false,
+  });
+  const navigate = useNavigate();
 
-    const validationSchema = Yup.object({
-      createPassword: Yup.string()
-        .min(12, "Password must be at least 12 characters")
-        .required("Password is required"),
-      confirmPassword: Yup.string()
-        .oneOf([Yup.ref("createPassword"), null], "Passwords must match")
-        .required("Confirm password is required"),
-    });
+  const validationSchema = Yup.object({
+    createPassword: Yup.string()
+      .min(12, "Password must be at least 12 characters")
+      .required("Password is required"),
+    confirmPassword: Yup.string()
+      .oneOf([Yup.ref("createPassword"), null], "Passwords must match")
+      .required("Confirm password is required"),
+  });
 
-    const formik = useFormik({
-      initialValues: {
-        createPassword: "",
-        confirmPassword: "",
-      },
-      validationSchema,
-      onSubmit: (values) => {
-        console.log("Password Data:", values); // Show data in console
-        navigate("/homepage");
-      },
-    });
+  const formik = useFormik({
+    initialValues: {
+      createPassword: "",
+      confirmPassword: "",
+    },
+    validationSchema,
+    onSubmit: (values) => {
+      console.log("Password Data:", values); // Show data in console
+      navigate("/homepage");
+    },
+  });
 
 
-    // Function to check password strength dynamically
-    const checkPasswordStrength = (password) => {
-      const minLength = password.length >= 12;
-      const uppercase = /[A-Z]/.test(password);
-      const number = /\d/.test(password);
-      const specialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+  // Function to check password strength dynamically
+  const checkPasswordStrength = (password) => {
+    const minLength = password.length >= 12;
+    const uppercase = /[A-Z]/.test(password);
+    const number = /\d/.test(password);
+    const specialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
 
-      setPasswordStrength({minLength, uppercase, number, specialChar});
-    };
+    setPasswordStrength({ minLength, uppercase, number, specialChar });
+  };
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
 
 
-  
+
   return (
     <div className="min-h-screen flex flex-col md:flex-row bg-white p-4 md:p-8 font-roboto">
       {/* Toggle Button */}
@@ -301,9 +301,8 @@ const AdminPassword = () => {
 
       {/* Main Content */}
       <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
+        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${sidebarOpen ? "ml-0" : "md:ml-1/3"
+          } transition-all duration-300 ease-in-out`}
       >
         {/*MainContent*/}
 
@@ -440,11 +439,10 @@ const AdminPassword = () => {
               <h3 className="text-sm font-medium mb-2">Password Strength</h3>
               <ul className="text-sm list-none space-y-1">
                 <li
-                  className={`flex items-center ${
-                    passwordStrength.minLength
+                  className={`flex items-center ${passwordStrength.minLength
                       ? "text-green-600"
                       : "text-red-600"
-                  }`}
+                    }`}
                 >
                   <span className="mr-2">
                     {passwordStrength.minLength ? "✔" : "✘"}
@@ -452,11 +450,10 @@ const AdminPassword = () => {
                   at least 12 characters.
                 </li>
                 <li
-                  className={`flex items-center ${
-                    passwordStrength.uppercase
+                  className={`flex items-center ${passwordStrength.uppercase
                       ? "text-green-600"
                       : "text-red-600"
-                  }`}
+                    }`}
                 >
                   <span className="mr-2">
                     {passwordStrength.uppercase ? "✔" : "✘"}
@@ -464,9 +461,8 @@ const AdminPassword = () => {
                   Include both uppercase and lowercase letters.
                 </li>
                 <li
-                  className={`flex items-center ${
-                    passwordStrength.number ? "text-green-600" : "text-red-600"
-                  }`}
+                  className={`flex items-center ${passwordStrength.number ? "text-green-600" : "text-red-600"
+                    }`}
                 >
                   <span className="mr-2">
                     {passwordStrength.number ? "✔" : "✘"}
@@ -474,11 +470,10 @@ const AdminPassword = () => {
                   at least one number (0-9).
                 </li>
                 <li
-                  className={`flex items-center ${
-                    passwordStrength.specialChar
+                  className={`flex items-center ${passwordStrength.specialChar
                       ? "text-green-600"
                       : "text-red-600"
-                  }`}
+                    }`}
                 >
                   <span className="mr-2">
                     {passwordStrength.specialChar ? "✔" : "✘"}
@@ -489,13 +484,13 @@ const AdminPassword = () => {
             </div>
 
             <div className="flex justify-end mt-14">
-        
+
               <Link to="/dashboard">
                 <button
                   type="submit"
                   className="px-8 py-2 bg-[#0D90C1]  text-white rounded-md shadow-sm hover:bg-blue-700"
                 >
-            Get Started
+                  Get Started
                 </button>
               </Link>
             </div>

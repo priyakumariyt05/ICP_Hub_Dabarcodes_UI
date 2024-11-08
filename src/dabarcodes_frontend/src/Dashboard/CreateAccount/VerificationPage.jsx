@@ -51,13 +51,13 @@
 // }
 
 // export default VerificationPage
-import React, {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
-import Asidebar from "../Asidebar";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import Asidebar from "../../ReusableComponents/Asidebar";
 import { useNavigate } from "react-router-dom";
 
-const VerificationPage = ({userData}) => {
-  const navigate =useNavigate()
+const VerificationPage = ({ userData }) => {
+  const navigate = useNavigate()
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -69,12 +69,12 @@ const VerificationPage = ({userData}) => {
     userId: "Not Available",
     password: "********",
   };
-    const handleButtonClick = () => {
-      navigate("/dashboard/admin-login");
-    };
+  const handleButtonClick = () => {
+    navigate("/dashboard/admin-login");
+  };
 
   // Validate if userData is provided
-  const {email, userId, password} = userData || defaultData;
+  const { email, userId, password } = userData || defaultData;
 
   return (
     <>
@@ -92,9 +92,8 @@ const VerificationPage = ({userData}) => {
 
         {/* Main Content */}
         <div
-          className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-            sidebarOpen ? "ml-0" : "md:ml-1/3"
-          } transition-all duration-300 ease-in-out`}
+          className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${sidebarOpen ? "ml-0" : "md:ml-1/3"
+            } transition-all duration-300 ease-in-out`}
         >
           <div className="w-2/3 p-8  shadow-md rounded-lg flex flex-col items-center justify-center text-center m-auto">
             <h3 className="text-xl font-bold">Email address verified</h3>

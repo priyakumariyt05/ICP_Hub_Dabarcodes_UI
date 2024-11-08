@@ -100,11 +100,11 @@
 
 // export default EmailVerificationPage;
 
-import React, {useState} from "react";
-import {FaBars, FaTimes} from "react-icons/fa";
+import React, { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-import {Link, useNavigate} from "react-router-dom";
-import Asidebar from "../Asidebar";
+import { Link, useNavigate } from "react-router-dom";
+import Asidebar from "../../ReusableComponents/Asidebar";
 
 const EmailVerificationPage = () => {
   const navigate = useNavigate()
@@ -139,7 +139,7 @@ const EmailVerificationPage = () => {
     setSidebarOpen(!sidebarOpen);
   };
   const handleButtonClick = () => {
-   
+
     navigate("/dashboard/verification-page");
   };
 
@@ -158,9 +158,8 @@ const EmailVerificationPage = () => {
 
       {/* Main Content */}
       <div
-        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${
-          sidebarOpen ? "ml-0" : "md:ml-1/3"
-        } transition-all duration-300 ease-in-out`}
+        className={`bg-white w-full md:w-2/3 p-4 md:p-8 flex flex-col justify-between ${sidebarOpen ? "ml-0" : "md:ml-1/3"
+          } transition-all duration-300 ease-in-out`}
       >
         {/* main  */}
 

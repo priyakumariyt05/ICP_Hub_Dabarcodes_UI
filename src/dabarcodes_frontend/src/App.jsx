@@ -202,6 +202,7 @@ const Store = lazy(() =>
 const LoginForm = lazy(() => import("./ProfileDetails/LoginForm"));
 import OperationalRoutes from "./RetailerSide/Operational/OperationalRoutes";
 import SupportWorkerRoutes from "./RetailerSide/SupportWorker/SupportWorkerRoutes";
+import SupplierRoutes from "./SupplierSide/SupplierRoutes";
 
 function App() {
   return (
@@ -278,7 +279,7 @@ function App() {
             element={<OperationalRoutes />}
           />
           <Route path="/support-worker/*" element={<SupportWorkerRoutes />} />
-
+          <Route path="/supplier/*" element={<SupplierRoutes />} />
           <Route path="/feedback" element={<FeedbackForm />} />
           <Route path="/contact-support" element={<ContactSupport />} />
         </Routes>
