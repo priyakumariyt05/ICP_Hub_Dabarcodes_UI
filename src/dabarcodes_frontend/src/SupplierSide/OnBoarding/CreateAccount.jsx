@@ -144,7 +144,7 @@ const CreateAccount = () => {
 
             {/* Submit Button */}
             <div className="flex justify-end mt-8">
-              <Link to="/dashboard/email-verification">
+              <Link to="/supplier/brand-details">
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700">
                   Create Account
                 </button>

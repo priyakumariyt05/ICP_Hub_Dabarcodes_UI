@@ -25,7 +25,7 @@ const Asidebar = ({ sidebarOpen, title }) => {
   return (
     <div
       className={`bg-[#D1EDFF] w-2/3 md:w-1/3 p-6 rounded-lg transition-transform duration-300 ease-in-out
-        ${sidebarOpen ? "fixed top-0 left-0 h-full z-40" : "hidden"} md:block`}
+        ${sidebarOpen ? "fixed top-0 left-0 h-full z-40" : "hidden"} md:block max-h-[100vh]`}
     >
       <div className="mb-8">
         <img

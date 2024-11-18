@@ -157,6 +157,155 @@ const DashboardRoutes = () => {
 };
 
 export default DashboardRoutes;
+// import React from "react";
+// import { Route, Routes, Navigate, useLocation } from "react-router-dom";
+// import Notifications from "./Notifications";
+// import Sidebar from "../ReusableComponents/Sidebar";
+// import TopNavbar from "./TopNavbar";
+
+// import AccountPage from "./CreateAccount/Accountpage";
+// import EmailVerificationPage from "./CreateAccount/EmailVerificationPage";
+// import VerificationPage from "./CreateAccount/VerificationPage";
+// import AdminLogin from "./CreateAccount/AdminLogin";
+// import AdminPassword from "./CreateAccount/AdminPassword";
+// import Documentation from "./Home/Documentation";
+// import Dashboard from "./Home/Dashboard";
+// import HomeDashboard from "./Home/HomeDashboard";
+// import AllProduct from "./ProductManagement/AllProduct";
+// import ProductOnPromotion from "./ProductManagement/ProductOnPromotion";
+// import SupplierList from "./SupplierManagement/SupplierList";
+// import PromotionList from "./SupplierManagement/PromotionList";
+// import ProductPerformation from "./Reports/ProductPerformation";
+// import StoryBroads from "./Reports/StoryBroads";
+// import Store from "./StoreManagement/Store";
+// import Role from "./Role/Role";
+// import NumberOfProductSoldDetails from "./Reports/Product/NumberOfProductSoldDetails";
+// import StoryBroadProduct from "./Reports/Product/StoryBroadsProduct/StoryBroadProduct";
+// import PlansPricing from "./Subscription/PlanPricing";
+// import SubscriptionPlan from "./Subscription/SubscriptionPlan";
+// import ProfileData from "./ProfileData/ProfileData";
+// import StoreDashboard from "./StoreManagement/StoreDetail/StoreDashboard";
+// import StoreDetailsPage from "./StoreManagement/StoreDetail/StoreDetailsPage";
+// import StoreProductsDetailsPage from "./StoreManagement/StoreDetail/StoreProductDetailsPage";
+// import StoreEmployeePage from "./StoreManagement/StoreDetail/StoreEmployeePage";
+// import StoreAnalyticsReportsPage from "./StoreManagement/StoreDetail/StoreAnalyticsReportsPage";
+// import StoreSupplierPage from "./StoreManagement/StoreDetail/StoreSupplierPage";
+// import StorePromotionDetailsPage from "./StoreManagement/StoreDetail/StorePromotionDetailsPage";
+// import ProductNoPromotion from "./ProductManagement/ProductDetail/ProductNoPromotion";
+// import ProductPromotion from "./ProductManagement/ProductDetail/ProductPromotion";
+// import SupplierDetailPage from "./SupplierManagement/SupplierDetail/SupplierDetailPage";
+
+// import HomeIcon from '@mui/icons-material/Home';
+// import StorefrontIcon from '@mui/icons-material/Storefront';
+// import { FaProductHunt } from "react-icons/fa";
+// import { TfiMedall } from "react-icons/tfi";
+// import { MdEqualizer } from "react-icons/md";
+
+// const DashboardRoutes = () => {
+//   const location = useLocation();
+
+//   const sidebarData = [
+//     {
+//       name: "Home",
+//       icon: <HomeIcon />,
+//       links: [
+//         { name: "Getting Started", path: "/dashboard/getting-started" },
+//         { name: "Dashboard", path: "/dashboard/home-dashboard" },
+//       ],
+//     },
+//     {
+//       name: "Store Management",
+//       icon: <StorefrontIcon />,
+//       path: "/dashboard/store",
+//     },
+//     {
+//       name: "Product Management",
+//       icon: <FaProductHunt />,
+//       links: [
+//         { name: "All Product", path: "/dashboard/all-product" },
+//         { name: "Product on Promotion", path: "/dashboard/product-promotion" },
+//       ],
+//     },
+//     {
+//       name: "Subscription Management",
+//       icon: <TfiMedall />,
+//       path: "/dashboard/plan-pricing",
+//     },
+//     {
+//       name: "Reports",
+//       icon: <MdEqualizer />,
+//       links: [
+//         { name: "Product Performance", path: "/dashboard/product-performance" },
+//         { name: "Story Broads", path: "/dashboard/story-broads" },
+//       ],
+//     },
+//   ];
+
+//   return (
+//     <div className="h-screen flex flex-col">
+//       {/* Top Navbar */}
+//       {location.pathname !== "/dashboard/admin-create" &&
+//         location.pathname !== "/dashboard/email-verification" &&
+//         location.pathname !== "/dashboard/verification-page" &&
+//         location.pathname !== "/dashboard/admin-login" &&
+//         location.pathname !== "/dashboard/admin-password" && <TopNavbar />}
+
+//       <div className="flex flex-1">
+//         {/* Sidebar */}
+//         {location.pathname !== "/dashboard/admin-create" &&
+//           location.pathname !== "/dashboard/email-verification" &&
+//           location.pathname !== "/dashboard/verification-page" &&
+//           location.pathname !== "/dashboard/admin-login" &&
+//           location.pathname !== "/dashboard/admin-password" && (
+//             <Sidebar data={sidebarData} />
+//           )}
+
+//         {/* Main Content */}
+//         <div className="flex-1 p-4">
+//           <Routes>
+//             <Route path="/" element={<Navigate to="/dashboard/getting-started" />} />
+//             <Route path="getting-started" element={<Dashboard />} />
+//             <Route path="home-dashboard" element={<HomeDashboard />} />
+//             <Route path="all-product" element={<AllProduct />} />
+//             <Route path="product-promotion" element={<ProductOnPromotion />} />
+//             <Route path="supplier-list" element={<SupplierList />} />
+//             <Route path="promotion-request" element={<PromotionList />} />
+//             <Route path="store" element={<Store />} />
+//             <Route path="role" element={<Role />} />
+//             <Route path="product-performance" element={<ProductPerformation />} />
+//             <Route path="story-broads" element={<StoryBroads />} />
+//             <Route path="number-of-product-sold" element={<NumberOfProductSoldDetails />} />
+//             <Route path="story-broads-product" element={<StoryBroadProduct />} />
+//             <Route path="notifications" element={<Notifications />} />
+//             <Route path="profile-data" element={<ProfileData />} />
+//             <Route path="plan-pricing" element={<PlansPricing />} />
+//             <Route path="subscription-plan" element={<SubscriptionPlan />} />
+//             <Route path="store-dashboard" element={<StoreDashboard />} />
+//             <Route path="/dashboard/store-dashboard/:section" element={<StoreDashboard />} />
+//             <Route path="/store-dashboard/store-details-page" element={<StoreDetailsPage />} />
+//             <Route path="/store-dashboard/store-products-details-page" element={<StoreProductsDetailsPage />} />
+//             <Route path="/store-dashboard/store-employee-details-page" element={<StoreEmployeePage />} />
+//             <Route path="/store-dashboard/store-analytics-reports-page" element={<StoreAnalyticsReportsPage />} />
+//             <Route path="/store-dashboard/store-supplier-details-page" element={<StoreSupplierPage />} />
+//             <Route path="/store-dashboard/store-promotion-details-page" element={<StorePromotionDetailsPage />} />
+//             <Route path="/product/promotion" element={<ProductPromotion />} />
+//             <Route path="/product/no-promotion" element={<ProductNoPromotion />} />
+//             <Route path="supplier-detail-page" element={<SupplierDetailPage />} />
+//             <Route path="admin-create" element={<AccountPage />} />
+//             <Route path="email-verification" element={<EmailVerificationPage />} />
+//             <Route path="verification-page" element={<VerificationPage />} />
+//             <Route path="admin-login" element={<AdminLogin />} />
+//             <Route path="admin-password" element={<AdminPassword />} />
+//             <Route path="documentation" element={<Documentation />} />
+//           </Routes>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default DashboardRoutes;
+
 
 // Responsive But looks not very well//
 // import React from "react";

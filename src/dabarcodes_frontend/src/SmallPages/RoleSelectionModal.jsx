@@ -87,7 +87,7 @@ const RoleSelectionModal = ({ onClose }) => {
     } else if (selectedRole === "retailer") {
       navigate("/dashboard/admin-create");
     } else if (selectedRole === "supplier") {
-      navigate("/login-page");
+      navigate("/supplier/create-account");
     }
     onClose(); // Close the modal after navigation
   };
