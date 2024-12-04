@@ -289,17 +289,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 // import React, { createContext, useEffect, useState } from "react";
 // import { HttpAgent, Actor } from "@dfinity/agent";
 // import { Principal } from "@dfinity/principal";
