@@ -207,7 +207,7 @@ const PersonalDetails = () => {
             Year
                 <span className="text-red-500">*</span>
               </label>
-              <input
+              <input 
                 type="number"
                 name="dob.year"
                 placeholder="YYYY"

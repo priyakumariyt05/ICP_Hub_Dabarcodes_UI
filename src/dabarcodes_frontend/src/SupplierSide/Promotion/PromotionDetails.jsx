@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import BackButton from "../../Dashboard/Reusable/BackButton";
-import PreviousRedemption from "../../Dashboard/Reusable/Table/PreviousRedemption";
+import PreviousRedemptionData from "../ReusableData/PreviousRedemptionData";
 
 const PromotionDetails = () => {
   const { promotionId } = useParams();
@@ -216,7 +216,7 @@ const PromotionDetails = () => {
          {/* table */}
   
         <h1 className="text-2xl font-bold mb-4">Previous Redemptions</h1>
-        <PreviousRedemption previousRedemption={previousData} />
+        <PreviousRedemptionData previousRedemption={previousData} />
      
       </div>
 

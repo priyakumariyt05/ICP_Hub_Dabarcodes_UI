@@ -51,6 +51,10 @@ const ConnectWalletModal = ({ onClose, onNext }) => {
     navigate("/login-page");
   };
 
+const handleConnectWalletImageClick = () => {
+   onNext();
+  onClose();
+};
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-gray-200 bg-opacity-50 font-roboto">
       <div className="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full relative">
@@ -82,7 +86,8 @@ const ConnectWalletModal = ({ onClose, onNext }) => {
           </button>
 
           <button
-            onClick={() => console.log("Bifinity login clicked")}
+            // onClick={() => console.log("Bifinity login clicked")}
+          onClick={handleConnectWalletImageClick }
             className="w-full flex items-center justify-center p-3 text-lg font-bold text-black hover:bg-indigo-100 rounded-b-md"
           >
             <img src="/image/3.png" alt="Bifinity Login" className="mr-4" />

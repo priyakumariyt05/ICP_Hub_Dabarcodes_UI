@@ -60,7 +60,10 @@ const CreateAccount = () => {
                   className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 "
                 />
               </div>
-              <div className="flex flex-col">
+             
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+           <div className="flex flex-col">
                 <label htmlFor="email" className="text-gray-800 py-2 font-semibold">
                   Email <span className="text-red-500">*</span>
                 </label>
@@ -72,7 +75,37 @@ const CreateAccount = () => {
                   className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
                 />
               </div>
+            <div className="flex flex-col">
+              <label
+                htmlFor="phone"
+                className="text-gray-700 py-2 font-semibold"
+              >
+                Phone
+                <span className="text-red-500">*</span>
+              </label>
+              <input
+                id="phone"
+                name="phone"
+                type="number"
+            
+                placeholder="Phone Number"
+                className="p-3 border border-[#ccc] rounded-lg focus:outline-none focus:border-[#1aaf9a]"
+              />
+       
             </div>
+          </div>
+            {/* <div className="flex flex-col">
+                <label htmlFor="email" className="text-gray-800 py-2 font-semibold">
+                  Email <span className="text-red-500">*</span>
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="text"
+                  placeholder="Email"
+                  className="p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500"
+                />
+              </div> */}
 
             {/* Store Address */}
             <h2 className="text-xl font-semibold my-6"> Head Office Address</h2>
@@ -144,7 +177,7 @@ const CreateAccount = () => {
 
             {/* Submit Button */}
             <div className="flex justify-end mt-8">
-              <Link to="/supplier/brand-details">
+              <Link to="/supplier/subscription-details">
                 <button className="px-4 py-2 bg-blue-600 text-white rounded-md shadow-sm hover:bg-blue-700">
                   Create Account
                 </button>

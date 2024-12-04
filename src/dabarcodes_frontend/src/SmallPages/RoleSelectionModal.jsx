@@ -75,10 +75,10 @@ import { useNavigate, Link } from "react-router-dom";
 
 const RoleSelectionModal = ({ onClose }) => {
   const navigate = useNavigate();
-  const [selectedRole, setSelectedRole] = useState(null); // Store selected role
+  const [selectedRole, setSelectedRole] = useState(null); 
 
   const handleRoleSelect = (role) => {
-    setSelectedRole(role); // Set the selected role
+    setSelectedRole(role); 
   };
 
   const handleContinue = () => {
@@ -135,7 +135,7 @@ const RoleSelectionModal = ({ onClose }) => {
         </div>
         <button
           onClick={handleContinue}
-          disabled={!selectedRole} // Disable button if no role is selected
+          disabled={!selectedRole} 
           className={`mt-6 w-full py-2 px-4 bg-blue-500 text-white rounded-md hover:bg-blue-600 block text-center ${
             !selectedRole ? "opacity-50 cursor-not-allowed" : ""
           }`}

@@ -170,15 +170,15 @@ const Sidebar = () => {
         {/* BOTOKS Token Management */}
         <li
           className={`px-6 py-3 cursor-pointer ${
-            location.pathname === "/supplier/botoks-token" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
+            location.pathname === "/supplier/subscription-plan" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
           }`}
-          onClick={() => handleToggle("botoks-token-management")}
+          onClick={() => handleToggle("subscription-plan")}
         >
           <div className="flex justify-between items-center">
-            <Link to="/supplier/botoks-token" className="flex items-center">
+            <Link to="/supplier/subscription-plan" className="flex items-center">
               <TfiMedall className="inline-block mr-2" /> Token Management
             </Link>
-            {openSection === "botoks-token-management" ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            {openSection === "subscription-plan" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
         </li>
  {/* Reports */}

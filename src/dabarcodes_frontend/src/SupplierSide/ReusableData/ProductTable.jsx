@@ -9,11 +9,11 @@ const ProductTable = ({ products }) => {
         <table className="min-w-full bg-white border">
           <thead>
             <tr>
-            <th className="py-2 px-4 border-b">Product Image</th>
-              <th className="py-2 px-4 border-b">Product SKU</th>
-              <th className="py-2 px-4 border-b">Product Name</th>
-              <th className="py-2 px-4 border-b">subBrand Name</th>
-              <th className="py-2 px-4 border-b">Category</th>
+            <th className="py-2 px-4 border-b text-left">Product Image</th>
+              <th className="py-2 px-4 border-b text-left">Product SKU</th>
+              <th className="py-2 px-4 border-b text-left">Product Name</th>
+              <th className="py-2 px-4 border-b text-left">SubBrand Name</th>
+              <th className="py-2 px-4 border-b text-left">Category</th>
               {/* <th className="py-2 px-4 border-b">Product Type</th> */}
               {/* <th className="py-2 px-4 border-b">Size</th>
               <th className="py-2 px-4 border-b">Description</th> */}
@@ -25,10 +25,10 @@ const ProductTable = ({ products }) => {
           <tbody>
             {products.map((product, index) => (
               <tr key={index}>
-              <td className="py-2 px-4 border-b">
+              <td className="py-2 px-4 border-b text-left">
                   {product.image ? (
                     <img
-                      src={URL.createObjectURL(product.image)} // Display the uploaded image
+                      src={URL.createObjectURL(product.image)} 
                       alt="Product"
                       className="w-16 h-16 object-cover "
                     />
@@ -36,10 +36,10 @@ const ProductTable = ({ products }) => {
                     'No Image'
                   )}
                 </td>
-                <td className="py-2 px-4 border-b">{product.sku}</td>
-                <td className="py-2 px-4 border-b">{product.productName}</td>
-                <td className="py-2 px-4 border-b">{product.subBrand}</td>
-                <td className="py-2 px-4 border-b">{product.category}</td>
+                <td className="py-2 px-4 border-b text-left">{product.sku}</td>
+                <td className="py-2 px-4 border-b text-left">{product.productName}</td>
+                <td className="py-2 px-4 border-b text-left">{product.subBrand}</td>
+                <td className="py-2 px-4 border-b text-left">{product.category}</td>
                 {/* <td className="py-2 px-4 border-b">{product.productType}</td> */}
                 {/* <td className="py-2 px-4 border-b">{product.size}</td> */}
                 {/* <td className="py-2 px-4 border-b">{product.description}</td> */}

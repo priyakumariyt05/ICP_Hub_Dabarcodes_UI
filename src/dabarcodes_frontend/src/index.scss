@@ -46,6 +46,28 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+// @layer utilities {
+//   .animation-pause {
+//     animation-play-state: paused;
+//   }
+// }
+
+// @keyframes slide-left {
+//   from {
+//     transform: translateX(0);
+//   }
+//   to {
+//     transform: translateX(-100%);
+//   }
+// }
+
+// .animate-slide-left-infinite {
+//   animation: slide-left 15s linear infinite;
+// }
+html {
+  scroll-behavior: smooth;
+}
 .roboto-thin {
   font-family: "Roboto", sans-serif;
   font-weight: 100;

@@ -3,11 +3,11 @@ import "../../components/style/Home.css";
 
 const About = () => {
   return (
-    <div id="about" className="section-container">
+    <div id="about" className="section-container font-roboto">
       <div className="container">
         <div className="box">
           <div className="header">
-            <h1 className=""> What is DaBarcodes</h1>
+            <h1 className="roboto-medium"> What is DaBarcodes</h1>
             <p>
               daBarcodes bridges the gap between customers, suppliers, and
               retailers through a unique promotional platform. Whether you're
@@ -15,9 +15,9 @@ const About = () => {
               solution.
             </p>
           </div>
-          <div className="boxes">
-            <div className="smallboxes">
-              <p className="">
+          <div className="boxes font-roboto">
+            <div className="smallboxes roboto-medium">
+              <p className="roboto-medium">
                 Start Your Savings <br /> Journey
               </p>
               <div className="image">

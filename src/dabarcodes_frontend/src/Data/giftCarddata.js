@@ -646,7 +646,7 @@ export const productData = [
     image: "/image/drink.png",
     discountText: "$15 off",
     name: "Nestle Ice Coffee",
-    price: "$37",
+    price: "$38",
     originalPrice: "$52",
     weight: "500g Pouch",
     description:

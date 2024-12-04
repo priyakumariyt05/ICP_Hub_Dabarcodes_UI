@@ -67,7 +67,7 @@ const SkuCard = ({ Data }) => {
         className={`w-fit h-fit rounded-md mt-1 text-white ${
           selectedCards.length >= 1
             ? "bg-[#0D90C1] cursor-pointer"
-            : "bg-blue-400 cursor-not-allowed"
+            : "bg-blue-300 cursor-not-allowed"
         }`}
       >
         <button className="px-4 py-1" disabled={selectedCards.length < 1}>

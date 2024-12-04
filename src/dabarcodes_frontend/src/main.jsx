@@ -11,7 +11,7 @@ import { ModalProvider } from "./ContextApi/ModalContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  {/* // <UserProvider> */}
+   {/* <UserProvider> */}
   <ModalProvider>
      <DataProvider>
       <App />

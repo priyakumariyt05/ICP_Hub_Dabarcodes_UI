@@ -127,12 +127,12 @@
   }
    */
 .header p {
-  font-family: Roboto, sans-serif;
+  /* font-family: Roboto, sans-serif; */
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
   text-align: center;
-  font-family: Roboto;
+  /* font-family: Roboto; */
   font-size: 16px;
   font-weight: 400;
   line-height: 19.2px;
@@ -162,7 +162,7 @@
 }
 
 .smallboxes p {
-  font-family: Butler, serif;
+  /* font-family: Butler, serif; */
   font-size: 20px;
   font-weight: 800;
   line-height: 24px;
@@ -271,15 +271,15 @@
 }
 .Promotion-smallbox h3 {
   font-size: 20px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 24px;
   text-align: left;
   color: #171717;
 }
 .Promotion-container h2 {
-  font-family: Butler;
+
   font-size: 31px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 37.2px;
   text-align: left;
   margin-bottom: 20px;
@@ -423,10 +423,11 @@
   color: #000000;
 
   font-size: 31px;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 37.2px;
   text-align: center;
   margin-bottom: 80px;
+  opacity: 0.9;
 }
 
 .Promotion-section-2-row {

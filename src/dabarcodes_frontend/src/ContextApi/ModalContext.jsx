@@ -3,15 +3,16 @@ import React, { createContext, useContext, useState } from "react";
 const ModalContext = createContext();
 
 export const ModalProvider = ({ children }) => {
-  const [isRoleModalOpen, setIsRoleModalOpen] = useState(false);
-  const [isConnectWalletModalOpen, setIsConnectWalletModalOpen] =
-    useState(false);
+  
+  const [isConnectWalletModalOpen, setIsConnectWalletModalOpen] = useState(false);
+  const [isRoleSelectionModalOpen, setIsRoleSelectionModalOpen] = useState(false);
 
-  const openRoleModal = () => setIsRoleModalOpen(true);
-  const closeRoleModal = () => setIsRoleModalOpen(false);
+  // Handlers to update state
+  const handleOpenConnectWalletModal = () => setIsConnectWalletModalOpen(true);
+  const handleCloseConnectWalletModal = () => setIsConnectWalletModalOpen(false);
 
-  const openConnectWalletModal = () => setIsConnectWalletModalOpen(true);
-  const closeConnectWalletModal = () => setIsConnectWalletModalOpen(false);
+  const handleOpenRoleSelectionModal = () => setIsRoleSelectionModalOpen(true);
+  const handleCloseRoleSelectionModal = () => setIsRoleSelectionModalOpen(false);
 
   //
   const [isTokenOpen, setIsTokenOpen] = useState(false);
@@ -55,16 +56,15 @@ export const ModalProvider = ({ children }) => {
   return (
     <ModalContext.Provider
       value={{
-        isRoleModalOpen,
-        isConnectWalletModalOpen,
-        //
-        openRoleModal,
-        closeRoleModal,
-        //
-        openConnectWalletModal,
-        closeConnectWalletModal,
-        //
-
+      
+// 
+isConnectWalletModalOpen,
+        isRoleSelectionModalOpen,
+        handleOpenConnectWalletModal,
+        handleCloseConnectWalletModal,
+        handleOpenRoleSelectionModal,
+        handleCloseRoleSelectionModal,
+// 
         isTokenOpen,
         openToken,
         closeToken,

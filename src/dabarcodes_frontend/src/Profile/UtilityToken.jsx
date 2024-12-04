@@ -18,13 +18,18 @@ const UtilityToken = () => {
       },
     ],
   };
-
-  const options = {
+const options = {
     cutout: "85%",
     maintainAspectRatio: false,
     responsive: true,
     plugins: {
       legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+      datalabels: {
         display: false,
       },
     },

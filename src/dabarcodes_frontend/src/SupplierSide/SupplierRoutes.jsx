@@ -78,6 +78,8 @@ import PromotionDetails from "./Promotion/PromotionDetails";
 import Accepted from "./Promotion/Detail/Accepted";
 import Rejected from "./Promotion/Detail/Rejected";
 import Pending from "./Promotion/Detail/Pending";
+import ProductDetailPage from "./SKU/ProductDetailPage";
+import SubscriptionDetails from "./OnBoarding/SubscriptionDetails";
 
 const SupplierRoutes = () => {
   const location = useLocation();
@@ -87,7 +89,8 @@ const SupplierRoutes = () => {
     "/supplier/create-account",
     "/supplier/brand-details",
     "/supplier/create-promotion",
-    "/supplier/select-retailer"
+    "/supplier/select-retailer",
+    "/supplier/subscription-details"
   ].some((path) => location.pathname.startsWith(path)) || location.pathname.includes("/supplier/product-details");
 
   return (
@@ -104,10 +107,12 @@ const SupplierRoutes = () => {
           <Routes>
             <Route path="create-account" element={<CreateAccount />} />
             <Route path="brand-details" element={<BrandDetails />} />
+            <Route path="subscription-details" element={<SubscriptionDetails />} />
             <Route path="supplier-home" element={<SupplierHome />} />
             <Route path="sku-management" element={<SkuManagement />} />
+            <Route path="sku-management/product-details/:id" element={<ProductDetailPage />} />
             <Route path="supplier-home-without-data" element={<DashboardWithoutData />} />
-            <Route path="botoks-token" element={<PlansPricing />} />
+            {/* <Route path="botoks-token" element={<PlansPricing />} /> */}
             <Route path="subscription-plan" element={<SubscriptionPlan />} />
             <Route path="profile-data" element={<ProfileData />} />
             <Route path="notifications" element={<Notifications />} />

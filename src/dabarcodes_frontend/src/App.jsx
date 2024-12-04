@@ -206,6 +206,8 @@ import SupplierRoutes from "./SupplierSide/SupplierRoutes";
 
 function App() {
   return (
+    <>
+    <div className=" max-w-[1600px] m-auto">
     <Router>
       <Suspense fallback={<Loading />}>
         <Routes>
@@ -285,6 +287,8 @@ function App() {
         </Routes>
       </Suspense>
     </Router>
+    </div>
+    </>
   );
 }
 

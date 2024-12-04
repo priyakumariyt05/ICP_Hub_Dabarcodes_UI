@@ -3,29 +3,38 @@ import { Link } from "react-router-dom";
 import { FaBars } from "react-icons/fa";
 import ConnectWalletModal from "../SmallPages/ConnectWalletModal";
 import RoleSelectionModal from "../SmallPages/RoleSelectionModal";
+import { useModal } from "../ContextApi/ModalContext";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [isConnectWalletModalOpen, setIsConnectWalletModalOpen] =
-    useState(false);
-  const [isRoleSelectionModalOpen, setIsRoleSelectionModalOpen] =
-    useState(false);
+  const {
+    isConnectWalletModalOpen,
+    isRoleSelectionModalOpen,
+    handleOpenConnectWalletModal,
+    handleCloseConnectWalletModal,
+    handleOpenRoleSelectionModal,
+    handleCloseRoleSelectionModal,
+  } =useModal()
+  // const [isConnectWalletModalOpen, setIsConnectWalletModalOpen] =
+  //   useState(false);
+  // const [isRoleSelectionModalOpen, setIsRoleSelectionModalOpen] =
+  //   useState(false);
 
-  const handleOpenConnectWalletModal = () => {
-    setIsConnectWalletModalOpen(true);
-  };
+  // const handleOpenConnectWalletModal = () => {
+  //   setIsConnectWalletModalOpen(true);
+  // };
 
-  const handleCloseConnectWalletModal = () => {
-    setIsConnectWalletModalOpen(false);
-  };
+  // const handleCloseConnectWalletModal = () => {
+  //   setIsConnectWalletModalOpen(false);
+  // };
 
-  const handleOpenRoleSelectionModal = () => {
-    setIsRoleSelectionModalOpen(true);
-  };
+  // const handleOpenRoleSelectionModal = () => {
+  //   setIsRoleSelectionModalOpen(true);
+  // };
 
-  const handleCloseRoleSelectionModal = () => {
-    setIsRoleSelectionModalOpen(false);
-  };
+  // const handleCloseRoleSelectionModal = () => {
+  //   setIsRoleSelectionModalOpen(false);
+  // };
 
   const handleNext = () => {
     handleOpenRoleSelectionModal(); // Open the Role Selection modal
@@ -133,18 +142,18 @@ function Navbar() {
         </div>
       )}
 
-      {/* Render ConnectWalletModal if isConnectWalletModalOpen is true */}
-      {isConnectWalletModalOpen && (
+
+       {isConnectWalletModalOpen && (
         <ConnectWalletModal
           onClose={handleCloseConnectWalletModal}
-          onNext={handleNext} // Pass handleNext function to ConnectWalletModal
+          onNext={handleNext} 
         />
       )}
 
-      {/* Render RoleSelectionModal if isRoleSelectionModalOpen is true */}
+  
       {isRoleSelectionModalOpen && (
         <RoleSelectionModal onClose={handleCloseRoleSelectionModal} />
-      )}
+      )} 
     </div>
   );
 }

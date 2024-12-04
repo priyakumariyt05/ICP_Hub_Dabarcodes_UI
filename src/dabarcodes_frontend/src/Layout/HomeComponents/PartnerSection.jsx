@@ -37,7 +37,7 @@ const PartnerSection = () => {
   return (
     <div id="partner" className="partners-container ">
       <h2 className="text-center text-3xl font-bold mb-8">Our Partners</h2>
-      <div className="partners-logos">
+      <div className="partners-logos ">
         {partners.map((partner) => (
           <div key={partner.id} className="partner-item">
             <img

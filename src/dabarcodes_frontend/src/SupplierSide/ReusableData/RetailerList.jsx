@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import BackButton from '../../Dashboard/Reusable/BackButton';
 import TitleHeader from './TitleHeader';
+import { useNavigate } from 'react-router-dom';
 const RetailerList = () => {
+    const navigate = useNavigate()
     const [retailers, setRetailers] = useState([
         { id: 'S00012', name: 'Reliance Market', location: 'Bangalore, India', totalProducts: 567, totalPromotions: 567 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
@@ -10,14 +11,13 @@ const RetailerList = () => {
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
-
+         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
         { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
-        { id: 'S00013', name: 'Coke', location: 'Pune, India', totalProducts: 398, totalPromotions: 398 },
-        // Add more dummy data or fetch dynamically here
+  
     ]);
 
     const [page, setPage] = useState(1);
@@ -25,15 +25,15 @@ const RetailerList = () => {
     // Pagination controls
     const handleNext = () => setPage((prev) => prev + 1);
     const handlePrevious = () => setPage((prev) => Math.max(prev - 1, 1));
-
+const handleClick = ()=>{
+navigate("/supplier/supplier-home")
+}
+const handleDraftPromotion =()=>{
+    navigate("/supplier/promotion-management/draft-promotion")
+}
     return (
         <div className=" ">
-            {/* Header */}
-            {/* <div className="flex justify-between items-center mb-4"> */}
-
-            <TitleHeader title="Retailer List" />
-            {/* </div> */}
-
+         <TitleHeader title="Retailer List" />
             {/* Table */}
             <table className="w-full text-left border-collapse">
                 <thead>
@@ -59,8 +59,7 @@ const RetailerList = () => {
                     ))}
                 </tbody>
             </table>
-
-            {/* Pagination */}
+             {/* Pagination */}
             <div className="flex justify-between items-center mt-4">
                 <button
                     onClick={handlePrevious}
@@ -80,10 +79,12 @@ const RetailerList = () => {
 
             {/* Action Buttons */}
             <div className="flex justify-center flex-col mt-4 space-x-4">
-                <button className="px-6 py-2 bg-[#0D90C1] text-white rounded-md">
+                <button  onClick={handleClick}
+                className="px-6 py-2 bg-[#0D90C1] text-white rounded-md">
                Activate Promotion
                 </button>
-                <button className="px-6 py-2 text-blue-600 underline">
+                <button onClick={handleDraftPromotion}
+                className="px-6 py-2 text-blue-600 underline">
                     Draft Promotion
                 </button>
             </div>

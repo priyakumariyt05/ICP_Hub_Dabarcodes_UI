@@ -228,62 +228,62 @@
 
 // // Custom hook to access user data
 // export const useUser = () => React.useContext(UserContext);
-import React, { createContext, useEffect, useState } from "react";
-import { HttpAgent, Actor } from "@dfinity/agent";
-import { Principal } from "@dfinity/principal";
-import { idlFactory } from "../../../declarations/dabarcodes_backend/dabarcodes_backend.did.js"; // Adjust path as necessary
+// import React, { createContext, useEffect, useState } from "react";
+// import { HttpAgent, Actor } from "@dfinity/agent";
+// import { Principal } from "@dfinity/principal";
+// import { idlFactory } from "../../../declarations/dabarcodes_backend/dabarcodes_backend.did.js"; 
 
-const canisterId = "dmalx-m4aaa-aaaaa-qaanq-cai"; 
+// const canisterId = "dmalx-m4aaa-aaaaa-qaanq-cai"; 
 
-// Create an agent for IC communication
-const agent = new HttpAgent({ host: "http://127.0.0.1:4943" });
+// // Create an agent for IC communication
+// const agent = new HttpAgent({ host: "http://127.0.0.1:4943" });
 
-if (process.env.NODE_ENV === "development") {
-  agent.fetchRootKey(); 
-}
+// if (process.env.NODE_ENV === "development") {
+//   agent.fetchRootKey(); 
+// }
 
-// Create actor to interact with the backend
-const backendActor = Actor.createActor(idlFactory, {
-  agent,
-  canisterId,
-});
-console.log("Backend API:", backendActor);
+// // Create actor to interact with the backend
+// const backendActor = Actor.createActor(idlFactory, {
+//   agent,
+//   canisterId,
+// });
+// console.log("Backend API:", backendActor);
 
-// Create a context for user data
-export const UserContext = createContext();
+// // Create a context for user data
+// export const UserContext = createContext();
 
-// UserProvider component to wrap the app
-export const UserProvider = ({ children }) => {
-  const [userData, setUserData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+// // UserProvider component to wrap the app
+// export const UserProvider = ({ children }) => {
+//   const [userData, setUserData] = useState(null);
+//   const [loading, setLoading] = useState(true);
+//   const [error, setError] = useState(null);
 
-  const createUserAccount = async (userProfileData) => {
-    try {
-      console.log("Creating account with data:", userProfileData);
-      // Use backendActor instead of canisterActor
-      const result = await backendActor.api_create_account(userProfileData);
-      console.log("Account created successfully:", result);
-      setUserData(result); // Store the account data
-    } catch (error) {
-      console.error("Failed to create user account:", error);
-      setError("Failed to create user account");
-    } finally {
-      setLoading(false);
-    }
-  };
+//   const createUserAccount = async (userProfileData) => {
+//     try {
+//       console.log("Creating account with data:", userProfileData);
+//       // Use backendActor instead of canisterActor
+//       const result = await backendActor.api_create_account(userProfileData);
+//       console.log("Account created successfully:", result);
+//       setUserData(result); // Store the account data
+//     } catch (error) {
+//       console.error("Failed to create user account:", error);
+//       setError("Failed to create user account");
+//     } finally {
+//       setLoading(false);
+//     }
+//   };
 
-  useEffect(() => {
-    createUserAccount(); 
-  }, []);
+//   useEffect(() => {
+//     createUserAccount(); 
+//   }, []);
 
-  return (
-    <UserContext.Provider value={{ userData, loading, error }}>
-      {children}
-    </UserContext.Provider>
-  );
-};
-export const useUser = () => React.useContext(UserContext);
+//   return (
+//     <UserContext.Provider value={{ userData, loading, error }}>
+//       {children}
+//     </UserContext.Provider>
+//   );
+// };
+// export const useUser = () => React.useContext(UserContext);
 
 
 

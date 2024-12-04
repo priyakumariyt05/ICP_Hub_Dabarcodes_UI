@@ -16,7 +16,7 @@ const plans = [
 
 const PlansPricing = () => {
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-white font-roboto">
+    <div className=" flex flex-col items-center justify-center bg-white font-roboto">
       <h2 className="text-3xl font-bold mb-2">Plans and Pricing</h2>
       <p className="text-gray-500 mb-8 text-center">
         Get access to all the features and SKUs with our plans
@@ -34,18 +34,19 @@ const PlansPricing = () => {
               {plan.price}
               <span className="text-xl font-normal">{plan.period}</span>
             </div>
-            <p className="text-gray-500 mb-6">{plan.description}</p>
+            <p className="text-gray-500 mb-4">{plan.description}</p>
+            <hr className="mb-2"/>
             <ul className="space-y-2 mb-6">
               {plan.features.map((feature, i) => (
-                <li key={i} className="flex items-center">
-                  <div className="bg-blue-400 text-white rounded-full w-6 h-6 flex items-center justify-center mr-4">
+                <li key={i} className="flex items-center text-gray-500">
+                  <div className="bg-[#0D90C1] text-white rounded-full w-6 h-6 flex items-center justify-center mr-4">
                     <FaCheck className="w-3 h-3" /> 
                   </div>
-                  {feature}
+                  {feature},
                 </li>
               ))}
             </ul>
-            <Link to="/supplier/subscription-plan">
+            <Link to="/supplier/brand-details">
               <button className="w-full py-2 bg-[#0D90C1] text-white rounded-lg hover:bg-blue-600">
                 Subscribe
               </button>
