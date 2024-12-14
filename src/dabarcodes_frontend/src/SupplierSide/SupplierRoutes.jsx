@@ -67,8 +67,8 @@ import Expired from "./Promotion/Expired";
 import DashboardWithoutData from "./SupplierDashboard/DashboardWithoutData";
 import Documentation from "./SupplierDashboard/Documentation";
 import Notifications from "./Notifications";
-import PlansPricing from "./BOTOKS/PlansPricing";
-import SubscriptionPlan from "./BOTOKS/SubscriptionPlan";
+import PlansPricing from "./Token/PlansPricing";
+import SubscriptionPlan from "./Token/SubscriptionPlan";
 import ProfileData from "./ProfileData/ProfileData";
 import SkuManagement from "./SKU/SkuManagement";
 import SelectProduct from "./Promotion/SelectProduct";
@@ -80,6 +80,8 @@ import Rejected from "./Promotion/Detail/Rejected";
 import Pending from "./Promotion/Detail/Pending";
 import ProductDetailPage from "./SKU/ProductDetailPage";
 import SubscriptionDetails from "./OnBoarding/SubscriptionDetails";
+import Report from "./Report/Report";
+import BotokPage from "./BOTOKS/BotokPage";
 
 const SupplierRoutes = () => {
   const location = useLocation();
@@ -110,10 +112,12 @@ const SupplierRoutes = () => {
             <Route path="subscription-details" element={<SubscriptionDetails />} />
             <Route path="supplier-home" element={<SupplierHome />} />
             <Route path="sku-management" element={<SkuManagement />} />
+            <Route path="report" element={<Report />} />
             <Route path="sku-management/product-details/:id" element={<ProductDetailPage />} />
             <Route path="supplier-home-without-data" element={<DashboardWithoutData />} />
             {/* <Route path="botoks-token" element={<PlansPricing />} /> */}
             <Route path="subscription-plan" element={<SubscriptionPlan />} />
+            <Route path="botok" element={<BotokPage />} />
             <Route path="profile-data" element={<ProfileData />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="documentation" element={<Documentation />} />

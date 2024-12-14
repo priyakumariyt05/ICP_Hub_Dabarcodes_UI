@@ -14,25 +14,25 @@ const AddProductForm = ({ closeModal, handleAddProduct }) => {
         productDescription: "",
     });
 
-    const [errors, setErrors] = useState({}); 
+    const [errors, setErrors] = useState({});
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setFormData({ ...formData, [name]: value });
     };
 
- 
+
     const handleImageUpload = (e) => {
         const file = e.target.files[0];
         if (file) {
             const reader = new FileReader();
             reader.onload = () => {
-                setFormData({ ...formData, image: reader.result }); 
+                setFormData({ ...formData, image: reader.result });
             };
-            reader.readAsDataURL(file); 
+            reader.readAsDataURL(file);
         }
     };
-    
+
     // Simple form validation
     const validateForm = () => {
         const newErrors = {};

@@ -5,7 +5,7 @@ const AddProductModal = ({ isOpen, onClose, onAddProduct }) => {
   const [productType, setProductType] = useState('');
   const [size, setSize] = useState('');
   const [description, setDescription] = useState('');
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(null); 
   const [imageUrl, setImageUrl] = useState('');
   const [category, setCategory] = useState('');
   const [subcategory, setSubcategory] = useState('');

@@ -167,7 +167,7 @@ const Sidebar = () => {
           </div>
         </li>
 
-        {/* BOTOKS Token Management */}
+        {/*  Token Management */}
         <li
           className={`px-6 py-3 cursor-pointer ${
             location.pathname === "/supplier/subscription-plan" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
@@ -181,18 +181,32 @@ const Sidebar = () => {
             {openSection === "subscription-plan" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
         </li>
+       {/* BOTOKS */}
+       <li
+          className={`px-6 py-3 cursor-pointer ${
+            location.pathname === "/supplier/botok" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
+          }`}
+          onClick={() => handleToggle("botok")}
+        >
+          <div className="flex justify-between items-center">
+            <Link to="/supplier/botok" className="flex items-center">
+              <TfiMedall className="inline-block mr-2" /> BOTOKS Campaign Activation
+            </Link>
+            {openSection === "botok" ? <AiOutlineMinus /> : <AiOutlinePlus />}
+          </div>
+        </li>
  {/* Reports */}
         <li
           className={`px-6 py-3 cursor-pointer ${
-            location.pathname === "/supplier/reports" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
+            location.pathname === "/supplier/report" ? "bg-[#E7F8FE]" : "hover:bg-gray-200"
           }`}
           onClick={() => handleToggle("reports")}
         >
           <div className="flex justify-between items-center">
-            <Link to="/supplier/reports" className="flex items-center">
+            <Link to="/supplier/report" className="flex items-center">
               <MdEqualizer className="inline-block mr-2" /> Reports
             </Link>
-            {openSection === "reports" ? <AiOutlineMinus /> : <AiOutlinePlus />}
+            {openSection === "report" ? <AiOutlineMinus /> : <AiOutlinePlus />}
           </div>
         </li>
       </ul>

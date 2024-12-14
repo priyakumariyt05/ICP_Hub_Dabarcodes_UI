@@ -1,6 +1,4 @@
-
 import React from 'react';
-
 const AddSubBrandModal = ({ onClose }) => {
   return (
     <div className="w-full max-w-md mx-auto">

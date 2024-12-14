@@ -82,7 +82,7 @@ const navigatePromotionPage= ()=>{
   navigate("/supplier/promotion-management")
 }
 const navigateSubscriptionPage = ()=>{
-  navigate("/supplier/botoks-token")
+  navigate("/supplier/subscription-plan")
 }
 
   return (

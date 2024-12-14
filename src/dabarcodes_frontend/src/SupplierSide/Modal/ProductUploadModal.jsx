@@ -1,7 +1,7 @@
 import React from "react";
-import {FaFileCsv} from "react-icons/fa";
+import { FaFileCsv } from "react-icons/fa";
 
-const ProductUploadModal = ({isOpen, closeModal}) => {
+const ProductUploadModal = ({ isOpen, closeModal }) => {
   const [file, setFile] = React.useState(null);
 
   const handleFileChange = (e) => {

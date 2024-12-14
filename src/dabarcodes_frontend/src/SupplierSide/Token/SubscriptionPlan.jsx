@@ -2,7 +2,7 @@ import React from "react";
 import CustomDoughnutChart from "../../Profile/CustomDoughnutChart";
 
 import SubscriptionManagement from "../../NewHomePageCustomer/SubscriptionManagement";
-import PlansPricing from "./PlansPricing";
+
 import PlanCard from "./PlanCard";
 
 const SubscriptionPlan = () => {

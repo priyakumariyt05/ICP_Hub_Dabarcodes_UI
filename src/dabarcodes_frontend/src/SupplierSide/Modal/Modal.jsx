@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 const Modal = ({ isOpen, onClose, children, className, mainclass }) => {
 const handleOutsideClick = (e) => {
     if (e.target.id === "modal-overlay") {

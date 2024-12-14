@@ -207,87 +207,87 @@ import SupplierRoutes from "./SupplierSide/SupplierRoutes";
 function App() {
   return (
     <>
-    <div className=" max-w-[1600px] m-auto">
-    <Router>
-      <Suspense fallback={<Loading />}>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/*" element={<Home />} />
+      <div className=" max-w-[1600px] m-auto">
+        <Router>
+          <Suspense fallback={<Loading />}>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/*" element={<Home />} />
 
-          {/* Like modals Start */}
-          <Route path="/connect-wallet" element={<ConnectWalletModal />} />
-          <Route path="/role-selection" element={<RoleSelectionModal />} />
-          <Route path="/utility-token" element={<UtilityTokenCard />} />
-          <Route path="/payment-process" element={<PaymentProcessCard />} />
-          <Route
-            path="/account-credentials"
-            element={<AccountCredentialsPopup />}
-          />
-          <Route path="/sku-modal" element={<SkuModal />} />
-          <Route path="/notifications" element={<NotificationsModals />} />
-          {/* <Route path="/token" element={<TokensModal />} /> */}
-          <Route path="/linked-sku" element={<LinkedSku />} />
-          {/* Like modals End*/}
+              {/* Like modals Start */}
+              <Route path="/connect-wallet" element={<ConnectWalletModal />} />
+              <Route path="/role-selection" element={<RoleSelectionModal />} />
+              <Route path="/utility-token" element={<UtilityTokenCard />} />
+              <Route path="/payment-process" element={<PaymentProcessCard />} />
+              <Route
+                path="/account-credentials"
+                element={<AccountCredentialsPopup />}
+              />
+              <Route path="/sku-modal" element={<SkuModal />} />
+              <Route path="/notifications" element={<NotificationsModals />} />
+              {/* <Route path="/token" element={<TokensModal />} /> */}
+              <Route path="/linked-sku" element={<LinkedSku />} />
+              {/* Like modals End*/}
 
-          {/* Profile routing start */}
-          <Route path="/profile" element={<ProfileInformation />} />
-          <Route
-            path="/subscription-profile"
-            element={<SubscriptionProfile />}
-          />
-          <Route path="/my-sku/*" element={<MySku />} />
-          <Route path="/setting/*" element={<Setting />} />
-          <Route path="/utility-tokens" element={<UtilityToken />} />
-          {/* Profile routing end */}
+              {/* Profile routing start */}
+              <Route path="/profile" element={<ProfileInformation />} />
+              <Route
+                path="/subscription-profile"
+                element={<SubscriptionProfile />}
+              />
+              <Route path="/my-sku/*" element={<MySku />} />
+              <Route path="/setting/*" element={<Setting />} />
+              <Route path="/utility-tokens" element={<UtilityToken />} />
+              {/* Profile routing end */}
 
-          <Route path="/plan-pricing" element={<PlansPricing />} />
+              <Route path="/plan-pricing" element={<PlansPricing />} />
 
-          {/* Create user Profile Start */}
-          <Route path="/login-page" element={<LoginForm />} />
-          <Route path="/privacy-preference" element={<PrivacyPreference />} />
-          <Route path="/personal-details" element={<PersonalDetails />} />
-          <Route path="/contact-details" element={<ContactDetails />} />
-          <Route
-            path="/additional-information"
-            element={<AdditionalInformation />}
-          />
-          <Route path="/create-password" element={<CreatePassword />} />
-          {/* Create user Profile End */}
+              {/* Create user Profile Start */}
+              <Route path="/login-page" element={<LoginForm />} />
+              <Route path="/privacy-preference" element={<PrivacyPreference />} />
+              <Route path="/personal-details" element={<PersonalDetails />} />
+              <Route path="/contact-details" element={<ContactDetails />} />
+              <Route
+                path="/additional-information"
+                element={<AdditionalInformation />}
+              />
+              <Route path="/create-password" element={<CreatePassword />} />
+              {/* Create user Profile End */}
 
-          {/* HOMEPAGE */}
-          <Route path="/homepage" element={<HomePage2 />} />
-          <Route path="/top-sku" element={<TopSku />} />
-          <Route path="/top-category" element={<TopCategory />} />
-          <Route path="/retailer-near" element={<RetailerNear />} />
-          <Route path="/categories" element={<ExploreCategories />} />
-          <Route path="/explore-brands" element={<ExploreBrands />} />
-          <Route path="/home-product-card" element={<HomeProductCard />} />
-          <Route path="/session-expired" element={<SessionExpiredModal />} />
-          <Route path="/session-timeout" element={<SessionTimeoutModal />} />
-          <Route path="/sku-overlay" element={<SkuOverlay />} />
-          <Route
-            path="/payment-card-details"
-            element={<PaymentDetailsCard />}
-          />
-          <Route path="/overlay" element={<OverlayQR />} />
-          <Route path="/overlay-multiple" element={<OverlayMultiple />} />
-          <Route path="/store" element={<Store />} />
-          {/* HOMEPAGE End */}
+              {/* HOMEPAGE */}
+              <Route path="/homepage" element={<HomePage2 />} />
+              <Route path="/top-sku" element={<TopSku />} />
+              <Route path="/top-category" element={<TopCategory />} />
+              <Route path="/retailer-near" element={<RetailerNear />} />
+              <Route path="/categories" element={<ExploreCategories />} />
+              <Route path="/explore-brands" element={<ExploreBrands />} />
+              <Route path="/home-product-card" element={<HomeProductCard />} />
+              <Route path="/session-expired" element={<SessionExpiredModal />} />
+              <Route path="/session-timeout" element={<SessionTimeoutModal />} />
+              <Route path="/sku-overlay" element={<SkuOverlay />} />
+              <Route
+                path="/payment-card-details"
+                element={<PaymentDetailsCard />}
+              />
+              <Route path="/overlay" element={<OverlayQR />} />
+              <Route path="/overlay-multiple" element={<OverlayMultiple />} />
+              <Route path="/store" element={<Store />} />
+              {/* HOMEPAGE End */}
 
-          <Route path="/filter" element={<Filter />} />
-          <Route path="/dashboard/*" element={<DashboardRoutes />} />
-          <Route
-            path="/operational-manager/*"
-            element={<OperationalRoutes />}
-          />
-          <Route path="/support-worker/*" element={<SupportWorkerRoutes />} />
-          <Route path="/supplier/*" element={<SupplierRoutes />} />
-          <Route path="/feedback" element={<FeedbackForm />} />
-          <Route path="/contact-support" element={<ContactSupport />} />
-        </Routes>
-      </Suspense>
-    </Router>
-    </div>
+              <Route path="/filter" element={<Filter />} />
+              <Route path="/dashboard/*" element={<DashboardRoutes />} />
+              <Route
+                path="/operational-manager/*"
+                element={<OperationalRoutes />}
+              />
+              <Route path="/support-worker/*" element={<SupportWorkerRoutes />} />
+              <Route path="/supplier/*" element={<SupplierRoutes />} />
+              <Route path="/feedback" element={<FeedbackForm />} />
+              <Route path="/contact-support" element={<ContactSupport />} />
+            </Routes>
+          </Suspense>
+        </Router>
+      </div>
     </>
   );
 }
