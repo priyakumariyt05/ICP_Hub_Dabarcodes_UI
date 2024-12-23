@@ -82,6 +82,11 @@ import ProductDetailPage from "./SKU/ProductDetailPage";
 import SubscriptionDetails from "./OnBoarding/SubscriptionDetails";
 import Report from "./Report/Report";
 import BotokPage from "./BOTOKS/BotokPage";
+import EventDetails from "./BOTOKS/EventDetails";
+import PrizePremiumDetails from "./BOTOKS/PrizePremiumDetails";
+import CommunityCampaignDetails from "./BOTOKS/CommunityCampaignDetails";
+import ProductSku from "./BOTOKS/ProductSku";
+import BrandActivationForm from "./BOTOKS/BrandActivationForm";
 
 const SupplierRoutes = () => {
   const location = useLocation();
@@ -115,15 +120,33 @@ const SupplierRoutes = () => {
             <Route path="report" element={<Report />} />
             <Route path="sku-management/product-details/:id" element={<ProductDetailPage />} />
             <Route path="supplier-home-without-data" element={<DashboardWithoutData />} />
-            {/* <Route path="botoks-token" element={<PlansPricing />} /> */}
             <Route path="subscription-plan" element={<SubscriptionPlan />} />
             <Route path="botok" element={<BotokPage />} />
+            <Route path="botok" element={<BotokPage />} />
+            <Route path="/botok/product-sku" element={<ProductSku />} />
+            <Route
+              path="/botok/product-sku/:id"
+              element={<BrandActivationForm />}
+            />
+
+
+            <Route
+              path="botok/product-sku/:id/event-details"
+              element={<EventDetails />}
+            />
+            <Route
+              path="botok/product-sku/:id/prize-premium-details"
+              element={<PrizePremiumDetails />}
+            />
+            <Route
+              path="botok/product-sku/:id/community-campaign-details"
+              element={<CommunityCampaignDetails />}
+            />
             <Route path="profile-data" element={<ProfileData />} />
             <Route path="notifications" element={<Notifications />} />
             <Route path="documentation" element={<Documentation />} />
             <Route path="create-promotion" element={<CreatePromotion />} />
             <Route path="product-details/:id" element={<ProductDetails />} />
-            {/* <Route path="retailer-list" element={<RetailerList />} /> */}
             <Route path="select-retailer" element={<SelectRetailer />} />
             <Route path="promotion-management" element={<PromotionPage />} />
             <Route path="promotion-management/ongoing-promotion" element={<Ongoing />} />

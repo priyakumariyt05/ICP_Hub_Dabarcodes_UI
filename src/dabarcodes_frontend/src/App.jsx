@@ -203,6 +203,7 @@ const LoginForm = lazy(() => import("./ProfileDetails/LoginForm"));
 import OperationalRoutes from "./RetailerSide/Operational/OperationalRoutes";
 import SupportWorkerRoutes from "./RetailerSide/SupportWorker/SupportWorkerRoutes";
 import SupplierRoutes from "./SupplierSide/SupplierRoutes";
+import CardDetails from "./NewHomePageCustomer/CardDetails";
 
 function App() {
   return (
@@ -262,6 +263,8 @@ function App() {
               <Route path="/categories" element={<ExploreCategories />} />
               <Route path="/explore-brands" element={<ExploreBrands />} />
               <Route path="/home-product-card" element={<HomeProductCard />} />
+              <Route path="/home-product-card/:productId" element={<CardDetails />} />
+
               <Route path="/session-expired" element={<SessionExpiredModal />} />
               <Route path="/session-timeout" element={<SessionTimeoutModal />} />
               <Route path="/sku-overlay" element={<SkuOverlay />} />
