@@ -50,15 +50,12 @@ const BrandActivationForm = () => {
             }
         }
     };
-
-
-
     return (
         <div className="w-full max-w-6xl mx-auto p-8">
             <div className="flex flex-start">
                 <BackButton />
 
-                <h1 className="text-2xl font-semibold mb-4">Event Details</h1>
+                <h1 className="text-2xl font-semibold mb-4">Brand Activation Campaign</h1>
             </div>
             {/* Description */}
             <p className="text-gray-600 mb-8">
@@ -182,7 +179,6 @@ const BrandActivationForm = () => {
                 </div>
 
                 {/* Type of Release */}
-
                 <select
                     name="releaseType"
                     value={formData.releaseType}
